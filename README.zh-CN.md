@@ -55,6 +55,8 @@ LaTeX 版本默认按 18 周、每周 2 次课、每次 90 分钟设计，包含
 
 配图设计入口：[36 课时配图计划](APMICRO-Teaching/Visual-Plan/visual-plan-36-sessions.md)。每节课按 2–5 项弹性设计：至少保留一张核心数据图和一张概念图，需要时再加入更多图表、流程图、历史图片或现实案例；后续再按来源、许可证和数据快照逐项制作。
 
+可视化数据入口：[Visual-Plan/assets/data](APMICRO-Teaching/Visual-Plan/assets/data/)。当前批次包含 FRED 原始快照、派生指标表、课堂模型合成数据和 SHA-256 清单；Kaggle 暂不需要，未来只有在寻找特定行业或家庭微观数据时再考虑。
+
 ## 索引和更新
 
 资料目录中的 `manifest.csv` 记录本地路径、来源、文件大小和 SHA-256。MCQ 目录另有 `resources.csv`，记录没有镜像进仓库的在线题库和官方入口。

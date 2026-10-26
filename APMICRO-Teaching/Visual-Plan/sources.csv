@@ -2,6 +2,8 @@ source_id,name,type,url,notes
 FRED-UNRATE,FRED UNRATE,Python chart data,https://fred.stlouisfed.org/series/UNRATE,BLS civilian unemployment rate; download the series at build time.
 FRED-CPIAUCSL,FRED CPIAUCSL,Python chart data,https://fred.stlouisfed.org/series/CPIAUCSL,BLS Consumer Price Index for All Urban Consumers; compute year-over-year inflation when needed.
 FRED-GDP,FRED GDP,Python chart data,https://fred.stlouisfed.org/series/GDP,BEA gross domestic product series; use real GDP separately when the lesson needs quantities rather than current dollars.
+FRED-GDPC1,FRED GDPC1,Python chart data,https://fred.stlouisfed.org/series/GDPC1,BEA real GDP series; use the derived growth table for macro context.
+FRED-USREC,FRED USREC,Python chart data,https://fred.stlouisfed.org/series/USREC,NBER recession indicator distributed through FRED; use as a shaded context marker.
 FRED-FEDFUNDS,FRED FEDFUNDS,Python chart data,https://fred.stlouisfed.org/series/FEDFUNDS,Effective federal funds rate; context extension for policy and banking visuals.
 FRED-M2SL,FRED M2SL,Python chart data,https://fred.stlouisfed.org/series/M2SL,M2 money stock; context extension for banking and monetary conditions.
 FRED-SP500,FRED SP500,Python chart data,https://fred.stlouisfed.org/series/SP500,"S&P 500 index; use for market confidence or financial-market context, not as an AP Micro core objective."

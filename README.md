@@ -45,6 +45,8 @@ The LaTeX project has its own [README](APMICRO-Teaching/Lesson-Plans/latex/READM
 
 The teaching area also reserves separate folders for [handouts](APMICRO-Teaching/Handouts/), [slides](APMICRO-Teaching/Slides/), and [visual assets](APMICRO-Teaching/Visual-Plan/). The visual plan currently covers all 36 sessions and records the intended classroom use, production method, and source trail for each planned visual.
 
+The first visual-data batch is available under [`APMICRO-Teaching/Visual-Plan/assets/data/`](APMICRO-Teaching/Visual-Plan/assets/data/). It contains official FRED snapshots, locally derived indicator tables, illustrative model tables, and a SHA-256 manifest. Kaggle is optional for future specialized datasets and is not required for the current AP Micro visual plan.
+
 ## Index and verification
 
 Each material area maintains a manifest with local path, source URL, file size, and SHA-256 where applicable. The MCQ area also has `resources.csv` for online resources that are indexed but not mirrored.

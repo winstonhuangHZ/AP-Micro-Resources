@@ -11,6 +11,8 @@ SOURCES = [
     ('FRED-UNRATE', 'FRED UNRATE', 'Python chart data', 'https://fred.stlouisfed.org/series/UNRATE', 'BLS civilian unemployment rate; download the series at build time.'),
     ('FRED-CPIAUCSL', 'FRED CPIAUCSL', 'Python chart data', 'https://fred.stlouisfed.org/series/CPIAUCSL', 'BLS Consumer Price Index for All Urban Consumers; compute year-over-year inflation when needed.'),
     ('FRED-GDP', 'FRED GDP', 'Python chart data', 'https://fred.stlouisfed.org/series/GDP', 'BEA gross domestic product series; use real GDP separately when the lesson needs quantities rather than current dollars.'),
+    ('FRED-GDPC1', 'FRED GDPC1', 'Python chart data', 'https://fred.stlouisfed.org/series/GDPC1', 'BEA real GDP series; use the derived growth table for macro context.'),
+    ('FRED-USREC', 'FRED USREC', 'Python chart data', 'https://fred.stlouisfed.org/series/USREC', 'NBER recession indicator distributed through FRED; use as a shaded context marker.'),
     ('FRED-FEDFUNDS', 'FRED FEDFUNDS', 'Python chart data', 'https://fred.stlouisfed.org/series/FEDFUNDS', 'Effective federal funds rate; context extension for policy and banking visuals.'),
     ('FRED-M2SL', 'FRED M2SL', 'Python chart data', 'https://fred.stlouisfed.org/series/M2SL', 'M2 money stock; context extension for banking and monetary conditions.'),
     ('FRED-SP500', 'FRED SP500', 'Python chart data', 'https://fred.stlouisfed.org/series/SP500', 'S&P 500 index; use for market confidence or financial-market context, not as an AP Micro core objective.'),
@@ -173,6 +175,23 @@ V = [
 ('Exam-readiness timeline','Concept diagram','Final week schedule for graph review, MCQ, FRQ, sleep, and materials.','Draw locally.','planned')]),
 ]
 
+DATA_READY_NAMES = {
+    'PPC with efficiency zones', 'Specialization and trade flow map',
+    'Comparative-advantage heatmap', 'Market equilibrium chart',
+    'Steep versus flat demand curves', 'Total-revenue curve',
+    'Consumer and producer surplus graph', 'Shortage and surplus side-by-side',
+    'Price ceiling, price floor, tax, and subsidy grid', 'Tariff graph with world price',
+    'TP, AP, and MP curves', 'Production-table heatmap',
+    'FC, VC, TC, ATC, AVC, and MC curves', 'LRATC economies-of-scale curve',
+    'MR, MC, and profit-maximizing output', 'Firm decision dashboard',
+    'Shutdown decision graph', 'Monopoly D-MR-MC-ATC graph',
+    'Payoff matrix heatmap', 'Efficiency comparison bars', 'MRP schedule chart',
+    'Competitive labor-market equilibrium', 'Monopsony MFC-MRP graph',
+    'Private versus social benefit/cost graph', 'Free-rider participation chart',
+    'Great Depression unemployment-rate timeline', 'Lorenz curve and Gini visual',
+    'Policy evidence dashboard',
+}
+
 
 def write_sources():
     with (VIS/'sources.csv').open('w', newline='', encoding='utf-8') as f:
@@ -194,7 +213,12 @@ def write_plan():
     for session,unit,topic,items in V:
         out += [f'### Session {session} · {unit} · {topic}','']
         for i,(name,kind,purpose,source,status) in enumerate(items,1):
-            planned_status = f'{status}; optional extension' if i == 3 else status
+            planned_status = status
+            data_ready = (VIS / 'assets' / 'data' / 'manifest.csv').exists()
+            if data_ready and name in DATA_READY_NAMES and status == 'planned':
+                planned_status = 'data-ready'
+            if i == 3:
+                planned_status = f'{planned_status}; optional extension'
             out += [f'{i}. **{name}**', f'   - Type: `{kind}`', f'   - Classroom use: {purpose}', f'   - Source / method: `{source}`', f'   - Status: `{planned_status}`', '']
     source_manifest = VIS / 'assets' / 'source' / 'sources.csv'
     out += ['## Source collection progress', '',
@@ -235,7 +259,7 @@ def write_plan():
             '├── wikimedia/     # files with license records',
             '└── exports/       # slide-ready and handout-ready exports',
             '```','',
-            'The current turn creates the design index and source catalog. Actual downloads and chart generation should be done in a later asset-production pass, with every file added to a manifest.','']
+            'Public data snapshots and illustrative model tables are tracked in [`assets/data/README.md`](assets/data/README.md) and [`assets/data/manifest.csv`](assets/data/manifest.csv). A `data-ready` status means the input table exists; the final chart still needs to be rendered and checked.','']
     (VIS/'visual-plan-36-sessions.md').write_text('\n'.join(out),encoding='utf-8')
 
 
@@ -244,7 +268,7 @@ def write_readmes():
     (BASE/'README.md').write_text('''# AP Microeconomics Teaching Materials\n\nThis folder is the working area for course planning and classroom production.\n\n## Structure\n\n- [`Lesson-Plans/`](Lesson-Plans/) — bilingual 36-session lesson plan, CED objective map, Markdown schedule, and LaTeX/PDF editions.\n- [`Handouts/`](Handouts/) — student-facing worksheets, graph practice, formula sheets, and FRQ/MCQ review pages.\n- [`Slides/`](Slides/) — future English and Chinese PPT/PPTX decks, organized by Unit and session.\n- [`Visual-Plan/`](Visual-Plan/) — visual design index, data-source catalog, and future chart/photo assets.\n\n## Production order\n\n1. Keep the session objective and activity in `Lesson-Plans/` as the source of truth.\n2. Use `Visual-Plan/visual-plan-36-sessions.md` to select or generate the session visuals.\n3. Build the matching worksheet in `Handouts/`.\n4. Build the teacher-facing and student-facing decks in `Slides/`.\n5. Add generated assets and source/license records to the visual manifest before using them in public materials.\n''',encoding='utf-8')
     (BASE/'Handouts'/'README.md').write_text('''# AP Microeconomics Handouts\n\nThis folder is reserved for student-facing materials. Suggested organization:\n\n```text\nHandouts/\n├── Unit-1/ ... Unit-6/\n├── Review/\n└── templates/\n```\n\nEach handout should record its session number, official objective ID, answer-key status, and the visual assets it uses. Keep the handout source editable and export PDFs only after the layout is checked.\n''',encoding='utf-8')
     (BASE/'Slides'/'README.md').write_text('''# AP Microeconomics Slides\n\nThis folder is reserved for PPT/PPTX and slide-source files. Suggested organization:\n\n```text\nSlides/\n├── Unit-1/ ... Unit-6/\n├── Review/\n└── shared/\n```\n\nEach deck should record the session number, official objective ID, visual asset filenames, and whether the deck is English or Chinese. The English deck can remain the primary version, with a linked Chinese edition when both are available.\n''',encoding='utf-8')
-    (VIS/'README.md').write_text('''# AP Microeconomics Visual Plan\n\n- [`visual-plan-36-sessions.md`](visual-plan-36-sessions.md) — a flexible two-to-five-visual plan for every session, plus indicator, government, and banking extension modules.\n- [`sources.csv`](sources.csv) — FRED, official course, and Wikimedia Commons discovery sources.\n- `assets/` — downloaded images, generated charts, diagrams, data snapshots, and exports.\n\nUse two visuals as the minimum lesson set. Add a third, fourth, or fifth visual when a session benefits from another graph, diagram, data panel, historical image, or real-world example. The plan uses FRED for reproducible public-data charts and Wikimedia Commons for historical or real-world image discovery. Original downloaded images go in [`assets/source/`](assets/source/) with a row in its metadata CSV.\n''',encoding='utf-8')
+    (VIS/'README.md').write_text('''# AP Microeconomics Visual Plan\n\n- [`visual-plan-36-sessions.md`](visual-plan-36-sessions.md) — a flexible two-to-five-visual plan for every session, plus indicator, government, and banking extension modules.\n- [`sources.csv`](sources.csv) — FRED, official course, and Wikimedia Commons discovery sources.\n- [`assets/data/`](assets/data/) — downloaded public-data snapshots, derived tables, illustrative model data, and the data manifest.\n- `assets/` — downloaded images, generated charts, diagrams, data snapshots, and exports.\n\nUse two visuals as the minimum lesson set. Add a third, fourth, or fifth visual when a session benefits from another graph, diagram, data panel, historical image, or real-world example. The plan uses FRED for reproducible public-data charts and Wikimedia Commons for historical or real-world image discovery. Original downloaded images go in [`assets/source/`](assets/source/) with a row in its metadata CSV. A `data-ready` status means the input table is available; the chart still needs final rendering and visual QA.\n''',encoding='utf-8')
     (VIS/'assets'/'README.md').write_text('''# Visual Assets\n\nReserved layout for future asset production:\n\n- `source/` — original downloaded source images and their metadata; keep these files unchanged\n- `data/` — public CSV snapshots and retrieval dates\n- `python/` — chart-generation scripts\n- `diagrams/` — original SVG/PDF/PNG diagrams\n- `wikimedia/` — optional compatibility area for source files that need a separate Wikimedia-specific grouping\n- `exports/` — slide-ready and handout-ready versions\n\nAdd every downloaded image to `source/sources.csv` with its individual source page, direct file URL, author, license, intended session, retrieval date, byte count, and SHA-256.\n''',encoding='utf-8')
 
 

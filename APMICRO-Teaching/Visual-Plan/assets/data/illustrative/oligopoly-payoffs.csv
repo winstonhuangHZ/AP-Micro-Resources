@@ -1,0 +1,5 @@
+strategy_a,strategy_b,payoff_a,payoff_b
+Cooperate,Cooperate,8,8
+Cooperate,Defect,2,10
+Defect,Cooperate,10,2
+Defect,Defect,4,4
