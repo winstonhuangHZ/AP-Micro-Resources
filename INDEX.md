@@ -8,7 +8,7 @@
 |---|---|---:|
 | 历年 FRQ、评分标准、学生答案和 Reader Report | [AP-Microeconomics-FRQ-Archive/](AP-Microeconomics-FRQ-Archive/) · [详细索引](AP-Microeconomics-FRQ-Archive/INDEX.md) | 251 PDFs |
 | MCQ 练习资料 | [AP-Microeconomics-MCQ-Practice/](AP-Microeconomics-MCQ-Practice/) · [详细说明](AP-Microeconomics-MCQ-Practice/README.md) | 2 PDFs |
-| Unit 1–6 HW | [AP-Microeconomics-Unit-HW/](AP-Microeconomics-Unit-HW/) · [详细索引](AP-Microeconomics-Unit-HW/INDEX.md) | 83 PDFs |
+| Unit 1–6 HW | [AP-Microeconomics-Unit-HW/](AP-Microeconomics-Unit-HW/) · [详细索引](AP-Microeconomics-Unit-HW/INDEX.md) | 84 PDFs |
 | MCQ 镜像和在线题库线索 | [MCQ-Mirror-Notes.md](MCQ-Mirror-Notes.md) | — |
 
 ## Unit HW 数量
@@ -29,4 +29,4 @@
 
 ## 索引和校验
 
-每个资料区都有自己的 `manifest.csv`，记录本地路径、来源、文件大小和 SHA-256。修改或补充资料后，重新运行维护脚本即可重建索引。
+每个资料区都有自己的 `manifest.csv`，记录本地路径、来源、文件大小和 SHA-256。MCQ 目录另有 `resources.csv`，记录已发现但没有镜像进仓库的官方入口、在线题库和付费线索。修改或补充资料后，从仓库根目录运行 `python3 scripts/update_indexes.py` 即可重建索引。
