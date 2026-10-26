@@ -12,7 +12,7 @@ This folder contains released AP Microeconomics free-response materials collecte
 - 2021–2025: Set 1 and Set 2 materials.
 - 2026: question paper and the current College Board scoring guidelines.
 
-The archive contains 251 PDFs. `manifest.csv` records the source URL, local path, download status, byte size, and SHA-256 checksum for every file.
+The archive contains 251 PDFs. The year-by-year listing is in [`INDEX.md`](INDEX.md). `manifest.csv` records the source URL, local path, download status, byte size, and SHA-256 checksum for every file.
 
 ## File types
 
