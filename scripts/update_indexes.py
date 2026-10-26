@@ -152,6 +152,8 @@ frq_counts = Counter(row['year'] for row in frq_rows)
 
 本仓库集中整理 AP Microeconomics 的 FRQ、MCQ 练习资料，以及 Unit 1–6 homework。
 
+项目说明： [English README](README.md) · [中文说明](README.zh-CN.md)
+
 ## 快速入口
 
 | 材料 | 入口 | 数量 |
