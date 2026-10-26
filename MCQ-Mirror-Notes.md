@@ -4,8 +4,8 @@
 
 ## 公开可用、已保存到仓库
 
-- [College Board AP Microeconomics Course and Exam Description](AP-Microeconomics-MCQ-Practice/college-board-ap-microeconomics-course-and-exam-description.pdf)：官方课程说明，含样题、考试说明和答案材料。
-- [ExamTeX AP Microeconomics practice exam](AP-Microeconomics-MCQ-Practice/examtex-ap-microeconomics-practice-exam.pdf)：独立练习卷，公开下载，含 MCQ 和 FRQ-style 内容。
+- [College Board AP Microeconomics Course and Exam Description](APMICRO-MCQ-Practice/college-board-ap-microeconomics-course-and-exam-description.pdf)：官方课程说明，含样题、考试说明和答案材料。
+- [ExamTeX AP Microeconomics practice exam](APMICRO-MCQ-Practice/examtex-ap-microeconomics-practice-exam.pdf)：独立练习卷，公开下载，含 MCQ 和 FRQ-style 内容。
 
 ## 官方资料：保留链接，不镜像整套文件
 

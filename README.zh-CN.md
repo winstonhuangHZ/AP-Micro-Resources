@@ -7,24 +7,24 @@
 ## 快速入口
 
 - [总索引](INDEX.md)
-- [历年 FRQ Archive](AP-Microeconomics-FRQ-Archive/)
-- [MCQ 练习资料](AP-Microeconomics-MCQ-Practice/)
-- [Unit 1–6 HW](AP-Microeconomics-Unit-HW/)
-- [College Board 官方课程文件](AP-Microeconomics-Official-Docs/)
-- [开放教材与大学课程资料](AP-Microeconomics-Open-Resources/)
-- [教案与课时设计](AP-Microeconomics-Lesson-Plan/)
+- [历年 FRQ Archive](APMICRO-FRQ-Archive/)
+- [MCQ 练习资料](APMICRO-MCQ-Practice/)
+- [Unit 1–6 HW](APMICRO-Unit-HW/)
+- [College Board 官方课程文件](APMICRO-Official-Docs/)
+- [开放教材与大学课程资料](APMICRO-Open-Resources/)
+- [教案与课时设计](APMICRO-Lesson-Plan/)
 - [研究来源、论坛和后续整理入口](AP-Microeconomics-Research-Sources.md)
 
 ## 资料内容
 
 | 目录 | 内容 |
 |---|---|
-| `AP-Microeconomics-FRQ-Archive/` | 2003–2026 的公开 FRQ、评分标准、学生答案和 Reader materials；2020 年目前没有配套文件 |
-| `AP-Microeconomics-MCQ-Practice/` | CED、独立练习和外部题库目录；受限官方 MCQ 只保留官方入口 |
-| `AP-Microeconomics-Unit-HW/` | Unit 1–6 HW、自制练习和逐文件索引 |
-| `AP-Microeconomics-Official-Docs/` | College Board 官方课程概览、课程海报和 CED 澄清文件 |
-| `AP-Microeconomics-Open-Resources/` | OpenStax、CORE Econ EPUB/PDF、MIT OCW 讲义、习题和答案 |
-| `AP-Microeconomics-Lesson-Plan/` | 教案框架、36 课时安排、资料映射、LaTeX 源文件和 PDF |
+| `APMICRO-FRQ-Archive/` | 2003–2026 的公开 FRQ、评分标准、学生答案和 Reader materials；2020 年目前没有配套文件 |
+| `APMICRO-MCQ-Practice/` | CED、独立练习和外部题库目录；受限官方 MCQ 只保留官方入口 |
+| `APMICRO-Unit-HW/` | Unit 1–6 HW、自制练习和逐文件索引 |
+| `APMICRO-Official-Docs/` | College Board 官方课程概览、课程海报和 CED 澄清文件 |
+| `APMICRO-Open-Resources/` | OpenStax、CORE Econ EPUB/PDF、MIT OCW 讲义、习题和答案 |
+| `APMICRO-Lesson-Plan/` | 教案框架、官方 CED Learning Objectives、36 课时安排、资料映射、双语 LaTeX 源文件和 PDF |
 
 ## LaTeX 教案
 
@@ -35,14 +35,18 @@ LaTeX 版本默认按 18 周、每周 2 次课、每次 90 分钟设计，包含
 - Unit 1–6 的 36 课时安排；
 - MCQ、FRQ、图像、计算和错题训练；
 - 测验和模拟考试节点；
-- XeLaTeX 源文件和 8 页打印版 PDF。
+- 每个课时对应的官方 objective ID、Learning Objective 和 CED 页码；
+- 分离的英文版和中文版 XeLaTeX 源文件及 PDF。
 
 入口：
 
-- [LaTeX README](AP-Microeconomics-Lesson-Plan/latex/README.md)
-- [LaTeX 源文件](AP-Microeconomics-Lesson-Plan/latex/main.tex)
-- [打印版 PDF](AP-Microeconomics-Lesson-Plan/latex/AP-Microeconomics-Lesson-Plan.pdf)
-- [LaTeX 备忘录](AP-Microeconomics-Lesson-Plan/LATEX-MEMO.md)
+- [LaTeX README](APMICRO-Lesson-Plan/latex/README.md)
+- [英文 LaTeX 源文件](APMICRO-Lesson-Plan/latex/en/main.tex)
+- [英文打印版 PDF](APMICRO-Lesson-Plan/latex/en/AP-Microeconomics-Lesson-Plan-en.pdf)
+- [中文 LaTeX 源文件](APMICRO-Lesson-Plan/latex/zh/main.tex)
+- [中文打印版 PDF](APMICRO-Lesson-Plan/latex/zh/AP-Microeconomics-Lesson-Plan-zh.pdf)
+- [官方目标说明](APMICRO-Lesson-Plan/OFFICIAL-LEARNING-OBJECTIVES.md)
+- [LaTeX 备忘录](APMICRO-Lesson-Plan/LATEX-MEMO.md)
 
 ## 索引和更新
 

@@ -1,0 +1,76 @@
+# Official Learning Objectives and CED Mapping
+
+This document records the AP Microeconomics learning-objective map used by the lesson-plan package.
+
+## Source and method
+
+- Source: [College Board AP Microeconomics Course and Exam Description](../APMICRO-MCQ-Practice/college-board-ap-microeconomics-course-and-exam-description.pdf).
+- The local CED is marked **Effective Fall 2026**; page references below are PDF page numbers.
+- Objective IDs are retained from the CED. The English and Chinese sentences here are concise teaching paraphrases aligned to those IDs, not a replacement for the official wording.
+- Session assignments are maintained in [`session-learning-objectives.csv`](session-learning-objectives.csv).
+
+## Unit map
+
+### Unit 1
+
+| CED topic | Objective ID | English teaching paraphrase | 中文教学改写 | CED PDF pages |
+|---|---|---|---|---|
+| 1.1 Scarcity | MKT-1.A | Define resources and explain why scarcity creates economic trade-offs. | 定义资源，并解释稀缺性为什么会产生经济取舍。 | 41 |
+| 1.2 Resource Allocation and Economic Systems | MKT-1.B | Explain how an economic system influences resource allocation. | 解释经济制度如何影响资源配置。 | 42 |
+| 1.3 Production Possibilities Curve | MKT-1.C | Define and use a PPC to explain scarcity, opportunity cost, efficiency, underutilization, and growth. | 定义并使用 PPC 解释稀缺性、机会成本、效率、资源闲置和经济增长。 | 43 |
+| 1.4 Comparative Advantage and Trade | MKT-2.A; MKT-2.B | Identify absolute and comparative advantage, then determine specialization and mutually beneficial terms of trade. | 识别绝对优势和比较优势，并确定专业化方向与互利贸易条件。 | 44 |
+| 1.5 Cost-Benefit Analysis | CBA-1.A; CBA-1.B | Define and calculate opportunity cost, total benefits, total costs, and net benefits to explain a choice. | 定义并计算机会成本、总收益、总成本和净收益，用它们解释选择。 | 45 |
+| 1.6 Marginal Analysis and Consumer Choice | CBA-2.A; CBA-2.B | Explain rational consumer choice and use marginal benefit and marginal cost to identify an optimal quantity. | 解释理性消费者选择，并用边际收益和边际成本确定最优数量。 | 46–47 |
+
+### Unit 2
+
+| CED topic | Objective ID | English teaching paraphrase | 中文教学改写 | CED PDF pages |
+|---|---|---|---|---|
+| 2.1 Demand | MKT-3.A | Define demand and explain how price, incentives, constraints, and diminishing marginal utility shape demand. | 定义需求，并解释价格、激励、约束和边际效用递减如何影响需求。 | 53 |
+| 2.2 Supply | MKT-3.C; MKT-3.D | Explain the law of supply and how producers respond to changes in incentives and technology. | 解释供给定律，以及生产者如何回应激励和技术变化。 | 55 |
+| 2.3–2.5 Elasticity | MKT-3.E | Define price, income, and cross-price elasticity and explain how elasticity affects total revenue and market responses. | 定义价格、收入和交叉价格弹性，并解释弹性如何影响总收益和市场反应。 | 56–59 |
+| 2.6 Market Equilibrium and Consumer and Producer Surplus | MKT-4.A | Explain equilibrium and calculate consumer surplus, producer surplus, and total economic surplus. | 解释市场均衡，并计算消费者剩余、生产者剩余和总经济剩余。 | 60 |
+| 2.7 Market Disequilibrium and Changes in Equilibrium | MKT-4.B | Explain shortages, surpluses, and changes in equilibrium using demand and supply models. | 使用需求和供给模型解释短缺、过剩以及均衡变化。 | 61 |
+| 2.8 The Effects of Government Intervention in Markets | POL-1.A | Define price and quantity interventions and calculate their effects on market outcomes. | 定义价格和数量干预，并计算其对市场结果的影响。 | 62 |
+| 2.9 International Trade and Public Policy | POL-1.B | Explain and calculate how trade policies change domestic price, quantity, surplus, and government revenue. | 解释并计算贸易政策如何改变国内价格、数量、剩余和政府收入。 | 63 |
+
+### Unit 3
+
+| CED topic | Objective ID | English teaching paraphrase | 中文教学改写 | CED PDF pages |
+|---|---|---|---|---|
+| 3.1 The Production Function | PRD-1.A | Define and interpret total, average, and marginal product in a production function. | 定义并解释生产函数中的总产量、平均产量和边际产量。 | 69 |
+| 3.2–3.3 Short-Run and Long-Run Production Costs | PRD-1.A | Calculate and interpret fixed, variable, total, average, marginal, and long-run costs. | 计算并解释固定、可变、总、平均、边际和长期成本。 | 70–71 |
+| 3.4 Types of Profit | CBA-2.C | Define accounting and economic profit and distinguish explicit and implicit costs. | 定义会计利润和经济利润，并区分显性成本与隐性成本。 | 72 |
+| 3.5 Profit Maximization | CBA-2.D | Use marginal analysis to determine the profit-maximizing output and explain the firm’s decision. | 使用边际分析确定利润最大化产量，并解释企业决策。 | 73 |
+| 3.6 Short-Run Decisions and Long-Run Entry or Exit | PRD-2.A | Explain how firms decide whether to produce, shut down, enter, or exit in the short run and long run. | 解释企业在短期和长期如何决定生产、停产、进入或退出。 | 74 |
+| 3.7 Perfect Competition | PRD-3.A | Define perfect competition and explain how competitive markets determine firm and market outcomes. | 定义完全竞争，并解释竞争市场如何决定企业和市场结果。 | 75 |
+
+### Unit 4
+
+| CED topic | Objective ID | English teaching paraphrase | 中文教学改写 | CED PDF pages |
+|---|---|---|---|---|
+| 4.1–4.4 Imperfect Competition, Monopoly, Price Discrimination, and Monopolistic Competition | PRD-3.B | Explain market power, barriers to entry, monopoly output and pricing, price discrimination, and monopolistic competition. | 解释市场势力、进入壁垒、垄断产量与定价、价格歧视和垄断竞争。 | 83–86 |
+| 4.5 Oligopoly and Game Theory | PRD-3.C | Use payoff tables and simple games to explain strategic behavior, dominant strategies, and Nash equilibrium. | 使用收益矩阵和简单博弈解释策略行为、支配策略和纳什均衡。 | 87 |
+
+### Unit 5
+
+| CED topic | Objective ID | English teaching paraphrase | 中文教学改写 | CED PDF pages |
+|---|---|---|---|---|
+| 5.1 Introduction to Factor Markets | PRD-4.A | Explain factor prices, derived demand, and how firms decide to hire inputs. | 解释要素价格、派生需求，以及企业如何决定雇用投入。 | 95 |
+| 5.2 Changes in Factor Demand and Factor Supply | PRD-4.B | Explain how output prices, productivity, immigration, education, and other factors shift factor demand or supply. | 解释产品价格、生产率、移民、教育等因素如何使要素需求或供给移动。 | 96 |
+| 5.3 Profit-Maximizing Behavior in Perfectly Competitive Factor Markets | PRD-4.C | Use MRP and the wage or factor price to determine the profit-maximizing quantity of an input. | 使用 MRP 与工资或要素价格确定利润最大化的投入数量。 | 97–98 |
+| 5.4 Monopsonistic Markets | PRD-4.D | Explain monopsony and use marginal factor cost and MRP to determine employment and wage outcomes. | 解释买方垄断，并使用边际要素成本和 MRP 确定就业与工资结果。 | 99 |
+
+### Unit 6
+
+| CED topic | Objective ID | English teaching paraphrase | 中文教学改写 | CED PDF pages |
+|---|---|---|---|---|
+| 6.1 Socially Efficient and Inefficient Market Outcomes | POL-2.A; POL-2.B | Define social efficiency and explain how private incentives can create inefficient outcomes and deadweight loss. | 定义社会效率，并解释私人激励如何造成低效率结果和无谓损失。 | 105–106 |
+| 6.2 Externalities | POL-3.A; POL-3.B | Explain how externalities create a gap between private and social costs or benefits and how policy can address it. | 解释外部性如何造成私人和社会成本或收益的差距，以及政策如何应对。 | 107 |
+| 6.3 Public and Private Goods | POL-3.C | Classify goods by rivalry and excludability and explain free riding and overuse of common resources. | 根据竞争性和排他性分类物品，并解释搭便车和共有资源过度使用。 | 108 |
+| 6.4 Government Intervention in Different Market Structures | POL-4.A | Explain and calculate how taxes, subsidies, price controls, regulation, and antitrust policy alter market outcomes. | 解释并计算税收、补贴、价格管制、监管和反垄断政策如何改变市场结果。 | 109–110 |
+| 6.5 Inequality | POL-5.A; POL-5.B | Define measures of economic inequality and explain sources of income and wealth inequality. | 定义经济不平等的衡量方式，并解释收入和财富不平等的来源。 | 111 |
+
+## Use in the lesson plan
+
+Each of the 36 sessions carries objective IDs, English and Chinese teaching objectives, and a CED page reference. The last three sessions synthesize the course skills and graphing references across Units 1–6.

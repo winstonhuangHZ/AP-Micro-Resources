@@ -8,12 +8,12 @@
 
 | 材料 | 入口 | 数量 |
 |---|---|---:|
-| 历年 FRQ、评分标准、学生答案和 Reader Report | [AP-Microeconomics-FRQ-Archive/](AP-Microeconomics-FRQ-Archive/) · [详细索引](AP-Microeconomics-FRQ-Archive/INDEX.md) | 251 PDFs |
-| MCQ 练习资料 | [AP-Microeconomics-MCQ-Practice/](AP-Microeconomics-MCQ-Practice/) · [详细说明](AP-Microeconomics-MCQ-Practice/README.md) | 2 PDFs |
-| Unit 1–6 HW | [AP-Microeconomics-Unit-HW/](AP-Microeconomics-Unit-HW/) · [详细索引](AP-Microeconomics-Unit-HW/INDEX.md) | 84 PDFs |
-| 官方课程文件 | [AP-Microeconomics-Official-Docs/](AP-Microeconomics-Official-Docs/) | 4 PDFs |
-| 开放教材与课程资料 | [AP-Microeconomics-Open-Resources/](AP-Microeconomics-Open-Resources/) | 61 PDF/EPUB |
-| 教案与课时设计 | [AP-Microeconomics-Lesson-Plan/](AP-Microeconomics-Lesson-Plan/) | 9 files |
+| 历年 FRQ、评分标准、学生答案和 Reader Report | [APMICRO-FRQ-Archive/](APMICRO-FRQ-Archive/) · [详细索引](APMICRO-FRQ-Archive/INDEX.md) | 251 PDFs |
+| MCQ 练习资料 | [APMICRO-MCQ-Practice/](APMICRO-MCQ-Practice/) · [详细说明](APMICRO-MCQ-Practice/README.md) | 2 PDFs |
+| Unit 1–6 HW | [APMICRO-Unit-HW/](APMICRO-Unit-HW/) · [详细索引](APMICRO-Unit-HW/INDEX.md) | 84 PDFs |
+| 官方课程文件 | [APMICRO-Official-Docs/](APMICRO-Official-Docs/) | 4 PDFs |
+| 开放教材与课程资料 | [APMICRO-Open-Resources/](APMICRO-Open-Resources/) | 61 PDF/EPUB |
+| 教案与课时设计 | [APMICRO-Lesson-Plan/](APMICRO-Lesson-Plan/) · [官方目标说明](APMICRO-Lesson-Plan/OFFICIAL-LEARNING-OBJECTIVES.md) · [LaTeX README](APMICRO-Lesson-Plan/latex/README.md) | 34 files |
 | 研究来源与论坛入口 | [AP-Microeconomics-Research-Sources.md](AP-Microeconomics-Research-Sources.md) | — |
 | MCQ 镜像和在线题库线索 | [MCQ-Mirror-Notes.md](MCQ-Mirror-Notes.md) | — |
 
@@ -31,7 +31,7 @@
 
 ## FRQ 年份覆盖
 
-已收录年份：2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2021, 2022, 2023, 2024, 2025, 2026。2020 年在当前公开资料中没有配套文件；详细说明和每年文件数见 [FRQ 索引](AP-Microeconomics-FRQ-Archive/INDEX.md)。
+已收录年份：2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2021, 2022, 2023, 2024, 2025, 2026。2020 年在当前公开资料中没有配套文件；详细说明和每年文件数见 [FRQ 索引](APMICRO-FRQ-Archive/INDEX.md)。
 
 ## 索引和校验
 

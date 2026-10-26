@@ -1,0 +1,388 @@
+\documentclass[11pt,a4paper]{ctexart}
+\usepackage[a4paper,margin=2.0cm]{geometry}
+\usepackage{longtable,booktabs,tabularx,array}
+\usepackage{enumitem,xcolor,hyperref,fancyhdr,lastpage,titlesec,parskip}
+\definecolor{apblue}{HTML}{17365D}
+\definecolor{aplight}{HTML}{EAF2F8}
+\hypersetup{colorlinks=true,linkcolor=apblue,urlcolor=apblue,pdftitle={AP Microeconomics 教案框架},pdfauthor={AP-Micro-Resources}}
+\pagestyle{fancy}\setlength{\headheight}{14pt}\fancyhf{}
+\lhead{AP Microeconomics 教案框架}\rhead{APMICRO-Lesson-Plan}\cfoot{\thepage/\pageref{LastPage}}
+\titleformat{\section}{\Large\bfseries\color{apblue}}{\thesection}{0.7em}{}
+\titleformat{\subsection}{\large\bfseries\color{apblue}}{\thesubsection}{0.7em}{}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newcommand{\objectivebox}[1]{\noindent\colorbox{aplight}{\parbox{0.96\textwidth}{#1}}}
+\newcommand{\codepath}[1]{\texttt{\small #1}}
+\begin{document}
+\begin{titlepage}\centering\vspace*{2cm}
+{\Huge\bfseries AP Microeconomics 教案框架\par}\vspace{0.5cm}{\LARGE 36 课时课程框架与课时设计\par}
+\vspace{1cm}{\large 18 weeks \textperiodcentered 2 meetings per week \textperiodcentered 90 minutes per meeting\par}
+\vspace{0.5cm}{\large 中文版（保留 AP 专业术语与英文缩写）\par}\vfill
+\begin{tabular}{ll}Scope: & Units 1--6\\Core outputs: & concepts, graphs, calculations, explanations, FRQ writing\\Official map: & CED objective IDs and PDF page references\\Repository: & \codepath{APMICRO-Lesson-Plan/}\\\end{tabular}
+\vfill{\large \today\par}\end{titlepage}
+\tableofcontents\newpage
+\section{课程设计}
+本课程把 AP Microeconomics 组织为一门以模型推理为核心的课程。学生需要把定义连接到图像、计算和因果解释，再把这些能力迁移到 MCQ 与 FRQ 题型中。
+
+默认方案为 18 周、每周 2 次课、每次 90 分钟。每个课时都有可检查的学生产出，并且对应 College Board CED 中的目标 ID。
+
+\section{课程学习成果}
+完成课程后，学生应能够：
+\begin{itemize}[leftmargin=2em]
+\item 解释稀缺性、机会成本、比较优势和 PPC；
+\item 使用需求、供给、弹性、剩余、贸易、税收、补贴和价格管制解释市场结果；
+\item 计算生产、成本、收益、利润和利润最大化产量；
+\item 比较完全竞争、垄断、垄断竞争和寡头；
+\item 使用 MRP、要素价格和买方垄断模型分析要素市场；
+\item 评价外部性、公共物品、共有资源、不平等、效率和政府政策；
+\item 绘制 AP 风格图像，完成计算，并用准确标注、单位和因果逻辑写出解释。
+\end{itemize}
+\section{标准 90 分钟课堂流程}
+\begin{tabularx}{\textwidth}{p{1.5cm}YY}\toprule 时间 & 环节 & 学生产出 \\ \midrule
+0--8 & Retrieval warm-up & 3--5 道回忆题或一张无标注核心图 \\
+8--20 & 情境与目标 & 写出预测和本节要回答的问题 \\
+20--42 & 小讲授与示范 & 结构化笔记、公式或教师示范模型 \\
+42--62 & 引导练习 & 图像、计算或因果解释 \\
+62--78 & AP 风格迁移 & 4--8 道 MCQ 或一个 FRQ 小问 \\
+78--86 & 讲评与错因编码 & 概念、图像、计算、读题或表达错误 \\
+86--90 & Exit ticket & 一句结论和一个仍未解决的问题 \\ \bottomrule\end{tabularx}
+\section{图像与作答常规}
+每次画图都要写出坐标轴和单位，指出移动的曲线，标出新旧结果，并说明价格、数量、收益、成本、剩余或效率的变化。每道计算题写出关系式、带单位的代入过程和经济含义。每个 FRQ 解释都使用“因为—所以—结果”的因果链。
+\section{逐课时设计}
+\subsection{课时 1：Unit 1 -- Scarcity and resource allocation}
+\objectivebox{\textbf{官方 Learning Objective:} 定义稀缺资源，并解释经济制度如何配置资源。\\\textbf{Objective ID:} MKT-1.A; MKT-1.B\\\textbf{CED PDF 页码:} 41–42}\par\vspace{0.4em}
+\begin{tabularx}{\textwidth}{p{3.0cm}Y}
+\toprule
+课堂重点 & Scarcity and resource allocation\\
+学生产出 & Use a PPF to explain one choice\\
+课后任务 & Unit 1 HW: basic concepts\\
+\bottomrule
+\end{tabularx}
+\subsection{课时 2：Unit 1 -- Production possibilities curve}
+\objectivebox{\textbf{官方 Learning Objective:} 使用 PPC 解释机会成本、效率、资源闲置和增长。\\\textbf{Objective ID:} MKT-1.C\\\textbf{CED PDF 页码:} 43}\par\vspace{0.4em}
+\begin{tabularx}{\textwidth}{p{3.0cm}Y}
+\toprule
+课堂重点 & Production possibilities curve\\
+学生产出 & Complete a PPF and opportunity-cost explanation\\
+课后任务 & Trade-off calculation practice\\
+\bottomrule
+\end{tabularx}
+\subsection{课时 3：Unit 1 -- Comparative advantage and trade}
+\objectivebox{\textbf{官方 Learning Objective:} 确定比较优势，以及互利的专业化和贸易。\\\textbf{Objective ID:} MKT-2.A; MKT-2.B\\\textbf{CED PDF 页码:} 44}\par\vspace{0.4em}
+\begin{tabularx}{\textwidth}{p{3.0cm}Y}
+\toprule
+课堂重点 & Comparative advantage and trade\\
+学生产出 & Complete a specialization and exchange table\\
+课后任务 & Comparative-advantage calculations\\
+\bottomrule
+\end{tabularx}
+\subsection{课时 4：Unit 1 -- Cost-benefit and marginal consumer choice}
+\objectivebox{\textbf{官方 Learning Objective:} 计算成本和收益，并使用边际分析确定最优选择。\\\textbf{Objective ID:} CBA-1.A; CBA-1.B; CBA-2.A; CBA-2.B\\\textbf{CED PDF 页码:} 45–47}\par\vspace{0.4em}
+\begin{tabularx}{\textwidth}{p{3.0cm}Y}
+\toprule
+课堂重点 & Cost-benefit and marginal consumer choice\\
+学生产出 & Use MB and MC to justify a decision\\
+课后任务 & MCQ rationale log\\
+\bottomrule
+\end{tabularx}
+\subsection{课时 5：Unit 2 -- Demand and supply}
+\objectivebox{\textbf{官方 Learning Objective:} 解释需求和供给，并预测激励和技术如何改变行为。\\\textbf{Objective ID:} MKT-3.A; MKT-3.C; MKT-3.D\\\textbf{CED PDF 页码:} 53; 55}\par\vspace{0.4em}
+\begin{tabularx}{\textwidth}{p{3.0cm}Y}
+\toprule
+课堂重点 & Demand and supply\\
+学生产出 & Draw the initial market equilibrium\\
+课后任务 & Unit 2 HW: equilibrium\\
+\bottomrule
+\end{tabularx}
+\subsection{课时 6：Unit 2 -- Price elasticity of demand and supply}
+\objectivebox{\textbf{官方 Learning Objective:} 计算并解释弹性，预测弹性对总收益的影响。\\\textbf{Objective ID:} MKT-3.E\\\textbf{CED PDF 页码:} 56–58}\par\vspace{0.4em}
+\begin{tabularx}{\textwidth}{p{3.0cm}Y}
+\toprule
+课堂重点 & Price elasticity of demand and supply\\
+学生产出 & Calculate elasticity and classify the result\\
+课后任务 & Elasticity practice\\
+\bottomrule
+\end{tabularx}
+\newpage
+\subsection{课时 7：Unit 2 -- Other elasticities and total revenue}
+\objectivebox{\textbf{官方 Learning Objective:} 使用收入弹性和交叉价格弹性解释物品与消费者之间的关系。\\\textbf{Objective ID:} MKT-3.E\\\textbf{CED PDF 页码:} 59}\par\vspace{0.4em}
+\begin{tabularx}{\textwidth}{p{3.0cm}Y}
+\toprule
+课堂重点 & Other elasticities and total revenue\\
+学生产出 & Use elasticity to predict total-revenue changes\\
+课后任务 & MCQ plus calculation\\
+\bottomrule
+\end{tabularx}
+\subsection{课时 8：Unit 2 -- Market equilibrium and surplus}
+\objectivebox{\textbf{官方 Learning Objective:} 识别均衡，并计算消费者、生产者和总剩余。\\\textbf{Objective ID:} MKT-4.A\\\textbf{CED PDF 页码:} 60}\par\vspace{0.4em}
+\begin{tabularx}{\textwidth}{p{3.0cm}Y}
+\toprule
+课堂重点 & Market equilibrium and surplus\\
+学生产出 & Calculate consumer, producer, and total surplus\\
+课后任务 & Surplus practice\\
+\bottomrule
+\end{tabularx}
+\subsection{课时 9：Unit 2 -- Market disequilibrium and equilibrium changes}
+\objectivebox{\textbf{官方 Learning Objective:} 解释需求或供给变化后的短缺、过剩和新均衡。\\\textbf{Objective ID:} MKT-4.B\\\textbf{CED PDF 页码:} 61}\par\vspace{0.4em}
+\begin{tabularx}{\textwidth}{p{3.0cm}Y}
+\toprule
+课堂重点 & Market disequilibrium and equilibrium changes\\
+学生产出 & Classify shortage, surplus, and the new equilibrium\\
+课后任务 & Shift-and-equilibrium diagrams\\
+\bottomrule
+\end{tabularx}
+\subsection{课时 10：Unit 2 -- Government intervention}
+\objectivebox{\textbf{官方 Learning Objective:} 画图并计算价格管制、税收和补贴的影响。\\\textbf{Objective ID:} POL-1.A\\\textbf{CED PDF 页码:} 62}\par\vspace{0.4em}
+\begin{tabularx}{\textwidth}{p{3.0cm}Y}
+\toprule
+课堂重点 & Government intervention\\
+学生产出 & Graph a price control, tax, or subsidy\\
+课后任务 & FRQ subpart\\
+\bottomrule
+\end{tabularx}
+\subsection{课时 11：Unit 2 -- International trade and public policy}
+\objectivebox{\textbf{官方 Learning Objective:} 解释贸易政策如何改变国内结果，并评价 Unit 2 综合情境。\\\textbf{Objective ID:} POL-1.B\\\textbf{CED PDF 页码:} 63}\par\vspace{0.4em}
+\begin{tabularx}{\textwidth}{p{3.0cm}Y}
+\toprule
+课堂重点 & International trade and public policy\\
+学生产出 & Complete a timed mixed Unit 2 FRQ\\
+课后任务 & Error review\\
+\bottomrule
+\end{tabularx}
+\subsection{课时 12：Unit 3 -- The production function}
+\objectivebox{\textbf{官方 Learning Objective:} 计算并解释总产量、平均产量和边际产量。\\\textbf{Objective ID:} PRD-1.A\\\textbf{CED PDF 页码:} 69}\par\vspace{0.4em}
+\begin{tabularx}{\textwidth}{p{3.0cm}Y}
+\toprule
+课堂重点 & The production function\\
+学生产出 & Complete a production table and identify MP\\
+课后任务 & Unit 3 HW: production\\
+\bottomrule
+\end{tabularx}
+\newpage
+\subsection{课时 13：Unit 3 -- Short-run production costs}
+\objectivebox{\textbf{官方 Learning Objective:} 计算短期固定、可变、总、平均和边际成本。\\\textbf{Objective ID:} PRD-1.A\\\textbf{CED PDF 页码:} 70}\par\vspace{0.4em}
+\begin{tabularx}{\textwidth}{p{3.0cm}Y}
+\toprule
+课堂重点 & Short-run production costs\\
+学生产出 & Calculate and graph the cost curves\\
+课后任务 & Cost-table calculations\\
+\bottomrule
+\end{tabularx}
+\subsection{课时 14：Unit 3 -- Long-run costs and types of profit}
+\objectivebox{\textbf{官方 Learning Objective:} 解释长期成本，并区分会计利润与经济利润。\\\textbf{Objective ID:} PRD-1.A; CBA-2.C\\\textbf{CED PDF 页码:} 71–72}\par\vspace{0.4em}
+\begin{tabularx}{\textwidth}{p{3.0cm}Y}
+\toprule
+课堂重点 & Long-run costs and types of profit\\
+学生产出 & Interpret long-run costs and profit types\\
+课后任务 & Profit comparison practice\\
+\bottomrule
+\end{tabularx}
+\subsection{课时 15：Unit 3 -- Profit maximization}
+\objectivebox{\textbf{官方 Learning Objective:} 使用边际分析确定企业利润最大化产量。\\\textbf{Objective ID:} CBA-2.D\\\textbf{CED PDF 页码:} 73}\par\vspace{0.4em}
+\begin{tabularx}{\textwidth}{p{3.0cm}Y}
+\toprule
+课堂重点 & Profit maximization\\
+学生产出 & Use P = MR and MC to choose output\\
+课后任务 & Profit-maximization questions\\
+\bottomrule
+\end{tabularx}
+\subsection{课时 16：Unit 3 -- Produce, shut down, enter, or exit}
+\objectivebox{\textbf{官方 Learning Objective:} 解释短期生产以及长期进入或退出决策。\\\textbf{Objective ID:} PRD-2.A\\\textbf{CED PDF 页码:} 74}\par\vspace{0.4em}
+\begin{tabularx}{\textwidth}{p{3.0cm}Y}
+\toprule
+课堂重点 & Produce, shut down, enter, or exit\\
+学生产出 & Apply shutdown and entry/exit conditions\\
+课后任务 & Decision classification\\
+\bottomrule
+\end{tabularx}
+\subsection{课时 17：Unit 3 -- Perfect competition and review}
+\objectivebox{\textbf{官方 Learning Objective:} 解释完全竞争如何决定市场和企业结果。\\\textbf{Objective ID:} PRD-3.A\\\textbf{CED PDF 页码:} 75}\par\vspace{0.4em}
+\begin{tabularx}{\textwidth}{p{3.0cm}Y}
+\toprule
+课堂重点 & Perfect competition and review\\
+学生产出 & Complete a cost/profit synthesis graph\\
+课后任务 & Unit 3 quiz and error review\\
+\bottomrule
+\end{tabularx}
+\subsection{课时 18：Unit 4 -- Introduction to imperfect competition}
+\objectivebox{\textbf{官方 Learning Objective:} 识别市场势力和进入壁垒的来源。\\\textbf{Objective ID:} PRD-3.B\\\textbf{CED PDF 页码:} 83}\par\vspace{0.4em}
+\begin{tabularx}{\textwidth}{p{3.0cm}Y}
+\toprule
+课堂重点 & Introduction to imperfect competition\\
+学生产出 & Identify barriers to entry and market power\\
+课后任务 & Unit 4 HW: market structures\\
+\bottomrule
+\end{tabularx}
+\newpage
+\subsection{课时 19：Unit 4 -- Monopoly}
+\objectivebox{\textbf{官方 Learning Objective:} 使用图像确定垄断产量、价格、利润和效率。\\\textbf{Objective ID:} PRD-3.B\\\textbf{CED PDF 页码:} 84}\par\vspace{0.4em}
+\begin{tabularx}{\textwidth}{p{3.0cm}Y}
+\toprule
+课堂重点 & Monopoly\\
+学生产出 & Graph monopoly output, price, and profit\\
+课后任务 & Monopoly graph practice\\
+\bottomrule
+\end{tabularx}
+\subsection{课时 20：Unit 4 -- Price discrimination}
+\objectivebox{\textbf{官方 Learning Objective:} 解释价格歧视如何改变价格、产量和剩余。\\\textbf{Objective ID:} PRD-3.B\\\textbf{CED PDF 页码:} 85}\par\vspace{0.4em}
+\begin{tabularx}{\textwidth}{p{3.0cm}Y}
+\toprule
+课堂重点 & Price discrimination\\
+学生产出 & Explain how price discrimination changes surplus\\
+课后任务 & Case analysis and MCQ\\
+\bottomrule
+\end{tabularx}
+\subsection{课时 21：Unit 4 -- Monopolistic competition}
+\objectivebox{\textbf{官方 Learning Objective:} 解释产品差异化以及垄断竞争的短期和长期结果。\\\textbf{Objective ID:} PRD-3.B\\\textbf{CED PDF 页码:} 86}\par\vspace{0.4em}
+\begin{tabularx}{\textwidth}{p{3.0cm}Y}
+\toprule
+课堂重点 & Monopolistic competition\\
+学生产出 & Compare short-run and long-run outcomes\\
+课后任务 & FRQ subpart\\
+\bottomrule
+\end{tabularx}
+\subsection{课时 22：Unit 4 -- Oligopoly and game theory}
+\objectivebox{\textbf{官方 Learning Objective:} 使用收益矩阵分析策略行为和均衡。\\\textbf{Objective ID:} PRD-3.C\\\textbf{CED PDF 页码:} 87}\par\vspace{0.4em}
+\begin{tabularx}{\textwidth}{p{3.0cm}Y}
+\toprule
+课堂重点 & Oligopoly and game theory\\
+学生产出 & Complete a payoff table and equilibrium explanation\\
+课后任务 & Unit 4 quiz\\
+\bottomrule
+\end{tabularx}
+\subsection{课时 23：Unit 4 -- Market structure review}
+\objectivebox{\textbf{官方 Learning Objective:} 从市场势力、行为和效率比较不完全竞争市场结构。\\\textbf{Objective ID:} PRD-3.B; PRD-3.C\\\textbf{CED PDF 页码:} 83–87}\par\vspace{0.4em}
+\begin{tabularx}{\textwidth}{p{3.0cm}Y}
+\toprule
+课堂重点 & Market structure review\\
+学生产出 & Compare imperfect market structures\\
+课后任务 & Mixed market-structure review\\
+\bottomrule
+\end{tabularx}
+\subsection{课时 24：Unit 5 -- Introduction to factor markets}
+\objectivebox{\textbf{官方 Learning Objective:} 解释要素价格、派生需求和雇用决策。\\\textbf{Objective ID:} PRD-4.A\\\textbf{CED PDF 页码:} 95}\par\vspace{0.4em}
+\begin{tabularx}{\textwidth}{p{3.0cm}Y}
+\toprule
+课堂重点 & Introduction to factor markets\\
+学生产出 & Derive MRP from the product market\\
+课后任务 & Unit 5 HW\\
+\bottomrule
+\end{tabularx}
+\newpage
+\subsection{课时 25：Unit 5 -- Changes in factor demand and factor supply}
+\objectivebox{\textbf{官方 Learning Objective:} 预测生产率、产品价格和劳动供给决定因素如何改变要素市场。\\\textbf{Objective ID:} PRD-4.B\\\textbf{CED PDF 页码:} 96}\par\vspace{0.4em}
+\begin{tabularx}{\textwidth}{p{3.0cm}Y}
+\toprule
+课堂重点 & Changes in factor demand and factor supply\\
+学生产出 & Graph a factor-market shift\\
+课后任务 & Wage and employment calculations\\
+\bottomrule
+\end{tabularx}
+\subsection{课时 26：Unit 5 -- Competitive factor markets}
+\objectivebox{\textbf{官方 Learning Objective:} 使用 MRP 和要素价格确定利润最大化的投入使用量。\\\textbf{Objective ID:} PRD-4.C\\\textbf{CED PDF 页码:} 97–98}\par\vspace{0.4em}
+\begin{tabularx}{\textwidth}{p{3.0cm}Y}
+\toprule
+课堂重点 & Competitive factor markets\\
+学生产出 & Use MRP and factor price to choose input use\\
+课后任务 & Factor-market FRQ\\
+\bottomrule
+\end{tabularx}
+\subsection{课时 27：Unit 5 -- Monopsony and review}
+\objectivebox{\textbf{官方 Learning Objective:} 解释买方垄断的就业和工资结果，并与竞争市场比较。\\\textbf{Objective ID:} PRD-4.D\\\textbf{CED PDF 页码:} 99}\par\vspace{0.4em}
+\begin{tabularx}{\textwidth}{p{3.0cm}Y}
+\toprule
+课堂重点 & Monopsony and review\\
+学生产出 & Compare monopsony and competitive outcomes\\
+课后任务 & Unit 5 synthesis\\
+\bottomrule
+\end{tabularx}
+\subsection{课时 28：Unit 6 -- Socially efficient and inefficient market outcomes}
+\objectivebox{\textbf{官方 Learning Objective:} 识别有效率数量，并解释私人激励如何造成低效率和 DWL。\\\textbf{Objective ID:} POL-2.A; POL-2.B\\\textbf{CED PDF 页码:} 105–106}\par\vspace{0.4em}
+\begin{tabularx}{\textwidth}{p{3.0cm}Y}
+\toprule
+课堂重点 & Socially efficient and inefficient market outcomes\\
+学生产出 & Identify the efficient quantity and DWL\\
+课后任务 & Unit 6 HW\\
+\bottomrule
+\end{tabularx}
+\subsection{课时 29：Unit 6 -- Externalities}
+\objectivebox{\textbf{官方 Learning Objective:} 画出私人和社会成本或收益，并评价矫正政策。\\\textbf{Objective ID:} POL-3.A; POL-3.B\\\textbf{CED PDF 页码:} 107}\par\vspace{0.4em}
+\begin{tabularx}{\textwidth}{p{3.0cm}Y}
+\toprule
+课堂重点 & Externalities\\
+学生产出 & Graph private and social costs or benefits\\
+课后任务 & Policy comparison\\
+\bottomrule
+\end{tabularx}
+\subsection{课时 30：Unit 6 -- Public and private goods}
+\objectivebox{\textbf{官方 Learning Objective:} 分类物品，并解释搭便车和共有资源过度使用。\\\textbf{Objective ID:} POL-3.C\\\textbf{CED PDF 页码:} 108}\par\vspace{0.4em}
+\begin{tabularx}{\textwidth}{p{3.0cm}Y}
+\toprule
+课堂重点 & Public and private goods\\
+学生产出 & Classify goods and explain free riding\\
+课后任务 & Classification practice\\
+\bottomrule
+\end{tabularx}
+\newpage
+\subsection{课时 31：Unit 6 -- Government intervention in different market structures}
+\objectivebox{\textbf{官方 Learning Objective:} 计算并评价政策在竞争和不完全竞争市场中的影响。\\\textbf{Objective ID:} POL-4.A\\\textbf{CED PDF 页码:} 109–110}\par\vspace{0.4em}
+\begin{tabularx}{\textwidth}{p{3.0cm}Y}
+\toprule
+课堂重点 & Government intervention in different market structures\\
+学生产出 & Evaluate a policy in a market-structure case\\
+课后任务 & MCQ practice\\
+\bottomrule
+\end{tabularx}
+\subsection{课时 32：Unit 6 -- Inequality}
+\objectivebox{\textbf{官方 Learning Objective:} 定义不平等衡量方式，并解释收入和财富不平等的来源。\\\textbf{Objective ID:} POL-5.A; POL-5.B\\\textbf{CED PDF 页码:} 111}\par\vspace{0.4em}
+\begin{tabularx}{\textwidth}{p{3.0cm}Y}
+\toprule
+课堂重点 & Inequality\\
+学生产出 & Explain an inequality measure and its causes\\
+课后任务 & FRQ subpart\\
+\bottomrule
+\end{tabularx}
+\subsection{课时 33：Unit 6 -- Market failure FRQ synthesis}
+\objectivebox{\textbf{官方 Learning Objective:} 在市场失灵 FRQ 中综合使用图像、计算和政策解释。\\\textbf{Objective ID:} POL-2.A; POL-2.B; POL-3.A; POL-3.B; POL-3.C; POL-4.A; POL-5.A; POL-5.B\\\textbf{CED PDF 页码:} 105–111}\par\vspace{0.4em}
+\begin{tabularx}{\textwidth}{p{3.0cm}Y}
+\toprule
+课堂重点 & Market failure FRQ synthesis\\
+学生产出 & Complete a timed market-failure FRQ\\
+课后任务 & Unit 6 quiz and error review\\
+\bottomrule
+\end{tabularx}
+\subsection{课时 34：Review -- Core graphs}
+\objectivebox{\textbf{官方 Learning Objective:} 绘制并解释 AP Microeconomics 核心图像，完成全部标注。\\\textbf{Objective ID:} MKT-1.C; MKT-4.A; PRD-1.A; PRD-2.A; PRD-3.A; PRD-3.B; PRD-4.C; PRD-4.D; POL-3.A; POL-4.A\\\textbf{CED PDF 页码:} CED pp. 166–173}\par\vspace{0.4em}
+\begin{tabularx}{\textwidth}{p{3.0cm}Y}
+\toprule
+课堂重点 & Core graphs\\
+学生产出 & Draw and interpret six core AP Micro graphs\\
+课后任务 & Graph error table\\
+\bottomrule
+\end{tabularx}
+\subsection{课时 35：Review -- Timed MCQ and error analysis}
+\objectivebox{\textbf{官方 Learning Objective:} 在限时条件下使用课程概念、计算、图像和解释技能。\\\textbf{Objective ID:} All course skills\\\textbf{CED PDF 页码:} CED pp. 15–19}\par\vspace{0.4em}
+\begin{tabularx}{\textwidth}{p{3.0cm}Y}
+\toprule
+课堂重点 & Timed MCQ and error analysis\\
+学生产出 & Complete and classify a timed MCQ set\\
+课后任务 & Targeted follow-up practice\\
+\bottomrule
+\end{tabularx}
+\subsection{课时 36：Review -- Timed FRQ and exam readiness}
+\objectivebox{\textbf{官方 Learning Objective:} 完成包含准确图像、计算和因果解释的整套 FRQ。\\\textbf{Objective ID:} All course skills\\\textbf{CED PDF 页码:} CED pp. 15–19; 166–173}\par\vspace{0.4em}
+\begin{tabularx}{\textwidth}{p{3.0cm}Y}
+\toprule
+课堂重点 & Timed FRQ and exam readiness\\
+学生产出 & Complete a full or half FRQ set\\
+课后任务 & Exam-readiness plan\\
+\bottomrule
+\end{tabularx}
+\section{Materials and assessment loop}
+Use the official CED and course documents to set the content boundary, the local FRQ archive for scored writing practice, the local Unit HW collection for repetition, and the open resources for supplementary explanations and problem sets. Restricted College Board MCQ stays in AP Classroom or Bluebook and is accessed through the official route.
+
+The recurring assessment loop is retrieval, graph or calculation practice, one AP-style transfer item, error coding, and a delayed reattempt. The error log distinguishes concept, graph, calculation, reading, and expression errors.
+
+\section{Source and synchronization note}
+The objective IDs and CED pages come from \codepath{official-learning-objectives.csv} and \codepath{session-learning-objectives.csv}. The Markdown schedule is generated from the same session table. The source CED is stored at \codepath{APMICRO-MCQ-Practice/college-board-ap-microeconomics-course-and-exam-description.pdf}.
+
+\end{document}

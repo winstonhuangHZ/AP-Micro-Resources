@@ -14,7 +14,7 @@ def sha(path):
 
 
 # MCQ local manifest and external-resource catalog.
-mcq = root / 'AP-Microeconomics-MCQ-Practice'
+mcq = root / 'APMICRO-MCQ-Practice'
 mcq_files = [p for p in sorted(mcq.iterdir()) if p.is_file() and p.suffix.lower() == '.pdf']
 with (mcq / 'manifest.csv').open('w', newline='') as f:
     fields = ['name', 'kind', 'local_path', 'source_url', 'bytes', 'sha256']
@@ -70,7 +70,7 @@ with (mcq / 'resources.csv').open('w', newline='') as f:
 ''')
 
 # Detailed Unit HW index from its manifest.
-hw = root / 'AP-Microeconomics-Unit-HW'
+hw = root / 'APMICRO-Unit-HW'
 rows = list(csv.DictReader((hw / 'manifest.csv').open()))
 by = defaultdict(list)
 for row in rows:
@@ -79,14 +79,14 @@ lines = ['# AP Microeconomics Unit 1–6 HW Index', '', 'This index is generated
 for unit in [f'Unit {i}' for i in range(1, 7)] + ['Custom']:
     lines += [f'## {unit}', '', '| Kind | Organized file | Original source |', '|---|---|---|']
     for row in sorted(by.get(unit, []), key=lambda x: (x['kind'], x['destination'])):
-        dest = Path(row['destination'].replace('AP-Microeconomics-Unit-HW/', ''))
+        dest = Path(row['destination'].replace('APMICRO-Unit-HW/', ''))
         link = dest.as_posix().replace(' ', '%20')
         lines.append(f"| {row['kind']} | [{link}]({link}) | `{row['source']}` |")
     lines.append('')
 (hw / 'INDEX.md').write_text('\n'.join(lines))
 
 # FRQ year index.
-frq = root / 'AP-Microeconomics-FRQ-Archive'
+frq = root / 'APMICRO-FRQ-Archive'
 frq_rows = list(csv.DictReader((frq / 'manifest.csv').open()))
 byyear = defaultdict(list)
 for row in frq_rows:
@@ -102,7 +102,7 @@ lines += ['', 'See [README.md](README.md) for coverage notes and source policy.'
 
 # Official document and open resource manifests are maintained separately from
 # the generated indexes so that source/licence notes are not overwritten.
-official = root / 'AP-Microeconomics-Official-Docs'
+official = root / 'APMICRO-Official-Docs'
 official_files = sorted([p for p in official.iterdir() if p.is_file() and p.suffix.lower() == '.pdf']) if official.exists() else []
 if official.exists():
     with (official / 'manifest.csv').open('w', newline='') as f:
@@ -118,7 +118,7 @@ if official.exists():
         for path in official_files:
             writer.writerow({'name': path.name, 'kind': 'College Board official course support', 'local_path': str(path.relative_to(root)), 'source_url': official_urls.get(path.name, ''), 'bytes': path.stat().st_size, 'sha256': sha(path), 'use_notes': 'Official source; follow College Board terms for redistribution.'})
 
-open_root = root / 'AP-Microeconomics-Open-Resources'
+open_root = root / 'APMICRO-Open-Resources'
 open_files = sorted([p for p in open_root.rglob('*') if p.is_file() and p.suffix.lower() in {'.pdf', '.epub'}]) if open_root.exists() else []
 if open_root.exists():
     with (open_root / 'manifest.csv').open('w', newline='') as f:
@@ -145,7 +145,7 @@ if open_root.exists():
 frq_pdf = list(frq.rglob('*.pdf'))
 hw_pdf = list(hw.rglob('*.pdf'))
 mcq_pdf = list(mcq.rglob('*.pdf'))
-lesson_files = [p for p in (root / 'AP-Microeconomics-Lesson-Plan').rglob('*') if p.is_file() and 'latex/build' not in p.as_posix()] if (root / 'AP-Microeconomics-Lesson-Plan').exists() else []
+lesson_files = [p for p in (root / 'APMICRO-Lesson-Plan').rglob('*') if p.is_file() and 'latex/build' not in p.as_posix()] if (root / 'APMICRO-Lesson-Plan').exists() else []
 unit_counts = Counter(row['unit'] for row in rows)
 frq_counts = Counter(row['year'] for row in frq_rows)
 (root / 'INDEX.md').write_text(f'''# AP Microeconomics Resources
@@ -158,12 +158,12 @@ frq_counts = Counter(row['year'] for row in frq_rows)
 
 | 材料 | 入口 | 数量 |
 |---|---|---:|
-| 历年 FRQ、评分标准、学生答案和 Reader Report | [AP-Microeconomics-FRQ-Archive/](AP-Microeconomics-FRQ-Archive/) · [详细索引](AP-Microeconomics-FRQ-Archive/INDEX.md) | {len(frq_pdf)} PDFs |
-| MCQ 练习资料 | [AP-Microeconomics-MCQ-Practice/](AP-Microeconomics-MCQ-Practice/) · [详细说明](AP-Microeconomics-MCQ-Practice/README.md) | {len(mcq_pdf)} PDFs |
-| Unit 1–6 HW | [AP-Microeconomics-Unit-HW/](AP-Microeconomics-Unit-HW/) · [详细索引](AP-Microeconomics-Unit-HW/INDEX.md) | {len(hw_pdf)} PDFs |
-| 官方课程文件 | [AP-Microeconomics-Official-Docs/](AP-Microeconomics-Official-Docs/) | {len(official_files)} PDFs |
-| 开放教材与课程资料 | [AP-Microeconomics-Open-Resources/](AP-Microeconomics-Open-Resources/) | {len(open_files)} PDF/EPUB |
-| 教案与课时设计 | [AP-Microeconomics-Lesson-Plan/](AP-Microeconomics-Lesson-Plan/) | {len(lesson_files)} files |
+| 历年 FRQ、评分标准、学生答案和 Reader Report | [APMICRO-FRQ-Archive/](APMICRO-FRQ-Archive/) · [详细索引](APMICRO-FRQ-Archive/INDEX.md) | {len(frq_pdf)} PDFs |
+| MCQ 练习资料 | [APMICRO-MCQ-Practice/](APMICRO-MCQ-Practice/) · [详细说明](APMICRO-MCQ-Practice/README.md) | {len(mcq_pdf)} PDFs |
+| Unit 1–6 HW | [APMICRO-Unit-HW/](APMICRO-Unit-HW/) · [详细索引](APMICRO-Unit-HW/INDEX.md) | {len(hw_pdf)} PDFs |
+| 官方课程文件 | [APMICRO-Official-Docs/](APMICRO-Official-Docs/) | {len(official_files)} PDFs |
+| 开放教材与课程资料 | [APMICRO-Open-Resources/](APMICRO-Open-Resources/) | {len(open_files)} PDF/EPUB |
+| 教案与课时设计 | [APMICRO-Lesson-Plan/](APMICRO-Lesson-Plan/) · [官方目标说明](APMICRO-Lesson-Plan/OFFICIAL-LEARNING-OBJECTIVES.md) · [LaTeX README](APMICRO-Lesson-Plan/latex/README.md) | {len(lesson_files)} files |
 | 研究来源与论坛入口 | [AP-Microeconomics-Research-Sources.md](AP-Microeconomics-Research-Sources.md) | — |
 | MCQ 镜像和在线题库线索 | [MCQ-Mirror-Notes.md](MCQ-Mirror-Notes.md) | — |
 
@@ -175,7 +175,7 @@ frq_counts = Counter(row['year'] for row in frq_rows)
 
 ## FRQ 年份覆盖
 
-已收录年份：{', '.join(sorted(frq_counts))}。2020 年在当前公开资料中没有配套文件；详细说明和每年文件数见 [FRQ 索引](AP-Microeconomics-FRQ-Archive/INDEX.md)。
+已收录年份：{', '.join(sorted(frq_counts))}。2020 年在当前公开资料中没有配套文件；详细说明和每年文件数见 [FRQ 索引](APMICRO-FRQ-Archive/INDEX.md)。
 
 ## 索引和校验
 

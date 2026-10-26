@@ -17,10 +17,10 @@
 
 | 来源 | 用途 | 本地资料 |
 |---|---|---|
-| [OpenStax Principles of Microeconomics 3e](https://openstax.org/details/books/principles-microeconomics-3e) | 供需、弹性、成本、市场结构、外部性等基础阅读 | `AP-Microeconomics-Open-Resources/OpenStax/` |
-| [OpenStax AP Courses 2e](https://openstax.org/details/books/principles-microeconomics-ap-courses-2e) | AP 对齐的旧版开放教材 | `AP-Microeconomics-Open-Resources/OpenStax/` |
-| [CORE Econ The Economy](https://www.core-econ.org/project/core-the-economy/) | 现实案例、制度、市场和政策的延伸阅读 | `AP-Microeconomics-Open-Resources/CORE-Econ/` |
-| [MIT OCW 14.01 Fall 2023](https://ocw.mit.edu/courses/14-01-principles-of-microeconomics-fall-2023/) | 讲义、Problem Sets、答案和考试，适合拔高 | `AP-Microeconomics-Open-Resources/MIT-OCW-14.01-Fall-2023/` |
+| [OpenStax Principles of Microeconomics 3e](https://openstax.org/details/books/principles-microeconomics-3e) | 供需、弹性、成本、市场结构、外部性等基础阅读 | `APMICRO-Open-Resources/OpenStax/` |
+| [OpenStax AP Courses 2e](https://openstax.org/details/books/principles-microeconomics-ap-courses-2e) | AP 对齐的旧版开放教材 | `APMICRO-Open-Resources/OpenStax/` |
+| [CORE Econ The Economy](https://www.core-econ.org/project/core-the-economy/) | 现实案例、制度、市场和政策的延伸阅读 | `APMICRO-Open-Resources/CORE-Econ/` |
+| [MIT OCW 14.01 Fall 2023](https://ocw.mit.edu/courses/14-01-principles-of-microeconomics-fall-2023/) | 讲义、Problem Sets、答案和考试，适合拔高 | `APMICRO-Open-Resources/MIT-OCW-14.01-Fall-2023/` |
 
 ## 三、论坛和学生经验入口
 
