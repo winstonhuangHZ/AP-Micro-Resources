@@ -14,7 +14,7 @@ A structured repository for AP Microeconomics study, teaching, practice, and cou
 - Use [open textbooks and university materials](APMICRO-Open-Resources/) for additional explanations, problem sets, and solutions.
 - Use the [teaching materials area](APMICRO-Teaching/) for lesson plans, handouts, slide decks, and the 36-session visual plan.
 - Use the [lesson plan package](APMICRO-Teaching/Lesson-Plans/) for the 36-session course design, official CED objective map, and bilingual printable PDFs.
-- Use the [visual plan](APMICRO-Teaching/Visual-Plan/) to design two or three charts, diagrams, or contextual images for every session before asset production.
+- Use the [visual plan](APMICRO-Teaching/Visual-Plan/) to design two to five charts, diagrams, or contextual images for every session before asset production.
 
 ## Repository contents
 

@@ -53,7 +53,7 @@ LaTeX 版本默认按 18 周、每周 2 次课、每次 90 分钟设计，包含
 - [官方目标说明](APMICRO-Teaching/Lesson-Plans/OFFICIAL-LEARNING-OBJECTIVES.md)
 - [LaTeX 备忘录](APMICRO-Teaching/Lesson-Plans/LATEX-MEMO.md)
 
-配图设计入口：[36 课时配图计划](APMICRO-Teaching/Visual-Plan/visual-plan-36-sessions.md)。每节课按 2–3 项弹性设计：通常保留一张核心数据图和一张概念图，第三项历史或现实场景图作为可选延伸；后续再按来源、许可证和数据快照逐项制作。
+配图设计入口：[36 课时配图计划](APMICRO-Teaching/Visual-Plan/visual-plan-36-sessions.md)。每节课按 2–5 项弹性设计：至少保留一张核心数据图和一张概念图，需要时再加入更多图表、流程图、历史图片或现实案例；后续再按来源、许可证和数据快照逐项制作。
 
 ## 索引和更新
 

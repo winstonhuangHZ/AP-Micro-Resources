@@ -1,6 +1,6 @@
 # AP Microeconomics 36-Session Visual Plan
 
-This is the visual design index for the 36-session course. Each session has a core pair of visuals and an optional third visual when a historical or real-world context adds teaching value. The target is two to three visuals per session, with the final count decided during handout and slide production. The plan is intentionally source-aware so later downloads and Python-generated charts can be tracked without mixing them into the lesson-plan source files.
+This is the visual design index for the 36-session course. Each session should have two to five visuals, with two as the minimum and additional charts, diagrams, or context images added when they improve the lesson. The current draft provides a core pair plus an optional third visual; later production can expand a session to four or five when useful. The final count is decided during handout and slide production. The plan is intentionally source-aware so later downloads and Python-generated charts can be tracked without mixing them into the lesson-plan source files.
 
 ## Production rules
 
