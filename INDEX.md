@@ -11,7 +11,7 @@
 | Unit 1–6 HW | [AP-Microeconomics-Unit-HW/](AP-Microeconomics-Unit-HW/) · [详细索引](AP-Microeconomics-Unit-HW/INDEX.md) | 84 PDFs |
 | 官方课程文件 | [AP-Microeconomics-Official-Docs/](AP-Microeconomics-Official-Docs/) | 4 PDFs |
 | 开放教材与课程资料 | [AP-Microeconomics-Open-Resources/](AP-Microeconomics-Open-Resources/) | 61 PDF/EPUB |
-| 教案与课时设计 | [AP-Microeconomics-Lesson-Plan/](AP-Microeconomics-Lesson-Plan/) | 8 files |
+| 教案与课时设计 | [AP-Microeconomics-Lesson-Plan/](AP-Microeconomics-Lesson-Plan/) | 9 files |
 | 研究来源与论坛入口 | [AP-Microeconomics-Research-Sources.md](AP-Microeconomics-Research-Sources.md) | — |
 | MCQ 镜像和在线题库线索 | [MCQ-Mirror-Notes.md](MCQ-Mirror-Notes.md) | — |
 
