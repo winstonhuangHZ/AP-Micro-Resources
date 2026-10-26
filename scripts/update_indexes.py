@@ -145,7 +145,7 @@ if open_root.exists():
 frq_pdf = list(frq.rglob('*.pdf'))
 hw_pdf = list(hw.rglob('*.pdf'))
 mcq_pdf = list(mcq.rglob('*.pdf'))
-lesson_files = list((root / 'AP-Microeconomics-Lesson-Plan').rglob('*')) if (root / 'AP-Microeconomics-Lesson-Plan').exists() else []
+lesson_files = [p for p in (root / 'AP-Microeconomics-Lesson-Plan').rglob('*') if p.is_file() and 'latex/build' not in p.as_posix()] if (root / 'AP-Microeconomics-Lesson-Plan').exists() else []
 unit_counts = Counter(row['unit'] for row in rows)
 frq_counts = Counter(row['year'] for row in frq_rows)
 (root / 'INDEX.md').write_text(f'''# AP Microeconomics Resources

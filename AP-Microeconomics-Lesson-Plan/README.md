@@ -8,6 +8,8 @@
 - [`course-schedule-36-sessions.md`](course-schedule-36-sessions.md)：36 课时逐节安排，包含目标、活动、练习和课后任务。
 - [`unit-lesson-template.md`](unit-lesson-template.md)：单节课模板、板书模板、图像训练模板和 FRQ/MCQ 插入方式。
 - [`materials-map.csv`](materials-map.csv)：把每个 Unit 映射到本仓库的 HW、FRQ、MCQ 和开放资料。
+- [`LATEX-MEMO.md`](LATEX-MEMO.md)：LaTeX 源文件、PDF、编译命令和同步规则。
+- [`latex/AP-Microeconomics-Lesson-Plan.pdf`](latex/AP-Microeconomics-Lesson-Plan.pdf)：已编译的 8 页打印版教案。
 
 ## 使用方式
 

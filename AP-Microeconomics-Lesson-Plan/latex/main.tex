@@ -1,0 +1,313 @@
+\documentclass[11pt,a4paper]{ctexart}
+
+\usepackage[a4paper,margin=2.1cm]{geometry}
+\usepackage{longtable,booktabs,tabularx,array}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{titlesec}
+\usepackage{parskip}
+
+\definecolor{apblue}{HTML}{17365D}
+\definecolor{aplight}{HTML}{EAF2F8}
+\definecolor{apgray}{HTML}{555555}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=apblue,
+  urlcolor=apblue,
+  pdftitle={AP Microeconomics 教案框架与课时设计},
+  pdfauthor={AP-Micro-Resources}
+}
+
+\pagestyle{fancy}
+\setlength{\headheight}{14pt}
+\fancyhf{}
+\lhead{AP Microeconomics 教案框架}
+\rhead{AP-Micro-Resources}
+\cfoot{\thepage/\pageref{LastPage}}
+
+\titleformat{\section}{\Large\bfseries\color{apblue}}{\thesection}{0.7em}{}
+\titleformat{\subsection}{\large\bfseries\color{apblue}}{\thesubsection}{0.7em}{}
+
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newcommand{\resource}[1]{\texttt{\small #1}}
+
+\begin{document}
+
+\begin{titlepage}
+\centering
+\vspace*{2cm}
+{\Huge\bfseries AP Microeconomics\par}
+\vspace{0.5cm}
+{\LARGE 教案框架与课时设计\par}
+\vspace{1.5cm}
+{\large 18 周学期制课程 · 36 课时 · 每课时 90 分钟\par}
+\vfill
+\begin{tabular}{ll}
+课程范围：& Unit 1--6\\
+主要产出：& 概念、图像、计算、经济解释和 FRQ 表达\\
+配套资料：& FRQ Archive、MCQ Practice、Unit HW、开放教材\\
+仓库位置：& \resource{AP-Microeconomics-Lesson-Plan/}
+\end{tabular}
+\vfill
+{\large \today\par}
+\end{titlepage}
+
+\tableofcontents
+\newpage
+
+\section{课程定位与设计原则}
+
+本教案将 AP Microeconomics 设计为一门以模型推理为核心的课程。学生不仅要记住术语，还要能够把一个现实变化转换成图像、计算和完整的经济解释。
+
+课程围绕三条主线展开：
+
+\begin{enumerate}[leftmargin=2em]
+  \item \textbf{概念识别：}理解稀缺性、机会成本、弹性、利润最大化、市场失灵等概念的定义和适用条件。
+  \item \textbf{图像与计算：}准确画出并移动曲线，标出均衡、利润、剩余、无谓损失和政策楔子，写出公式、代入值、单位和结论。
+  \item \textbf{因果解释：}用“因为--所以--结果”的结构说明价格、数量、收益、成本、效率或分配如何变化。
+\end{enumerate}
+
+每一节课至少保留一个可检查的学生产出：一张图、一组计算、一个 FRQ 小问、一组 MCQ 错因，或一段完整解释。课程安排默认每周两次课、每次 90 分钟；若课时不同，可按第 \ref{sec:adjust} 节调整。
+
+\section{课程目标}
+
+完成课程后，学生应能够：
+
+\begin{itemize}[leftmargin=2em]
+  \item 区分稀缺性、机会成本、绝对优势、比较优势和生产可能性边界；
+  \item 用需求、供给、均衡、弹性、税收和价格管制模型解释市场结果；
+  \item 计算固定成本、可变成本、总成本、平均成本、边际成本、收益和利润；
+  \item 在完全竞争、垄断、垄断竞争和寡头模型中判断产量、价格、利润和效率；
+  \item 用边际收益产品分析劳动等要素市场中的工资和就业量；
+  \item 识别负外部性、正外部性、公共物品、共有资源和信息不对称；
+  \item 使用消费者剩余、生产者剩余、总剩余和无谓损失评价政策；
+  \item 在 FRQ 中标注坐标轴、曲线、旧点、新点、阴影区域、数值和单位；
+  \item 用评分标准复盘答案，把错误分为概念、图像、计算、读题和表达问题。
+\end{itemize}
+
+\section{单节课的 90 分钟结构}
+
+\begin{table}[ht]
+\centering
+\caption{标准 90 分钟课堂流程}
+\begin{tabularx}{\textwidth}{>{\raggedleft\arraybackslash}p{1.4cm}YY}
+\toprule
+时间 & 环节 & 学生产出\\
+\midrule
+0--8 分钟 & Retrieval warm-up & 3--5 道旧知识题，或一张无标注核心图\\
+8--20 分钟 & 情境导入与目标 & 写出本节的核心问题和初步预测\\
+20--42 分钟 & 小讲授与教师示范 & 结构化笔记、公式关系或完整板书图\\
+42--62 分钟 & 引导练习 & 小组完成计算、画图或因果解释\\
+62--78 分钟 & AP 风格练习 & 4--8 道 MCQ，或一个 FRQ 小问\\
+78--86 分钟 & 讲评与错误分类 & 记录错误原因和正确依据\\
+86--90 分钟 & Exit ticket & 一句话结论和一个待解决问题\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{图像训练的固定检查}
+
+学生每次画图都回答四个问题：
+
+\begin{enumerate}[leftmargin=2em]
+  \item 横轴、纵轴和单位是什么？
+  \item 是曲线移动，还是沿曲线移动？
+  \item 新旧均衡点、产量或价格在哪里？
+  \item 价格、数量、收益、成本、剩余或效率如何变化？
+\end{enumerate}
+
+\subsection{计算题的固定格式}
+
+所有计算题写三行：
+
+\begin{enumerate}[leftmargin=2em]
+  \item 公式或经济关系；
+  \item 代入的数值和单位；
+  \item 最终答案及其经济含义。
+\end{enumerate}
+
+\subsection{FRQ 解释句式}
+
+建议训练学生使用：
+
+\begin{quote}
+因为边际成本上升，企业在相同价格下的利润最大化产量下降，所以市场供给减少，均衡价格上升、均衡数量下降。
+\end{quote}
+
+\section{36 课时总安排}
+
+\small
+\begin{longtable}{p{0.8cm}p{2.7cm}p{5.2cm}p{4.2cm}}
+\caption{18 周、36 课时课程表}\\
+\toprule
+课时 & Unit / 主题 & 课堂重点 & 主要产出与课后任务\\
+\midrule
+\endfirsthead
+\toprule
+课时 & Unit / 主题 & 课堂重点 & 主要产出与课后任务\\
+\midrule
+\endhead
+1 & Unit 1：稀缺性与机会成本 & PPF、选择、机会成本 & PPF 图；Unit 1 HW 基础题\\
+2 & Unit 1：比较优势与贸易 & 专业化、交换、贸易收益 & 贸易计算表\\
+3 & Unit 1：边际分析与激励 & MB、MC、激励和决策 & 边际决策练习\\
+4 & Unit 1：综合与小测 & 概念、PPF、贸易和边际分析 & Unit 1 小测与错题表\\
+5 & Unit 2：需求、供给与均衡 & 初始均衡、市场变量 & 均衡图；Unit 2 HW\\
+6 & Unit 2：曲线移动 & 需求/供给移动与沿曲线移动 & 8 个情境分类图\\
+7 & Unit 2：弹性与计算 & 价格弹性、收入弹性、交叉弹性 & 弹性计算题\\
+8 & Unit 2：弹性与总收益 & 弹性区间和总收益关系 & 总收益图与 MCQ\\
+9 & Unit 2：价格管制 & 价格上限、下限、短缺、过剩 & 政策图题\\
+10 & Unit 2：税收与补贴 & 税楔、税负、税收归宿、DWL & FRQ 小问\\
+11 & Unit 2：综合 FRQ & 混合图像、计算和解释 & 限时 FRQ 与讲评\\
+12 & Unit 3：生产函数 & 总产量、边际产量、递减规律 & 生产表\\
+13 & Unit 3：成本曲线 & FC、VC、TC、ATC、AVC、MC & 成本表和曲线\\
+14 & Unit 3：完全竞争企业 & P=MR、利润最大化、收益 & 企业利润图\\
+15 & Unit 3：停产与退出 & 短期供给、shutdown、exit & 条件判断题\\
+16 & Unit 3：长期均衡 & 进入、退出、长期调整 & 市场调整图\\
+17 & Unit 3：综合与测验 & 成本、利润、供给和长期均衡 & Unit 3 测验\\
+18 & Unit 4：垄断基础 & 进入壁垒、市场权力 & 市场结构分类\\
+19 & Unit 4：垄断利润 & D、MR、MC、ATC 和利润 & 垄断图题\\
+20 & Unit 4：垄断与效率 & 消费者剩余、DWL、效率 & 效率比较图\\
+21 & Unit 4：价格歧视 & 不同市场、消费者剩余转移 & 案例分析\\
+22 & Unit 4：垄断竞争 & 产品差异化、短期/长期 & 两张对比图\\
+23 & Unit 4：寡头与博弈 & payoff matrix、策略和均衡 & 博弈解释；Unit 4 测验\\
+24 & Unit 5：派生需求 & MRP、产品市场与要素市场 & MRP 表和图\\
+25 & Unit 5：竞争性劳动市场 & 劳动供需、工资、就业 & 工资就业图\\
+26 & Unit 5：买方垄断 & monopsony、最低工资 & 政策比较 FRQ\\
+27 & Unit 5：要素市场综合 & 劳动、资本、土地和派生需求 & Unit 5 综合题\\
+28 & Unit 6：外部性 & private/social cost 与 benefit & 社会最优图\\
+29 & Unit 6：政策工具 & 矫正税、补贴、许可 & 政策比较表\\
+30 & Unit 6：公共物品 & 排他性、竞争性、搭便车 & 分类练习\\
+31 & Unit 6：共有资源 & 过度使用与悲剧 & 现实案例解释\\
+32 & Unit 6：信息不对称 & 道德风险、逆向选择、政府角色 & FRQ 小问\\
+33 & Unit 6：综合 FRQ & 市场失灵、政策和效率 & Unit 6 测验\\
+34 & 综合复习：核心图像 & 六个 Unit 的高频图像 & 20 分钟图像训练\\
+35 & 综合复习：MCQ 计时 & 读题、计算、错因分类 & 限时 MCQ 与补练\\
+36 & 综合复习：FRQ 模拟 & 图像、计算、解释和时间管理 & 模拟 FRQ 与考前计划\\
+\bottomrule
+\end{longtable}
+\normalsize
+
+\section{Unit 级教案设计}
+
+\subsection{Unit 1：Basic Economic Concepts}
+
+\begin{tabularx}{\textwidth}{p{2.8cm}YY}
+\toprule
+核心概念 & 课堂活动 & 检查方式\\
+\midrule
+稀缺性与机会成本 & 用学生每天的时间表构建 PPF；比较不同选择的机会成本 & PPF 标注和一句解释\\
+比较优势与贸易 & 小组完成生产表，讨论专业化与交换 & 计算比较优势并解释贸易收益\\
+边际分析 & 用“多学习一小时”的情境计算 MB 与 MC & 边际决策 MCQ\\
+\bottomrule
+\end{tabularx}
+
+\subsection{Unit 2：Supply and Demand}
+
+\begin{tabularx}{\textwidth}{p{2.8cm}YY}
+\toprule
+核心概念 & 课堂活动 & 检查方式\\
+\midrule
+均衡与曲线移动 & 从新闻或校园情境判断需求、供给和均衡变化 & 初始图、变化图、因果句\\
+弹性与总收益 & 让学生先预测收入变化，再用弹性验证 & 公式、数值和经济解释\\
+税收与管制 & 比较价格上限、价格下限、税收和补贴 & 阴影区域与政策评价\\
+\bottomrule
+\end{tabularx}
+
+\subsection{Unit 3：Production, Cost, and Perfect Competition}
+
+重点是把生产表、成本表、曲线图和利润图连成一个连续模型。建议先让学生从表格计算，再由表格画曲线，最后在价格给定时判断企业决策。
+
+\subsection{Unit 4：Imperfect Competition}
+
+重点是区分需求曲线、边际收益曲线和边际成本曲线的作用。垄断、垄断竞争和寡头不应只靠定义记忆，而要用进入壁垒、产品差异化、策略互动和效率结果比较。
+
+\subsection{Unit 5：Factor Markets}
+
+从产品市场的派生需求出发，先建立 MRP，再判断竞争性劳动市场和买方垄断中的工资、就业和政策效果。
+
+\subsection{Unit 6：Market Failure and the Role of Government}
+
+每个政策工具都用同一组问题分析：解决什么市场失灵？改变哪条曲线？目标结果是什么？会不会产生新的成本或执行问题？
+
+\section{评价与错题闭环}
+
+\begin{table}[ht]
+\centering
+\caption{建议的评价节奏}
+\begin{tabularx}{\textwidth}{p{3.2cm}YY}
+\toprule
+节点 & 评价 & 目的\\
+\midrule
+每节课 & Exit ticket & 检查当天一个关键误区\\
+每周 & 8--12 道 MCQ + 1 个 FRQ 小问 & 形成性反馈\\
+Unit 1--2 后 & 基础模型小测 & 需求、供给、弹性和政策图\\
+Unit 3--4 后 & 中段测验 & 成本、利润和市场结构\\
+Unit 5--6 后 & 综合测验 & 要素市场和市场失灵\\
+考前 3 周 & 限时 MCQ / FRQ & 训练时间管理\\
+考前 1 周 & 全套模拟 & 暴露最后的知识和时间问题\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+错题表至少记录：题号、考点、错误原因、正确依据、下次检查日期。错误原因统一分成概念、图像、计算、读题和表达五类。
+
+\section{资料配合}
+
+\begin{itemize}[leftmargin=2em]
+  \item 官方 CED 和课程文件：确定课程边界、术语和考试要求。
+  \item \resource{AP-Microeconomics-FRQ-Archive/}：每个 Unit 结束后选历史 FRQ，先独立作答，再对照评分标准。
+  \item \resource{AP-Microeconomics-MCQ-Practice/}：平时使用公开且授权清楚的练习；受限官方题目通过 AP Classroom 或 Bluebook 使用。
+  \item \resource{AP-Microeconomics-Unit-HW/}：作为课后熟练度训练和分层作业。
+  \item \resource{AP-Microeconomics-Open-Resources/}：用 OpenStax、CORE Econ 和 MIT OCW 补充阅读、讲义、习题和答案。
+\end{itemize}
+
+\section{不同课时版本的调整}
+\label{sec:adjust}
+
+\begin{tabularx}{\textwidth}{p{2.6cm}YY}
+\toprule
+版本 & 调整方式 & 应保留内容\\
+\midrule
+18 次课 & 每次合并连续两个课时 & 每个 Unit 的测验、至少 3 次 FRQ、最后模拟\\
+36 次课 & 默认版本，每周两次、每次 90 分钟 & 概念、图像、计算、解释全部保留\\
+45 次课 & Unit 2、3、4、6 的图像和 FRQ 各拆分一次 & 增加错题讲评和整套模拟\\
+自学 & 把课堂活动改为阅读、限时练习和口头讲解 & 每周 MCQ、每个 Unit FRQ、错题复做\\
+\bottomrule
+\end{tabularx}
+
+\section{单节课备课模板}
+
+\begin{enumerate}[leftmargin=2em]
+  \item 课题、Unit、前置知识和 AP 技能；
+  \item 2--4 个可测量学习目标；
+  \item 一个现实情境和一个核心问题；
+  \item 一张教师示范图；
+  \item 一个必须写过程的计算；
+  \item 一个必须用完整句子解释的变化；
+  \item 4--8 道 MCQ 或一个 FRQ 小问；
+  \item 讲评时的错误分类；
+  \item Exit ticket 和下一节课的回收问题。
+\end{enumerate}
+
+\section{仓库备忘录}
+
+本 LaTeX 文档与源文件位于：
+
+\begin{center}
+\resource{AP-Microeconomics-Lesson-Plan/latex/}
+\end{center}
+
+相关 Markdown 文件仍保留在同一目录，便于快速编辑；LaTeX 版本用于打印、归档和课程备课。更新课时安排后，应同时检查：
+
+\begin{enumerate}[leftmargin=2em]
+  \item \resource{course-schedule-36-sessions.md}；
+  \item \resource{materials-map.csv}；
+  \item 本文件中的 36 课时表；
+  \item 根目录索引和 LaTeX 项目 PDF。
+\end{enumerate}
+
+\end{document}
