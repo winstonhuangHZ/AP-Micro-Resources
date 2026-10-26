@@ -732,6 +732,45 @@ This is the visual design index for the 36-session course. Each session should h
    - Source / method: `Draw locally.`
    - Status: `planned; optional extension`
 
+## Source collection progress
+
+The first source-image batch is marked `completed` below. These are source candidates ready for later cropping, annotation, handouts, or slides. The image file itself remains unchanged in `assets/source/`; derived teaching versions belong under `assets/exports/`.
+
+**Completed source images: 30**
+
+| Status | Source image | Planned use | License note |
+|---|---|---|---|
+| `completed` | [`bank-building-philadelphia.jpg`](assets/source/bank-building-philadelphia.jpg) | Bank buildings, financial intermediation, and institutional context. | Public domain |
+| `completed` | [`container-terminal-bremerhaven.jpg`](assets/source/container-terminal-bremerhaven.jpg) | Specialization, international trade, imports, and exports. | CC BY-SA 3.0 |
+| `completed` | [`continental-tire-factory.jpg`](assets/source/continental-tire-factory.jpg) | Factory inputs, production costs, returns to scale, and factor demand. | CC BY-SA 4.0 |
+| `completed` | [`dunn-memorial-hospital.jpg`](assets/source/dunn-memorial-hospital.jpg) | Hospital labor markets and New Deal/public-investment context. | Public domain |
+| `completed` | [`ephesus-mangal-restaurant.jpg`](assets/source/ephesus-mangal-restaurant.jpg) | Product differentiation and monopolistic competition. | CC BY-SA 2.0 |
+| `completed` | [`factory-car-production-line.jpg`](assets/source/factory-car-production-line.jpg) | Production, inputs, marginal product, cost, scale, and hiring. | CC BY 3.0 |
+| `completed` | [`gas-station-price-analysis-1938.jpg`](assets/source/gas-station-price-analysis-1938.jpg) | Prices, taxes, fuel markets, and policy discussion. | Public domain |
+| `completed` | [`gas-station-price-board-austria.jpg`](assets/source/gas-station-price-board-austria.jpg) | Price changes, elasticity, and consumer response. | CC BY-SA 4.0 |
+| `completed` | [`great-depression-bank-run-michigan-1933.jpg`](assets/source/great-depression-bank-run-michigan-1933.jpg) | Bank run, deposit confidence, government and financial-crisis context. | Public domain |
+| `completed` | [`great-depression-times-square-line-1930.jpg`](assets/source/great-depression-times-square-line-1930.jpg) | Unemployment, relief, and Great Depression opening prompt. | Public domain |
+| `completed` | [`grocery-store-widtsoe-utah.jpg`](assets/source/grocery-store-widtsoe-utah.jpg) | Consumer choice, necessities, substitutes, and shortage prompts. | Public domain |
+| `completed` | [`groton-new-london-airport-terminal.jpg`](assets/source/groton-new-london-airport-terminal.jpg) | Airline market, oligopoly, and strategic interdependence. | CC BY-SA 3.0 |
+| `completed` | [`inside-hospital.jpg`](assets/source/inside-hospital.jpg) | Monopsony and local labor-market context. | Public domain |
+| `completed` | [`machine-cutting-factory-workshop.jpg`](assets/source/machine-cutting-factory-workshop.jpg) | Production process, inputs, and marginal product. | CC BY 2.0 |
+| `completed` | [`mariner-bank-building.jpg`](assets/source/mariner-bank-building.jpg) | Banking institutions and local financial-market context. | Public domain |
+| `completed` | [`media-pennsylvania-theater.jpg`](assets/source/media-pennsylvania-theater.jpg) | Price discrimination through cinema and entertainment examples. | Public domain |
+| `completed` | [`new-deal-collage.jpg`](assets/source/new-deal-collage.jpg) | Government objectives, New Deal, and public-policy context. | Public domain |
+| `completed` | [`old-movie-theater-roadhouse.jpg`](assets/source/old-movie-theater-roadhouse.jpg) | Entertainment markets and differentiated products. | Public domain |
+| `completed` | [`pennsylvania-railroad-freight-station.jpg`](assets/source/pennsylvania-railroad-freight-station.jpg) | Trade infrastructure, transportation, and barriers to entry. | CC BY-SA 4.0 |
+| `completed` | [`portland-farmers-market-8177757645.jpg`](assets/source/portland-farmers-market-8177757645.jpg) | Market exchange and producer/consumer surplus. | CC BY-SA 2.0 |
+| `completed` | [`portland-farmers-market.jpg`](assets/source/portland-farmers-market.jpg) | Market exchange, buyers, sellers, and equilibrium. | CC BY-SA 3.0 |
+| `completed` | [`rainbow-chard-farmers-market.jpg`](assets/source/rainbow-chard-farmers-market.jpg) | Farmers market, demand/supply, exchange, and consumer choice. | CC BY-SA 4.0 |
+| `completed` | [`rent-control-placard.jpg`](assets/source/rent-control-placard.jpg) | Price ceilings and rent-control context. | CC BY 2.0 |
+| `completed` | [`restaurant-amigos-acapulco.jpg`](assets/source/restaurant-amigos-acapulco.jpg) | Firm entry, product differentiation, and monopolistic competition. | Public domain |
+| `completed` | [`rice-planting-bhutan.jpg`](assets/source/rice-planting-bhutan.jpg) | Scarcity, labor, agriculture, and standardized-product markets. | CC BY-SA 4.0 |
+| `completed` | [`santa-clara-public-park.jpg`](assets/source/santa-clara-public-park.jpg) | Public goods, public services, and common-benefit discussion. | CC0 |
+| `completed` | [`singapore-cargo-terminal.jpg`](assets/source/singapore-cargo-terminal.jpg) | International trade, shipping, and imports. | CC BY-SA 3.0 |
+| `completed` | [`telephone-exchange-carnegie.jpg`](assets/source/telephone-exchange-carnegie.jpg) | Network infrastructure, barriers, and oligopoly/telecom context. | CC0 |
+| `completed` | [`wall-street-crowd-1929.jpg`](assets/source/wall-street-crowd-1929.jpg) | Wall Street, financial-market confidence, and 1929 crash context. | Public domain |
+| `completed` | [`woolwich-arsenal-factory-workers.jpg`](assets/source/woolwich-arsenal-factory-workers.jpg) | Labor, factory production, and factor markets. | No restrictions |
+
 ## Cross-cutting visual modules
 
 ### Indicators
