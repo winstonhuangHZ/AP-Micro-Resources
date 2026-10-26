@@ -100,10 +100,52 @@ for year in sorted(byyear):
 lines += ['', 'See [README.md](README.md) for coverage notes and source policy.', '']
 (frq / 'INDEX.md').write_text('\n'.join(lines))
 
+# Official document and open resource manifests are maintained separately from
+# the generated indexes so that source/licence notes are not overwritten.
+official = root / 'AP-Microeconomics-Official-Docs'
+official_files = sorted([p for p in official.iterdir() if p.is_file() and p.suffix.lower() == '.pdf']) if official.exists() else []
+if official.exists():
+    with (official / 'manifest.csv').open('w', newline='') as f:
+        fields = ['name', 'kind', 'local_path', 'source_url', 'bytes', 'sha256', 'use_notes']
+        writer = csv.DictWriter(f, fieldnames=fields)
+        writer.writeheader()
+        official_urls = {
+            'official-ced-clarifications.pdf': 'https://apcentral.collegeboard.org/media/pdf/ap-microeconomics-course-and-exam-description-clarifications.pdf',
+            'official-course-overview.pdf': 'https://apcentral.collegeboard.org/media/pdf/ap-microeconomics-course-overview.pdf',
+            'official-course-at-a-glance.pdf': 'https://apcentral.collegeboard.org/media/pdf/ap-microeconomics-course-at-a-glance.pdf',
+            'official-course-at-a-glance-printable-poster.pdf': 'https://apcentral.collegeboard.org/media/pdf/ap-microeconomics-course-at-a-glance-printable-poster.pdf',
+        }
+        for path in official_files:
+            writer.writerow({'name': path.name, 'kind': 'College Board official course support', 'local_path': str(path.relative_to(root)), 'source_url': official_urls.get(path.name, ''), 'bytes': path.stat().st_size, 'sha256': sha(path), 'use_notes': 'Official source; follow College Board terms for redistribution.'})
+
+open_root = root / 'AP-Microeconomics-Open-Resources'
+open_files = sorted([p for p in open_root.rglob('*') if p.is_file() and p.suffix.lower() in {'.pdf', '.epub'}]) if open_root.exists() else []
+if open_root.exists():
+    with (open_root / 'manifest.csv').open('w', newline='') as f:
+        fields = ['name', 'kind', 'local_path', 'source_url', 'bytes', 'sha256', 'license_or_terms']
+        writer = csv.DictWriter(f, fieldnames=fields)
+        writer.writeheader()
+        for path in open_files:
+            rel = path.relative_to(root).as_posix()
+            if 'OpenStax' in rel:
+                source = 'https://openstax.org/details/books/principles-microeconomics-3e' if '3e' in path.name else 'https://openstax.org/details/books/principles-microeconomics-ap-courses-2e'
+                kind = 'OpenStax open textbook'
+                terms = 'Creative Commons Attribution 4.0 International (CC BY 4.0); verify front matter for edition-specific notices.'
+            elif 'CORE-Econ' in rel:
+                source = 'https://www.core-econ.org/project/core-the-economy/'
+                kind = 'CORE Econ open textbook / local EPUB conversion'
+                terms = 'CORE Econ open access resource; retain attribution and check current CORE Econ terms before redistribution.'
+            else:
+                source = 'https://ocw.mit.edu/courses/14-01-principles-of-microeconomics-fall-2023/'
+                kind = 'MIT OpenCourseWare course material'
+                terms = 'MIT OpenCourseWare materials are generally CC BY-NC-SA 4.0; retain notices and verify the page terms.'
+            writer.writerow({'name': path.name, 'kind': kind, 'local_path': rel, 'source_url': source, 'bytes': path.stat().st_size, 'sha256': sha(path), 'license_or_terms': terms})
+
 # Root index.
 frq_pdf = list(frq.rglob('*.pdf'))
 hw_pdf = list(hw.rglob('*.pdf'))
 mcq_pdf = list(mcq.rglob('*.pdf'))
+lesson_files = list((root / 'AP-Microeconomics-Lesson-Plan').rglob('*')) if (root / 'AP-Microeconomics-Lesson-Plan').exists() else []
 unit_counts = Counter(row['unit'] for row in rows)
 frq_counts = Counter(row['year'] for row in frq_rows)
 (root / 'INDEX.md').write_text(f'''# AP Microeconomics Resources
@@ -117,6 +159,10 @@ frq_counts = Counter(row['year'] for row in frq_rows)
 | 历年 FRQ、评分标准、学生答案和 Reader Report | [AP-Microeconomics-FRQ-Archive/](AP-Microeconomics-FRQ-Archive/) · [详细索引](AP-Microeconomics-FRQ-Archive/INDEX.md) | {len(frq_pdf)} PDFs |
 | MCQ 练习资料 | [AP-Microeconomics-MCQ-Practice/](AP-Microeconomics-MCQ-Practice/) · [详细说明](AP-Microeconomics-MCQ-Practice/README.md) | {len(mcq_pdf)} PDFs |
 | Unit 1–6 HW | [AP-Microeconomics-Unit-HW/](AP-Microeconomics-Unit-HW/) · [详细索引](AP-Microeconomics-Unit-HW/INDEX.md) | {len(hw_pdf)} PDFs |
+| 官方课程文件 | [AP-Microeconomics-Official-Docs/](AP-Microeconomics-Official-Docs/) | {len(official_files)} PDFs |
+| 开放教材与课程资料 | [AP-Microeconomics-Open-Resources/](AP-Microeconomics-Open-Resources/) | {len(open_files)} PDF/EPUB |
+| 教案与课时设计 | [AP-Microeconomics-Lesson-Plan/](AP-Microeconomics-Lesson-Plan/) | {len(lesson_files)} files |
+| 研究来源与论坛入口 | [AP-Microeconomics-Research-Sources.md](AP-Microeconomics-Research-Sources.md) | — |
 | MCQ 镜像和在线题库线索 | [MCQ-Mirror-Notes.md](MCQ-Mirror-Notes.md) | — |
 
 ## Unit HW 数量

@@ -9,6 +9,10 @@
 | 历年 FRQ、评分标准、学生答案和 Reader Report | [AP-Microeconomics-FRQ-Archive/](AP-Microeconomics-FRQ-Archive/) · [详细索引](AP-Microeconomics-FRQ-Archive/INDEX.md) | 251 PDFs |
 | MCQ 练习资料 | [AP-Microeconomics-MCQ-Practice/](AP-Microeconomics-MCQ-Practice/) · [详细说明](AP-Microeconomics-MCQ-Practice/README.md) | 2 PDFs |
 | Unit 1–6 HW | [AP-Microeconomics-Unit-HW/](AP-Microeconomics-Unit-HW/) · [详细索引](AP-Microeconomics-Unit-HW/INDEX.md) | 84 PDFs |
+| 官方课程文件 | [AP-Microeconomics-Official-Docs/](AP-Microeconomics-Official-Docs/) | 4 PDFs |
+| 开放教材与课程资料 | [AP-Microeconomics-Open-Resources/](AP-Microeconomics-Open-Resources/) | 61 PDF/EPUB |
+| 教案与课时设计 | [AP-Microeconomics-Lesson-Plan/](AP-Microeconomics-Lesson-Plan/) | 5 files |
+| 研究来源与论坛入口 | [AP-Microeconomics-Research-Sources.md](AP-Microeconomics-Research-Sources.md) | — |
 | MCQ 镜像和在线题库线索 | [MCQ-Mirror-Notes.md](MCQ-Mirror-Notes.md) | — |
 
 ## Unit HW 数量
