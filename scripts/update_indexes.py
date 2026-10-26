@@ -145,7 +145,11 @@ if open_root.exists():
 frq_pdf = list(frq.rglob('*.pdf'))
 hw_pdf = list(hw.rglob('*.pdf'))
 mcq_pdf = list(mcq.rglob('*.pdf'))
-lesson_files = [p for p in (root / 'APMICRO-Lesson-Plan').rglob('*') if p.is_file() and 'latex/build' not in p.as_posix()] if (root / 'APMICRO-Lesson-Plan').exists() else []
+teaching = root / 'APMICRO-Teaching'
+lesson_files = [p for p in (teaching / 'Lesson-Plans').rglob('*') if p.is_file() and 'latex/build' not in p.as_posix()] if (teaching / 'Lesson-Plans').exists() else []
+handout_files = [p for p in (teaching / 'Handouts').rglob('*') if p.is_file()] if (teaching / 'Handouts').exists() else []
+slide_files = [p for p in (teaching / 'Slides').rglob('*') if p.is_file()] if (teaching / 'Slides').exists() else []
+visual_files = [p for p in (teaching / 'Visual-Plan').rglob('*') if p.is_file()] if (teaching / 'Visual-Plan').exists() else []
 unit_counts = Counter(row['unit'] for row in rows)
 frq_counts = Counter(row['year'] for row in frq_rows)
 (root / 'INDEX.md').write_text(f'''# AP Microeconomics Resources
@@ -163,7 +167,11 @@ frq_counts = Counter(row['year'] for row in frq_rows)
 | Unit 1–6 HW | [APMICRO-Unit-HW/](APMICRO-Unit-HW/) · [详细索引](APMICRO-Unit-HW/INDEX.md) | {len(hw_pdf)} PDFs |
 | 官方课程文件 | [APMICRO-Official-Docs/](APMICRO-Official-Docs/) | {len(official_files)} PDFs |
 | 开放教材与课程资料 | [APMICRO-Open-Resources/](APMICRO-Open-Resources/) | {len(open_files)} PDF/EPUB |
-| 教案与课时设计 | [APMICRO-Lesson-Plan/](APMICRO-Lesson-Plan/) · [官方目标说明](APMICRO-Lesson-Plan/OFFICIAL-LEARNING-OBJECTIVES.md) · [LaTeX README](APMICRO-Lesson-Plan/latex/README.md) | {len(lesson_files)} files |
+| 教学资料总目录 | [APMICRO-Teaching/](APMICRO-Teaching/) | {len(lesson_files) + len(handout_files) + len(slide_files) + len(visual_files)} files |
+| 教案与课时设计 | [APMICRO-Teaching/Lesson-Plans/](APMICRO-Teaching/Lesson-Plans/) · [官方目标说明](APMICRO-Teaching/Lesson-Plans/OFFICIAL-LEARNING-OBJECTIVES.md) · [LaTeX README](APMICRO-Teaching/Lesson-Plans/latex/README.md) | {len(lesson_files)} files |
+| 讲义 | [APMICRO-Teaching/Handouts/](APMICRO-Teaching/Handouts/) | {len(handout_files)} files |
+| PPT / Slides | [APMICRO-Teaching/Slides/](APMICRO-Teaching/Slides/) | {len(slide_files)} files |
+| 配图设计与素材目录 | [APMICRO-Teaching/Visual-Plan/](APMICRO-Teaching/Visual-Plan/) | {len(visual_files)} files |
 | 研究来源与论坛入口 | [AP-Microeconomics-Research-Sources.md](AP-Microeconomics-Research-Sources.md) | — |
 | MCQ 镜像和在线题库线索 | [MCQ-Mirror-Notes.md](MCQ-Mirror-Notes.md) | — |
 

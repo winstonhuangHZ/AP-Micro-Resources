@@ -1,0 +1,17 @@
+source_id,name,type,url,notes
+FRED-UNRATE,FRED UNRATE,Python chart data,https://fred.stlouisfed.org/series/UNRATE,BLS civilian unemployment rate; download the series at build time.
+FRED-CPIAUCSL,FRED CPIAUCSL,Python chart data,https://fred.stlouisfed.org/series/CPIAUCSL,BLS Consumer Price Index for All Urban Consumers; compute year-over-year inflation when needed.
+FRED-GDP,FRED GDP,Python chart data,https://fred.stlouisfed.org/series/GDP,BEA gross domestic product series; use real GDP separately when the lesson needs quantities rather than current dollars.
+FRED-FEDFUNDS,FRED FEDFUNDS,Python chart data,https://fred.stlouisfed.org/series/FEDFUNDS,Effective federal funds rate; context extension for policy and banking visuals.
+FRED-M2SL,FRED M2SL,Python chart data,https://fred.stlouisfed.org/series/M2SL,M2 money stock; context extension for banking and monetary conditions.
+FRED-SP500,FRED SP500,Python chart data,https://fred.stlouisfed.org/series/SP500,"S&P 500 index; use for market confidence or financial-market context, not as an AP Micro core objective."
+FRED-GINI,FRED GINIALLRH,Python chart data,https://fred.stlouisfed.org/series/GINIALLRH,U.S. household income inequality measure; pair with a Lorenz curve drawn locally.
+WIKIMEDIA-GREAT-DEPRESSION-US,Wikimedia Commons: Great Depression in the United States,Historical photo discovery,https://commons.wikimedia.org/wiki/Category:Great_Depression_in_the_United_States,Choose individual files and verify their description-page license before copying.
+WIKIMEDIA-GREAT-DEPRESSION,Wikimedia Commons: Great Depression,Historical photo discovery,https://commons.wikimedia.org/wiki/Category:Great_Depression,"Includes bank runs, unemployment, relief, and public-policy context images."
+WIKIMEDIA-BANK-RUNS,Wikimedia Commons: Bank runs,Historical photo discovery,https://commons.wikimedia.org/wiki/Category:Bank_runs,"Use for banking, liquidity, confidence, and deposit-withdrawal context."
+WIKIMEDIA-BANKING,Wikimedia Commons: Banking,Historical/photo discovery,https://commons.wikimedia.org/wiki/Category:Banking,"Broad category for bank documents, bank buildings, bank runs, and financial systems."
+WIKIMEDIA-WALL-STREET,Wikimedia Commons: Wall Street,Historical/photo discovery,https://commons.wikimedia.org/wiki/Category:Wall_Street,"Contains Wall Street, bank buildings, NYSE, and financial-district images."
+WIKIMEDIA-WALL-STREET-HISTORY,Wikimedia Commons: Wall Street in History,Historical/photo discovery,https://commons.wikimedia.org/wiki/Category:Wall_Street_in_History,Useful for historical banking and financial-market context.
+WIKIMEDIA-FACTORIES,Wikimedia Commons: Factories,Historical/photo discovery,https://commons.wikimedia.org/wiki/Category:Factories,Use only after checking each selected file’s license and attribution requirements.
+WIKIMEDIA-NYSE-HISTORY,Wikimedia Commons: History of the New York Stock Exchange,Historical/photo discovery,https://commons.wikimedia.org/wiki/Category:History_of_the_New_York_Stock_Exchange,Includes historical exchange and Wall Street crash material.
+AP-CED,College Board AP Microeconomics CED,Official course boundary,https://apcentral.collegeboard.org/media/pdf/ap-microeconomics-course-and-exam-description.pdf,Use to keep visuals aligned with the official Unit and Learning Objective structure.

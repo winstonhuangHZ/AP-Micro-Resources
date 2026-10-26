@@ -14,11 +14,11 @@ Run from the repository root:
 ```bash
 python3 scripts/build_lesson_plan.py
 python3 /Users/huangwenqin/.codex/plugins/cache/openai-bundled/latex/0.2.8/scripts/compile_latex.py \
-  "$PWD/APMICRO-Lesson-Plan/latex/en/main.tex" --compiler texlive --engine xelatex \
-  --output-directory "$PWD/APMICRO-Lesson-Plan/latex/en/build"
+  "$PWD/APMICRO-Teaching/Lesson-Plans/latex/en/main.tex" --compiler texlive --engine xelatex \
+  --output-directory "$PWD/APMICRO-Teaching/Lesson-Plans/latex/en/build"
 python3 /Users/huangwenqin/.codex/plugins/cache/openai-bundled/latex/0.2.8/scripts/compile_latex.py \
-  "$PWD/APMICRO-Lesson-Plan/latex/zh/main.tex" --compiler texlive --engine xelatex \
-  --output-directory "$PWD/APMICRO-Lesson-Plan/latex/zh/build"
+  "$PWD/APMICRO-Teaching/Lesson-Plans/latex/zh/main.tex" --compiler texlive --engine xelatex \
+  --output-directory "$PWD/APMICRO-Teaching/Lesson-Plans/latex/zh/build"
 ```
 
 Copy each `build/main.pdf` to its edition directory using the edition-specific PDF filename. Temporary build directories are ignored by Git.
@@ -29,4 +29,4 @@ Copy each `build/main.pdf` to its edition directory using the edition-specific P
 - [`session-learning-objectives.csv`](../session-learning-objectives.csv): 36 session-level objectives.
 - [`OFFICIAL-LEARNING-OBJECTIVES.md`](../OFFICIAL-LEARNING-OBJECTIVES.md): source and paraphrase notes.
 - [`course-schedule-36-sessions.md`](../course-schedule-36-sessions.md): generated Markdown schedule.
-- [`../../scripts/build_lesson_plan.py`](../../scripts/build_lesson_plan.py): regenerates the Markdown schedule and both TeX sources.
+- [`../../../scripts/build_lesson_plan.py`](../../../scripts/build_lesson_plan.py): regenerates the Markdown schedule and both TeX sources.

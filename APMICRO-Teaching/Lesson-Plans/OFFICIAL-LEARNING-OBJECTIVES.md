@@ -4,7 +4,7 @@ This document records the AP Microeconomics learning-objective map used by the l
 
 ## Source and method
 
-- Source: [College Board AP Microeconomics Course and Exam Description](../APMICRO-MCQ-Practice/college-board-ap-microeconomics-course-and-exam-description.pdf).
+- Source: [College Board AP Microeconomics Course and Exam Description](../../APMICRO-MCQ-Practice/college-board-ap-microeconomics-course-and-exam-description.pdf).
 - The local CED is marked **Effective Fall 2026**; page references below are PDF page numbers.
 - Objective IDs are retained from the CED. The English and Chinese sentences here are concise teaching paraphrases aligned to those IDs, not a replacement for the official wording.
 - Session assignments are maintained in [`session-learning-objectives.csv`](session-learning-objectives.csv).

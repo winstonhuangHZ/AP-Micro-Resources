@@ -5,7 +5,7 @@ from collections import defaultdict
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-LESSON = ROOT / 'APMICRO-Lesson-Plan'
+LESSON = ROOT / 'APMICRO-Teaching/Lesson-Plans'
 LATEX = LESSON / 'latex'
 OBJ_CSV = LESSON / 'official-learning-objectives.csv'
 SESSION_CSV = LESSON / 'session-learning-objectives.csv'
@@ -70,7 +70,7 @@ def build_objective_doc():
     out = ['# Official Learning Objectives and CED Mapping','',
       'This document records the AP Microeconomics learning-objective map used by the lesson-plan package.','',
       '## Source and method','',
-      '- Source: [College Board AP Microeconomics Course and Exam Description](../APMICRO-MCQ-Practice/college-board-ap-microeconomics-course-and-exam-description.pdf).',
+      '- Source: [College Board AP Microeconomics Course and Exam Description](../../APMICRO-MCQ-Practice/college-board-ap-microeconomics-course-and-exam-description.pdf).',
       '- The local CED is marked **Effective Fall 2026**; page references below are PDF page numbers.',
       '- Objective IDs are retained from the CED. The English and Chinese sentences here are concise teaching paraphrases aligned to those IDs, not a replacement for the official wording.',
       '- Session assignments are maintained in [`session-learning-objectives.csv`](session-learning-objectives.csv).','', '## Unit map','']
@@ -102,7 +102,7 @@ def tex_header(lang):
 \\definecolor{{aplight}}{{HTML}}{{EAF2F8}}
 \\hypersetup{{colorlinks=true,linkcolor=apblue,urlcolor=apblue,pdftitle={{{title}}},pdfauthor={{AP-Micro-Resources}}}}
 \\pagestyle{{fancy}}\\setlength{{\\headheight}}{{14pt}}\\fancyhf{{}}
-\\lhead{{{title}}}\\rhead{{APMICRO-Lesson-Plan}}\\cfoot{{\\thepage/\\pageref{{LastPage}}}}
+\\lhead{{{title}}}\\rhead{{APMICRO-Teaching/Lesson-Plans}}\\cfoot{{\\thepage/\\pageref{{LastPage}}}}
 \\titleformat{{\\section}}{{\\Large\\bfseries\\color{{apblue}}}}{{\\thesection}}{{0.7em}}{{}}
 \\titleformat{{\\subsection}}{{\\large\\bfseries\\color{{apblue}}}}{{\\thesubsection}}{{0.7em}}{{}}
 \\newcolumntype{{Y}}{{>{{\\raggedright\\arraybackslash}}X}}
@@ -113,7 +113,7 @@ def tex_header(lang):
 {{\\Huge\\bfseries {title}\\par}}\\vspace{{0.5cm}}{{\\LARGE {subtitle}\\par}}
 \\vspace{{1cm}}{{\\large 18 weeks \\textperiodcentered 2 meetings per week \\textperiodcentered 90 minutes per meeting\\par}}
 \\vspace{{0.5cm}}{{\\large {note}\\par}}\\vfill
-\\begin{{tabular}}{{ll}}Scope: & Units 1--6\\\\Core outputs: & concepts, graphs, calculations, explanations, FRQ writing\\\\Official map: & CED objective IDs and PDF page references\\\\Repository: & \\codepath{{APMICRO-Lesson-Plan/}}\\\\\\end{{tabular}}
+\\begin{{tabular}}{{ll}}Scope: & Units 1--6\\\\Core outputs: & concepts, graphs, calculations, explanations, FRQ writing\\\\Official map: & CED objective IDs and PDF page references\\\\Repository: & \\codepath{{APMICRO-Teaching/Lesson-Plans/}}\\\\\\end{{tabular}}
 \\vfill{{\\large \\today\\par}}\\end{{titlepage}}
 \\tableofcontents\\newpage
 '''

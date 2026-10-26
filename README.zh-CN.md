@@ -12,7 +12,11 @@
 - [Unit 1–6 HW](APMICRO-Unit-HW/)
 - [College Board 官方课程文件](APMICRO-Official-Docs/)
 - [开放教材与大学课程资料](APMICRO-Open-Resources/)
-- [教案与课时设计](APMICRO-Lesson-Plan/)
+- [教学资料总目录](APMICRO-Teaching/)
+- [教案与课时设计](APMICRO-Teaching/Lesson-Plans/)
+- [讲义](APMICRO-Teaching/Handouts/)
+- [PPT / Slides](APMICRO-Teaching/Slides/)
+- [36 课时配图设计](APMICRO-Teaching/Visual-Plan/)
 - [研究来源、论坛和后续整理入口](AP-Microeconomics-Research-Sources.md)
 
 ## 资料内容
@@ -24,7 +28,8 @@
 | `APMICRO-Unit-HW/` | Unit 1–6 HW、自制练习和逐文件索引 |
 | `APMICRO-Official-Docs/` | College Board 官方课程概览、课程海报和 CED 澄清文件 |
 | `APMICRO-Open-Resources/` | OpenStax、CORE Econ EPUB/PDF、MIT OCW 讲义、习题和答案 |
-| `APMICRO-Lesson-Plan/` | 教案框架、官方 CED Learning Objectives、36 课时安排、资料映射、双语 LaTeX 源文件和 PDF |
+| `APMICRO-Teaching/` | 教案、讲义、PPT 文件夹，以及每节课的配图设计和素材目录 |
+| `APMICRO-Teaching/Lesson-Plans/` | 教案框架、官方 CED Learning Objectives、36 课时安排、资料映射、双语 LaTeX 源文件和 PDF |
 
 ## LaTeX 教案
 
@@ -40,13 +45,15 @@ LaTeX 版本默认按 18 周、每周 2 次课、每次 90 分钟设计，包含
 
 入口：
 
-- [LaTeX README](APMICRO-Lesson-Plan/latex/README.md)
-- [英文 LaTeX 源文件](APMICRO-Lesson-Plan/latex/en/main.tex)
-- [英文打印版 PDF](APMICRO-Lesson-Plan/latex/en/AP-Microeconomics-Lesson-Plan-en.pdf)
-- [中文 LaTeX 源文件](APMICRO-Lesson-Plan/latex/zh/main.tex)
-- [中文打印版 PDF](APMICRO-Lesson-Plan/latex/zh/AP-Microeconomics-Lesson-Plan-zh.pdf)
-- [官方目标说明](APMICRO-Lesson-Plan/OFFICIAL-LEARNING-OBJECTIVES.md)
-- [LaTeX 备忘录](APMICRO-Lesson-Plan/LATEX-MEMO.md)
+- [LaTeX README](APMICRO-Teaching/Lesson-Plans/latex/README.md)
+- [英文 LaTeX 源文件](APMICRO-Teaching/Lesson-Plans/latex/en/main.tex)
+- [英文打印版 PDF](APMICRO-Teaching/Lesson-Plans/latex/en/AP-Microeconomics-Lesson-Plan-en.pdf)
+- [中文 LaTeX 源文件](APMICRO-Teaching/Lesson-Plans/latex/zh/main.tex)
+- [中文打印版 PDF](APMICRO-Teaching/Lesson-Plans/latex/zh/AP-Microeconomics-Lesson-Plan-zh.pdf)
+- [官方目标说明](APMICRO-Teaching/Lesson-Plans/OFFICIAL-LEARNING-OBJECTIVES.md)
+- [LaTeX 备忘录](APMICRO-Teaching/Lesson-Plans/LATEX-MEMO.md)
+
+配图设计入口：[36 课时配图计划](APMICRO-Teaching/Visual-Plan/visual-plan-36-sessions.md)。每节课按 2–3 项弹性设计：通常保留一张核心数据图和一张概念图，第三项历史或现实场景图作为可选延伸；后续再按来源、许可证和数据快照逐项制作。
 
 ## 索引和更新
 

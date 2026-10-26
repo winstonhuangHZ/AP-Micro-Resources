@@ -1,4 +1,13 @@
 .DS_Store
 APMICRO-Open-Resources/CORE-Econ/converted/
-APMICRO-Lesson-Plan/latex/build/
-APMICRO-Lesson-Plan/latex/*/build/
+APMICRO-Teaching/Lesson-Plans/latex/build/
+APMICRO-Teaching/Lesson-Plans/latex/*/build/
+APMICRO-Teaching/Lesson-Plans/latex/*/main.aux
+APMICRO-Teaching/Lesson-Plans/latex/*/main.fdb_latexmk
+APMICRO-Teaching/Lesson-Plans/latex/*/main.fls
+APMICRO-Teaching/Lesson-Plans/latex/*/main.log
+APMICRO-Teaching/Lesson-Plans/latex/*/main.out
+APMICRO-Teaching/Lesson-Plans/latex/*/main.synctex.gz
+APMICRO-Teaching/Lesson-Plans/latex/*/main.toc
+APMICRO-Teaching/Lesson-Plans/latex/*/main.xdv
+APMICRO-Teaching/Lesson-Plans/latex/*/main.pdf

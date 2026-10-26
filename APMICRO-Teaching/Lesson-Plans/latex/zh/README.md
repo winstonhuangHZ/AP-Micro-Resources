@@ -7,9 +7,9 @@
 
 ```bash
 python3 /Users/huangwenqin/.codex/plugins/cache/openai-bundled/latex/0.2.8/scripts/compile_latex.py \
-  "$PWD/APMICRO-Lesson-Plan/latex/zh/main.tex" \
+  "$PWD/APMICRO-Teaching/Lesson-Plans/latex/zh/main.tex" \
   --compiler texlive --engine xelatex \
-  --output-directory "$PWD/APMICRO-Lesson-Plan/latex/zh/build"
+  --output-directory "$PWD/APMICRO-Teaching/Lesson-Plans/latex/zh/build"
 ```
 
 课时目标来自 [`../../session-learning-objectives.csv`](../../session-learning-objectives.csv)。正文使用中文，但保留 AP Microeconomics、Learning Objective、FRQ、MCQ、PPC、MRP 等标准术语。
