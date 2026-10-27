@@ -462,8 +462,8 @@ def draw_s30():
     ax.text(.50, .92, "Rivalry × excludability", ha="center", fontsize=14, color=INK, fontweight="bold")
     ax.text(.35, .13, "nonrival", ha="center", color=INK, fontsize=9, fontweight="bold")
     ax.text(.65, .13, "rival", ha="center", color=INK, fontsize=9, fontweight="bold")
-    ax.text(.12, .47, "nonexcludable", ha="center", rotation=90, color=INK, fontsize=9, fontweight="bold")
-    ax.text(.12, .73, "excludable", ha="center", rotation=90, color=INK, fontsize=9, fontweight="bold")
+    ax.text(.18, .59, "non-excludable", ha="right", va="center", color=INK, fontsize=8.5, fontweight="bold")
+    ax.text(.18, .33, "excludable", ha="right", va="center", color=INK, fontsize=8.5, fontweight="bold")
     cells = [[("Public good", PALE_TEAL), ("Common resource", PALE_ORANGE)], [("Club good", PALE_BLUE), ("Private good", "white")]]
     for r in range(2):
         for c in range(2):
