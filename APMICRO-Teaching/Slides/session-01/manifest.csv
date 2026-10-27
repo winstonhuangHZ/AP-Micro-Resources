@@ -1,12 +1,13 @@
-slide,component,title,handout_link,asset_path,source,license_or_terms,status
-1,OPEN,Lesson identity,,none,Original slide text,Repository license,checked
-2,H02,Opening question,H02,none,Original prompt aligned to Session 01 handout,Repository license,checked
-3,H01,Official objectives,H01,none,College Board CED MKT-1.A and MKT-1.B,Official source cited in handout plan,checked
-4,H01,Scarcity and trade-offs,H01,none,Original synthesis aligned to CED,Repository license,checked
-5,H03,Three allocation questions,H03,none,Original clinic example aligned to CED MKT-1.B,Repository license,checked
-6,P01,Economic systems,P01,none,Original comparison aligned to CED MKT-1.B,Repository license,checked
-7,G02,Resource bundle visual,G02,../../Visual-Plan/assets/exports/figures/session-01-three-resource-scarcity-panel.png,Generated locally in repository,Repository license,checked
-8,G01,Choice and opportunity cost,G01,../../Visual-Plan/assets/diagrams/session-01-choice-opportunity-cost-card.png,Generated locally in repository,Repository license,checked
-9,G01,PPF bridge,G01,none,Editable TikZ sketch matched to handout,Repository license,checked
-10,T01,AP transfer,T01,none,Original prompt aligned to local Unit 1 practice topics,Repository license,checked
-11,E01,Exit ticket,E01,none,Original retrieval prompt,Repository license,checked
+pdf_pages,component,title,overlay_sequence,handout_link,asset_path,source,license_or_terms,status
+1,OPEN,Lesson identity,static,,none,Original slide text,Repository license,checked
+2-3,H02,Opening question,question -> lesson target,H02,none,Original prompt aligned to Session 01 handout,Repository license,checked
+4,H01,Official targets,static,H01,none,College Board CED MKT-1.A and MKT-1.B,Official source cited in handout plan,checked
+5-7,H01,Scarcity and trade-offs,resource image -> constraints -> conclusion,H01,../../Visual-Plan/assets/exports/figures/session-01-three-resource-scarcity-panel.png,Generated locally in repository,Repository license,checked
+8-10,H01,Causal chain,scarcity -> choice -> opportunity cost,H01,none,Original synthesis aligned to CED,Repository license,checked
+11-14,H03,Three allocation questions,what -> how -> for whom -> synthesis,H03,none,Original allocation sequence aligned to CED MKT-1.B,Repository license,checked
+15-18,P01,Economic systems,frame -> market -> command -> mixed/conclusion,P01,none,Original comparison aligned to CED MKT-1.B,Repository license,checked
+19-21,G02,Resource bundle visual,image -> resource labels -> trade-off,G02,../../Visual-Plan/assets/exports/figures/session-01-three-resource-scarcity-panel.png,Generated locally in repository,Repository license,checked
+22-24,G01,Choice and opportunity cost,choice -> foregone alternative -> definition,G01,../../Visual-Plan/assets/diagrams/session-01-choice-opportunity-cost-card.png,Generated locally in repository,Repository license,checked
+25-28,G01,PPF bridge,curve -> A/B points -> projections -> conclusion,G01,none,Editable TikZ sketch matched to handout,Repository license,checked
+29-31,T01,AP transfer,question -> evidence -> answer,T01,none,Original prompt aligned to local Unit 1 practice topics,Repository license,checked
+32-34,E01,Exit ticket,prompt -> response space -> model answer,E01,none,Original retrieval prompt,Repository license,checked

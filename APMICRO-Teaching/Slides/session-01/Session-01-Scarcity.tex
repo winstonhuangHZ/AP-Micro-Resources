@@ -1,379 +1,165 @@
 \documentclass[aspectratio=169,11pt]{beamer}
-
-\usepackage{libertinus}
+\usetheme{Madrid}
+\usecolortheme{default}
+\usepackage{lmodern}
 \usepackage{microtype}
 \usepackage{graphicx}
-\usepackage{booktabs,array}
 \usepackage{tikz}
-\usetikzlibrary{arrows.meta,calc,positioning}
+\usetikzlibrary{arrows.meta}
 \usepackage{xcolor}
 
 \definecolor{APBlue}{HTML}{17395C}
+\definecolor{APBlueDark}{HTML}{102B45}
 \definecolor{APTeal}{HTML}{168C87}
 \definecolor{APOrange}{HTML}{C96B32}
-\definecolor{APGold}{HTML}{D7A83D}
-\definecolor{PaleBlue}{HTML}{EDF4FA}
-\definecolor{PaleTeal}{HTML}{EAF6F4}
-\definecolor{PaleOrange}{HTML}{FFF1E8}
 \definecolor{Ink}{HTML}{1E2F40}
 \definecolor{Muted}{HTML}{5E7185}
-\definecolor{Paper}{HTML}{FBFCFD}
-
+\definecolor{PaleBlue}{HTML}{EEF4F9}
 \graphicspath{{../../Visual-Plan/assets/exports/figures/}{../../Visual-Plan/assets/diagrams/}}
 
-\setbeamertemplate{navigation symbols}{}
-\setbeamertemplate{footline}{}
-\setbeamertemplate{headline}{}
-\setbeamertemplate{itemize item}{\color{APTeal}\small$\blacktriangleright$}
-\setbeamertemplate{itemize subitem}{\color{APOrange}\scriptsize$\blacktriangleright$}
-\setbeamertemplate{blocks}[rounded][shadow=false]
-\setbeamercolor{background canvas}{bg=Paper}
-\setbeamercolor{normal text}{fg=Ink,bg=Paper}
-\setbeamercolor{frametitle}{fg=APBlue,bg=Paper}
 \setbeamercolor{structure}{fg=APBlue}
-\setbeamercolor{PaleBlue}{fg=Ink,bg=PaleBlue}
-\setbeamercolor{PaleTeal}{fg=Ink,bg=PaleTeal}
-\setbeamercolor{PaleOrange}{fg=Ink,bg=PaleOrange}
-\setbeamerfont{title}{family=\rmfamily,series=\bfseries,size=\fontsize{34}{40}\selectfont}
-\setbeamerfont{subtitle}{family=\sffamily,size=\fontsize{18}{22}\selectfont}
-\setbeamerfont{frametitle}{family=\rmfamily,series=\bfseries,size=\fontsize{25}{29}\selectfont}
-\setbeamerfont{normal text}{family=\rmfamily,size=\fontsize{16}{20}\selectfont}
-\setbeamerfont{footline}{family=\sffamily,size=\fontsize{8}{10}\selectfont}
+\setbeamercolor{palette primary}{fg=white,bg=APBlue}
+\setbeamercolor{palette secondary}{fg=white,bg=APBlueDark}
+\setbeamercolor{palette tertiary}{fg=white,bg=APBlue}
+\setbeamercolor{palette quaternary}{fg=white,bg=APBlueDark}
+\setbeamercolor{frametitle}{fg=white,bg=APBlue}
+\setbeamercolor{title}{fg=white}
+\setbeamercolor{subtitle}{fg=white}
+\setbeamercolor{normal text}{fg=Ink,bg=white}
+\setbeamercolor{block title}{fg=white,bg=APBlue}
+\setbeamercolor{block body}{fg=Ink,bg=PaleBlue}
+\setbeamercolor{alerted text}{fg=APOrange}
+\setbeamercolor{example text}{fg=APTeal}
+\setbeamercolor{author in head/foot}{fg=white,bg=APBlueDark}
+\setbeamercolor{title in head/foot}{fg=white,bg=APBlue}
+\setbeamercolor{date in head/foot}{fg=white,bg=APBlueDark}
+\setbeamerfont{title}{family=\rmfamily,series=\bfseries,size=\fontsize{17}{21}\selectfont}
+\setbeamerfont{subtitle}{family=\sffamily,size=\fontsize{12}{15}\selectfont}
+\setbeamerfont{frametitle}{family=\rmfamily,series=\bfseries,size=\fontsize{14}{17}\selectfont}
+\setbeamerfont{normal text}{family=\rmfamily,size=\fontsize{15}{19}\selectfont}
+\setbeamerfont{block title}{family=\rmfamily,series=\bfseries,size=\fontsize{14}{17}\selectfont}
+\setbeamerfont{block body}{family=\rmfamily,size=\fontsize{15}{19}\selectfont}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{itemize item}{\color{APBlue}$\blacktriangleright$}
+\setbeamertemplate{blocks}[rounded][shadow=false]
+\setbeamertemplate{frametitle continuation}{}
 \setbeamersize{text margin left=0.72cm,text margin right=0.72cm}
+\setlength{\leftmargini}{1.35em}
 
-\setbeamertemplate{frametitle}{%
-  \vspace{0.22cm}%
-  \noindent\usebeamerfont{frametitle}\insertframetitle\par%
-  \vspace{0.08cm}\noindent\color{APBlue}\rule{\textwidth}{0.8pt}%
-  \vspace{0.16cm}%
-}
-
-\newcommand{\sessionfooter}[2]{}
-
-\newcommand{\tagline}[1]{\textcolor{Muted}{\scriptsize\sffamily #1}\par}
-\newcommand{\callout}[2]{%
-  \begin{beamercolorbox}[wd=\linewidth,sep=0.18cm,rounded=true]{#1}%
-    #2
-  \end{beamercolorbox}%
-}
-\newcommand{\highlight}[1]{\textcolor{APOrange}{\textbf{#1}}}
-\newcommand{\teal}[1]{\textcolor{APTeal}{\textbf{#1}}}
+\title[Scarcity and Resource Allocation]{Scarcity and Resource Allocation}
+\subtitle{AP Microeconomics · Unit 1 · Session 01}
+\author[AP Microeconomics]{AP Microeconomics}
+\institute[Unit 1]{Unit 1 · Session 01}
+\date{}
 \newcommand{\blue}[1]{\textcolor{APBlue}{\textbf{#1}}}
+\newcommand{\teal}[1]{\textcolor{APTeal}{\textbf{#1}}}
+\newcommand{\orange}[1]{\textcolor{APOrange}{\textbf{#1}}}
+\newcommand{\muted}[1]{\textcolor{Muted}{#1}}
+\newcommand{\prompt}[1]{\begin{center}\Large\color{APBlue}\textit{#1}\end{center}}
+\newcommand{\answerline}{\rule{0.78\linewidth}{0.5pt}}
 
 \begin{document}
 
-% --------------------------------------------------------------------------
-% Cover
-% --------------------------------------------------------------------------
-\sessionfooter{}{Opening}
-\begin{frame}[plain]
-  \vspace{0.65cm}
-  {\color{APBlue}\rule{0.12\textwidth}{5pt}}\par
-  \vspace{0.45cm}
-  {\usebeamerfont{title}\color{APBlue}Scarcity and Resource Allocation\par}
-  \vspace{0.10cm}
-  {\usebeamerfont{subtitle}\color{Muted}AP Microeconomics · Unit 1 · Session 01\par}
-  \vspace{0.55cm}
+\begin{frame}[plain]\titlepage\end{frame}
+
+% Opening: question -> lesson target
+\begin{frame}<1-2>{A fixed resource forces a choice}
+  \only<1>{\vfill\prompt{A town has a fixed amount of land, labor, and time.}\vspace{0.18cm}\begin{center}\Large It chooses to produce more school meals.\end{center}\vfill\begin{center}\muted{What must happen to another use?}\end{center}}
+  \only<2>{\vspace{0.25cm}\begin{block}{Today we will answer}\Large How does scarcity create a choice, a trade-off, and an opportunity cost?\end{block}\vspace{0.25cm}\begin{itemize}\setlength{\itemsep}{0.20cm}\item identify the scarce resource;\item explain the allocation decision;\item name the best alternative given up.\end{itemize}}
+\end{frame}
+
+\begin{frame}{Official targets for Session 01}
+  \begin{block}{By the end of the lesson}\large I can connect a limited resource to a specific choice and a specific foregone alternative.\end{block}
+  \vspace{0.25cm}\begin{itemize}\setlength{\itemsep}{0.20cm}\item Define resources and explain why \blue{scarcity creates trade-offs}.\item Answer \blue{what, how, and for whom}.\item Compare \blue{market, command, and mixed systems}.\item Explain \orange{opportunity cost} as the best alternative given up.\end{itemize}
+  \vfill\begin{center}\small\muted{College Board CED: MKT-1.A · MKT-1.B}\end{center}
+\end{frame}
+
+% Scarcity: resource visual -> constraints -> conclusion
+\begin{frame}<1-3>{Scarcity turns resources into trade-offs}
   \begin{columns}[T,totalwidth=\textwidth]
-    \column{0.58\textwidth}
-      {\color{Muted}\fontsize{18}{24}\selectfont
-      One scarce resource can support several valuable uses.\par}
-      \vspace{0.35cm}
-      \callout{PaleBlue}{\blue{Official focus}\quad MKT-1.A · MKT-1.B}
+    \column{0.58\textwidth}\centering\includegraphics[width=0.92\linewidth,height=0.56\textheight,keepaspectratio]{session-01-three-resource-scarcity-panel.png}
     \column{0.36\textwidth}
-      \raggedleft
-      {\color{APTeal}\fontsize{18}{23}\selectfont\sffamily
-      90-minute lesson\par}
-      \vspace{0.25cm}
-      {\color{Muted}\large\sffamily\raggedleft
-      Handout IDs: H02 · H01 · H03 · P01 · G02 · G01 · T01 · E01}
+      \only<1>{\vspace{0.8cm}\Large\blue{Look first.}\par\vspace{0.18cm}What resources appear limited?}
+      \only<2>{\vspace{0.25cm}\Large\blue{Three constraints}\par\vspace{0.15cm}\begin{itemize}\setlength{\itemsep}{0.16cm}\item labor\item materials\item time\end{itemize}\vspace{0.12cm}Each input has competing uses.}
+      \only<3>{\vspace{0.25cm}\Large\blue{Conclusion}\par\vspace{0.15cm}Desired uses exceed available resources.\vspace{0.18cm}Every decision creates an \orange{economic trade-off}.}
   \end{columns}
 \end{frame}
 
-% --------------------------------------------------------------------------
-% H02
-% --------------------------------------------------------------------------
-\sessionfooter{H02}{0–8 min · Opening question}
-\begin{frame}[t]{A fixed resource forces a choice}
-  \tagline{H02 · RETRIEVAL AND PREDICTION}
-  \vspace{0.18cm}
+% Definitions: definition -> mechanism -> conclusion
+\begin{frame}<1-3>{The causal chain}
+  \vfill\begin{center}
+    \only<1>{\Huge\blue{Scarcity}\par\vspace{0.25cm}\Large Resources are limited relative to desired uses.}
+    \only<2>{\Huge\blue{Choice}\par\vspace{0.25cm}\Large A decision-maker selects one use for a scarce resource.}
+    \only<3>{\Huge\orange{Opportunity cost}\par\vspace{0.25cm}\Large The value of the best alternative given up.}
+  \end{center}\vfill
+\end{frame}
+
+% Allocation questions: what -> how -> for whom -> synthesis
+\begin{frame}<1-4>{Every economic system answers three questions}
   \begin{columns}[T,totalwidth=\textwidth]
-    \column{0.64\textwidth}
-      {\color{APBlue}\fontsize{20}{24}\selectfont
-      A town has a fixed amount of land, labor, and time.\par}
-      \vspace{0.12cm}
-      {\fontsize{20}{24}\selectfont
-      It chooses to produce more school meals.\par}
-      \vspace{0.16cm}
-      \callout{PaleOrange}{\fontsize{16}{19}\selectfont
-        At least one other use of those resources must fall.}
-    \column{0.30\textwidth}
-      \vspace{0.02cm}
-      \begin{tikzpicture}[x=1cm,y=1cm]
-        \fill[APBlue!10,rounded corners=3pt] (0,0) rectangle (3.6,4.55);
-        \draw[APBlue!65,line width=1pt,rounded corners=3pt] (0,0) rectangle (3.6,4.55);
-        \node[align=center,text width=3.0cm,font=\sffamily\large\bfseries,text=APBlue] at (1.8,3.95) {Write one sentence};
-        \draw[APTeal,line width=2pt,-{Latex[length=3mm]}] (1.8,3.30) -- (1.8,2.55);
-        \node[align=center,text width=2.6cm,font=\sffamily\large,text=Ink] at (1.8,1.98) {name the\\foregone use};
-        \draw[APOrange,line width=2pt,-{Latex[length=3mm]}] (1.8,1.34) -- (1.8,0.72);
-        \node[align=center,text width=2.7cm,font=\sffamily\large\bfseries,text=APOrange] at (1.8,0.32) {60 seconds};
-      \end{tikzpicture}
+    \column{0.31\textwidth}\only<1->{\Large\blue{What?}\par\vspace{0.15cm}Which goods or services will be made?}
+    \column{0.31\textwidth}\only<2->{\Large\teal{How?}\par\vspace{0.15cm}Which methods and inputs will be used?}
+    \column{0.31\textwidth}\only<3->{\Large\orange{For whom?}\par\vspace{0.15cm}Who will receive the output?}
+  \end{columns}
+  \vfill\only<4>{\begin{block}{Why all three matter}\large Fixed staff, time, and building capacity make all three questions unavoidable.\end{block}}
+\end{frame}
+
+% Economic systems: frame -> market -> command -> mixed/conclusion
+\begin{frame}<1-4>{Economic systems coordinate scarce resources}
+  \only<1>{\vfill\prompt{A system is a way of coordinating choices.}\vfill}
+  \only<2->{\begin{columns}[T,totalwidth=\textwidth]\column{0.31\textwidth}\only<2->{\Large\blue{Market}\par\vspace{0.15cm}Prices, incentives, and voluntary exchange guide decisions.}\column{0.31\textwidth}\only<3->{\Large\orange{Command}\par\vspace{0.15cm}Central planning and administrative direction guide decisions.}\column{0.31\textwidth}\only<4->{\Large\teal{Mixed}\par\vspace{0.15cm}Markets operate alongside public rules or provision.}\end{columns}\vfill\only<4>{\begin{center}\muted{The coordinating mechanism changes; scarcity remains.}\end{center}}}
+\end{frame}
+
+% Resource bundle: image -> labels -> trade-off
+\begin{frame}<1-3>{A resource bundle can support competing uses}
+  \begin{columns}[T,totalwidth=\textwidth]\column{0.60\textwidth}\centering\includegraphics[width=0.90\linewidth,height=0.56\textheight,keepaspectratio]{session-01-three-resource-scarcity-panel.png}\column{0.35\textwidth}
+    \only<1>{\vspace{0.8cm}\Large\blue{Read the bars.}\par\vspace{0.18cm}Which use receives the scarce bundle?}
+    \only<2>{\vspace{0.25cm}\Large\blue{Name the constraints.}\par\vspace{0.15cm}\begin{itemize}\item labor\item materials\item time\end{itemize}}
+    \only<3>{\vspace{0.25cm}\Large\orange{Trade-off}\par\vspace{0.18cm}More of one use requires less of another when the bundle is fixed.}
   \end{columns}
 \end{frame}
 
-% --------------------------------------------------------------------------
-% H01
-% --------------------------------------------------------------------------
-\sessionfooter{H01}{8–15 min · Official objectives}
-\begin{frame}[t]{Today’s official targets}
-  \tagline{H01 · MKT-1.A AND MKT-1.B}
-  \vspace{0.06cm}
-  \begin{columns}[T,totalwidth=\textwidth]
-    \column{0.56\textwidth}
-      \begin{itemize}\setlength{\itemsep}{0.08cm}\fontsize{15}{18}\selectfont
-        \item Define resources and explain why \teal{scarcity creates trade-offs}.
-        \item Answer the allocation questions: \blue{what, how, and for whom}.
-        \item Compare \blue{market, command, and mixed systems}.
-        \item Explain one choice with a \highlight{foregone alternative}.
-      \end{itemize}
-    \column{0.39\textwidth}
-      \vspace{0.10cm}
-      \callout{PaleTeal}{%
-        \blue{Success criterion}\par\vspace{0.08cm}
-        I can name the scarce input, the choice, and the alternative use that gives up a benefit.
-      }
-      \vspace{0.14cm}
-      {\color{Muted}\small\sffamily\textbf{CED links}\par
-      MKT-1.A · MKT-1.B\par
-      CED pp. 41–42}
+% Choice: selection -> foregone alternative -> definition
+\begin{frame}<1-3>{Opportunity cost names the benefit left behind}
+  \begin{columns}[T,totalwidth=\textwidth]\column{0.56\textwidth}\centering\includegraphics[width=0.82\linewidth,height=0.44\textheight,keepaspectratio]{session-01-choice-opportunity-cost-card.png}\column{0.37\textwidth}
+    \only<1>{\vspace{0.55cm}\Large\blue{Choice}\par\vspace{0.18cm}The decision-maker chooses A.}
+    \only<2>{\vspace{0.55cm}\Large\blue{What is given up?}\par\vspace{0.18cm}The next-best alternative is B.}
+    \only<3>{\vspace{0.55cm}\Large\orange{Opportunity cost}\par\vspace{0.18cm}The benefit from B is the opportunity cost of choosing A.}
   \end{columns}
 \end{frame}
 
-% --------------------------------------------------------------------------
-% H01 core model
-% --------------------------------------------------------------------------
-\sessionfooter{H01}{15–22 min · Core model}
-\begin{frame}[t]{Scarcity turns resources into trade-offs}
-  \tagline{H01 · SCARCITY, TRADE-OFF, OPPORTUNITY COST}
-  \vspace{0.10cm}
-  \begin{columns}[T,totalwidth=\textwidth]
-    \column{0.47\textwidth}
-      \callout{PaleBlue}{%
-        {\color{APBlue}\fontsize{20}{24}\selectfont\bfseries Scarcity}\par\vspace{0.06cm}
-        Available resources are limited relative to desired uses.
-      }
-      \vspace{0.10cm}
-      {\color{Muted}\fontsize{15}{18}\selectfont
-      The resource may be land, labor, physical capital, time, or productive capacity.}
-    \column{0.47\textwidth}
-      \callout{PaleOrange}{%
-        {\color{APOrange}\fontsize{20}{24}\selectfont\bfseries Trade-off}\par\vspace{0.06cm}
-        Choosing one use means giving up another use.
-      }
-      \vspace{0.10cm}
-      {\color{Ink}\fontsize{16}{20}\selectfont
-      \highlight{Opportunity cost} = the value of the best alternative given up.}
-  \end{columns}
-  \vspace{0.10cm}
-  {\color{Muted}\centering\fontsize{13}{16}\selectfont\sffamily
-    scarce resource $\longrightarrow$ choice $\longrightarrow$ foregone alternative\par}
-\end{frame}
-
-% --------------------------------------------------------------------------
-% H03
-% --------------------------------------------------------------------------
-\sessionfooter{H03}{22–32 min · Allocation questions}
-\begin{frame}[t]{Every economic system answers three questions}
-  \tagline{H03 · RESOURCE ALLOCATION}
-  \vspace{0.08cm}
-  \begin{columns}[T,totalwidth=\textwidth]
-    \column{0.32\textwidth}
-      {\color{APBlue}\fontsize{20}{24}\selectfont\bfseries What\par\vspace{0.04cm}}
-      {\fontsize{14}{17}\selectfont Which goods or services will be made?\par}
-      \vspace{0.10cm}\textcolor{Muted}{\rule{\linewidth}{0.6pt}}\par
-      {\color{Muted}\small\sffamily Clinic example\par}
-      {\fontsize{14}{17}\selectfont Vaccinations or meal kits?}
-    \column{0.32\textwidth}
-      {\color{APTeal}\fontsize{20}{24}\selectfont\bfseries How\par\vspace{0.04cm}}
-      {\fontsize{14}{17}\selectfont Which methods and inputs will be used?\par}
-      \vspace{0.10cm}\textcolor{Muted}{\rule{\linewidth}{0.6pt}}\par
-      {\color{Muted}\small\sffamily Clinic example\par}
-      {\fontsize{14}{17}\selectfont Nurses and equipment or a mobile unit?}
-    \column{0.32\textwidth}
-      {\color{APOrange}\fontsize{20}{24}\selectfont\bfseries For whom\par\vspace{0.04cm}}
-      {\fontsize{14}{17}\selectfont Who will receive the output?\par}
-      \vspace{0.10cm}\textcolor{Muted}{\rule{\linewidth}{0.6pt}}\par
-      {\color{Muted}\small\sffamily Clinic example\par}
-      {\fontsize{14}{17}\selectfont Residents meeting a stated rule?}
-  \end{columns}
-  \vspace{0.10cm}
-  {\color{Muted}\centering\fontsize{13}{16}\selectfont\sffamily
-    Fixed capacity makes all three questions unavoidable.\par}
-\end{frame}
-
-% --------------------------------------------------------------------------
-% P01
-% --------------------------------------------------------------------------
-\sessionfooter{P01}{32–42 min · Economic systems}
-\begin{frame}[t]{Economic systems coordinate scarce resources}
-  \tagline{P01 · COMPARE THE MECHANISM, NOT A RANKING}
-  \vspace{0.08cm}
-  \begin{columns}[T,totalwidth=\textwidth]
-    \column{0.32\textwidth}
-      {\color{APBlue}\fontsize{20}{24}\selectfont\bfseries Market\par\vspace{0.06cm}}
-      {\fontsize{14}{17}\selectfont Prices, incentives, and voluntary exchange guide decisions.\par}
-      \vspace{0.10cm}{\color{Muted}\scriptsize\sffamily\textbf{Signal:} demand can raise a price and attract resources.}
-    \column{0.32\textwidth}
-      {\color{APOrange}\fontsize{20}{24}\selectfont\bfseries Command\par\vspace{0.06cm}}
-      {\fontsize{14}{17}\selectfont Central planning and administrative direction guide decisions.\par}
-      \vspace{0.10cm}{\color{Muted}\scriptsize\sffamily\textbf{Signal:} an authority sets targets or directs inputs.}
-    \column{0.32\textwidth}
-      {\color{APTeal}\fontsize{20}{24}\selectfont\bfseries Mixed\par\vspace{0.06cm}}
-      {\fontsize{14}{17}\selectfont Markets operate alongside public rules or provision.\par}
-      \vspace{0.10cm}{\color{Muted}\scriptsize\sffamily\textbf{Signal:} private and public decisions interact.}
-  \end{columns}
-  \vspace{0.10cm}
-  {\color{Muted}\centering\fontsize{13}{16}\selectfont\sffamily
-    The coordinating mechanism changes; scarcity remains.\par}
-\end{frame}
-
-% --------------------------------------------------------------------------
-% G02
-% --------------------------------------------------------------------------
-\sessionfooter{G02}{42–50 min · Visual model}
-\begin{frame}[t]{A resource bundle can support competing uses}
-  \tagline{G02 · RESOURCE BUNDLE}
-  \vspace{0.06cm}
-  \begin{columns}[T,totalwidth=\textwidth]
-    \column{0.62\textwidth}
-      \centering
-      \includegraphics[width=0.78\linewidth,height=0.42\textheight,keepaspectratio]{session-01-three-resource-scarcity-panel.png}
-    \column{0.34\textwidth}
-      \vspace{0.14cm}
-      {\color{APBlue}\fontsize{18}{22}\selectfont\bfseries Choose one bar.\par}
-      \vspace{0.10cm}
-      {\fontsize{15}{19}\selectfont
-      Name one resource.\par\vspace{0.10cm}
-      Name one displaced use.}
-      \vspace{0.12cm}
-      \callout{PaleTeal}{\fontsize{13}{16}\selectfont
-        \teal{Evidence:} fixed input + displaced alternative.
-      }
+% PPF bridge: curve -> points -> projections -> conclusion
+\begin{frame}<1-4>{A movement along a boundary shows a trade-off}
+  \begin{columns}[T,totalwidth=\textwidth]\column{0.64\textwidth}\centering
+    \begin{tikzpicture}[x=0.50cm,y=0.29cm,>=Latex]
+      \draw[->,thick,APBlue] (0,0) -- (11,0) node[below right,font=\sffamily\normalsize] {Good A};
+      \draw[->,thick,APBlue] (0,0) -- (0,11) node[above left,font=\sffamily\normalsize] {Good B};
+      \draw[very thick,APTeal] (0.5,9.5) .. controls (3.2,8.9) and (6.4,5.8) .. (9.8,0.7);
+      \only<2->{\fill[APBlue] (3.2,7.9) circle (3pt) node[above right,font=\sffamily\normalsize] {A};\fill[APOrange] (6.6,4.7) circle (3pt) node[above right,font=\sffamily\normalsize] {B};}
+      \only<3->{\draw[densely dashed,Muted] (3.2,0) -- (3.2,7.9) (0,7.9) -- (3.2,7.9);\draw[densely dashed,Muted] (6.6,0) -- (6.6,4.7) (0,4.7) -- (6.6,4.7);\draw[->,very thick,APOrange] (3.55,7.45) -- (6.15,5.15);}
+    \end{tikzpicture}
+  \column{0.30\textwidth}
+    \only<1>{\vspace{0.7cm}\Large\blue{Start with the boundary.}\par\vspace{0.18cm}It shows feasible combinations of two goods.}
+    \only<2>{\vspace{0.7cm}\Large\blue{Compare A and B.}\par\vspace{0.18cm}Both points lie on the same boundary.}
+    \only<3>{\vspace{0.7cm}\Large\blue{Project to the axes.}\par\vspace{0.18cm}Good A rises while Good B falls.}
+    \only<4>{\vspace{0.7cm}\Large\orange{Trade-off}\par\vspace{0.18cm}Moving from A to B gives up Good B.}
   \end{columns}
 \end{frame}
 
-% --------------------------------------------------------------------------
-% G01
-% --------------------------------------------------------------------------
-\sessionfooter{G01}{50–56 min · Choice and opportunity cost}
-\begin{frame}[t]{Opportunity cost names the benefit left behind}
-  \tagline{G01 · CHOICE CARD}
-  \vspace{0.06cm}
-  \begin{columns}[T,totalwidth=\textwidth]
-    \column{0.55\textwidth}
-      \centering
-      \includegraphics[width=0.68\linewidth,height=0.27\textheight,keepaspectratio]{session-01-choice-opportunity-cost-card.png}
-    \column{0.40\textwidth}
-      \vspace{0.06cm}
-      {\color{APBlue}\fontsize{17}{20}\selectfont\bfseries If the decision-maker chooses A:\par}
-      \vspace{0.06cm}
-      {\fontsize{15}{18}\selectfont
-      \highlight{the opportunity cost is the benefit from B.}\par}
-      \vspace{0.06cm}
-      {\color{Muted}\fontsize{13}{16}\selectfont\sffamily
-        A uses a scarce resource; choosing A gives up B's benefit.\par}
+% AP transfer: prompt -> evidence -> answer
+\begin{frame}<1-3>{AP transfer: identify the scarce resource}
+  \begin{columns}[T,totalwidth=\textwidth]\column{0.64\textwidth}\Large One empty classroom must serve either a tutoring center or a rehearsal room. Which statement is most accurate?\vspace{0.22cm}\begin{enumerate}\setlength{\itemsep}{0.10cm}\normalsize\item Scarcity exists only if the school charges rent.\item The room is scarce because it has alternative uses.\item There is no scarcity if both activities are valuable.\end{enumerate}\column{0.30\textwidth}
+    \only<1>{\vspace{0.9cm}\muted{Read the choices first.}}
+    \only<2>{\vspace{0.55cm}\Large\blue{Evidence}\par\vspace{0.18cm}The classroom is fixed and has alternative uses.}
+    \only<3>{\vspace{0.35cm}\Large\orange{Answer: B}\par\vspace{0.18cm}The room cannot serve both uses at once.}
   \end{columns}
 \end{frame}
 
-% --------------------------------------------------------------------------
-% PPF bridge
-% --------------------------------------------------------------------------
-\sessionfooter{G01}{56–60 min · PPF bridge}
-\begin{frame}[t]{A movement along a boundary shows a trade-off}
-  \tagline{BRIDGE GRAPH · PREVIEW FOR SESSION 2}
-  \vspace{0.04cm}
-  \begin{columns}[T,totalwidth=\textwidth]
-    \column{0.61\textwidth}
-      \centering
-      \begin{tikzpicture}[x=0.48cm,y=0.24cm,>=Latex]
-        \draw[->,thick,APBlue] (0,0) -- (11,0) node[below right,font=\sffamily\normalsize] {Good A};
-        \draw[->,thick,APBlue] (0,0) -- (0,11) node[above left,align=center,font=\sffamily\normalsize] {Good B};
-        \draw[very thick,APTeal] (0.5,9.5) .. controls (3.2,8.9) and (6.4,5.8) .. (9.8,0.7);
-        \fill[APBlue] (3.2,7.9) circle (3pt) node[above right,font=\sffamily\normalsize] {A};
-        \fill[APOrange] (6.6,4.7) circle (3pt) node[above right,font=\sffamily\normalsize] {B};
-        \draw[densely dashed,Muted] (3.2,0) -- (3.2,7.9) (0,7.9) -- (3.2,7.9);
-        \draw[densely dashed,Muted] (6.6,0) -- (6.6,4.7) (0,4.7) -- (6.6,4.7);
-        \draw[->,very thick,APOrange] (3.55,7.45) -- (6.15,5.15);
-      \end{tikzpicture}
-    \column{0.34\textwidth}
-      \vspace{0.10cm}
-      {\fontsize{16}{19}\selectfont
-      Moving from A to B:}
-      \vspace{0.10cm}
-      \begin{itemize}\setlength{\itemsep}{0.04cm}\fontsize{14}{17}\selectfont
-        \item Good A increases.
-        \item Good B decreases.
-        \item The trade-off is the Good B forgone.
-      \end{itemize}
-      \vspace{0.02cm}
-      {\color{Muted}\fontsize{10}{12}\selectfont\sffamily
-        Session 2 formalizes this boundary.\par}
-  \end{columns}
-\end{frame}
-
-% --------------------------------------------------------------------------
-% T01
-% --------------------------------------------------------------------------
-\sessionfooter{T01}{60–86 min · AP transfer}
-\begin{frame}[t]{AP transfer: identify the scarce resource}
-  \tagline{T01 · MCQ AND SHORT RESPONSE}
-  \vspace{0.04cm}
-  \begin{columns}[T,totalwidth=\textwidth]
-    \column{0.61\textwidth}
-      {\fontsize{15}{18}\selectfont
-      One empty classroom must serve either a tutoring center or a rehearsal room. Which statement is most accurate?\par}
-      \vspace{0.10cm}
-      \begin{enumerate}\setlength{\itemsep}{0.02cm}\fontsize{12}{14}\selectfont
-        \item Scarcity exists only if the school charges rent.
-        \item The room is scarce because it has alternative uses.
-        \item There is no scarcity if both activities are valuable.
-      \end{enumerate}
-    \column{0.33\textwidth}
-      \callout{PaleTeal}{%
-        {\color{APTeal}\fontsize{18}{21}\selectfont\bfseries Answer: B\par\vspace{0.04cm}}
-        The fixed classroom cannot serve both uses at once.
-      }
-      \vspace{0.12cm}
-      {\color{APBlue}\fontsize{16}{19}\selectfont\bfseries Short response\par}
-      {\fontsize{13}{16}\selectfont What allocation question is answered when a city makes a building a clinic?}
-  \end{columns}
-\end{frame}
-
-% --------------------------------------------------------------------------
-% E01
-% --------------------------------------------------------------------------
-\sessionfooter{E01}{86–90 min · Exit ticket}
-\begin{frame}[t]{Exit ticket: state the causal chain}
-  \tagline{E01 · LAST 3 MINUTES}
-  \vspace{0.12cm}
-  \callout{PaleBlue}{\centering\fontsize{19}{23}\selectfont
-    scarce resource \quad $\rightarrow$ \quad choice \quad $\rightarrow$ \quad trade-off
-  }
-  \vspace{0.30cm}
-  \begin{columns}[T,totalwidth=\textwidth]
-    \column{0.48\textwidth}
-      {\color{APBlue}\fontsize{18}{22}\selectfont\bfseries Complete one sentence:\par}
-      \vspace{0.10cm}
-      {\fontsize{15}{19}\selectfont
-      “Because \underline{\hspace{1.0cm}} is limited, choosing \underline{\hspace{1.0cm}} means giving up \underline{\hspace{1.0cm}}.”}
-    \column{0.43\textwidth}
-      {\color{APOrange}\fontsize{18}{22}\selectfont\bfseries One point to check:\par}
-      \vspace{0.10cm}
-      {\fontsize{15}{19}\selectfont
-      Write one distinction you still need to review.}
-  \end{columns}
-  \vspace{0.18cm}
-  {\color{Muted}\fontsize{13}{16}\selectfont\sffamily Submit one accurate causal sentence.}
+% Exit ticket: prompt -> response -> model answer
+\begin{frame}<1-3>{Exit ticket: state the causal chain}
+  \only<1>{\vfill\prompt{Because \underline{\hspace{1.5cm}} is limited, choosing \underline{\hspace{1.5cm}} means giving up \underline{\hspace{1.5cm}}.}\vfill}
+  \only<2>{\vspace{0.6cm}\begin{block}{Write one accurate causal sentence}\large Because \answerline\ is limited, choosing \answerline\ means giving up \answerline.\end{block}\vfill\begin{center}\muted{Use one scarce resource, one choice, and one foregone alternative.}\end{center}}
+  \only<3>{\vspace{0.6cm}\begin{block}{Model answer}\large Because \blue{classroom space} is limited, choosing \blue{a tutoring center} means giving up \orange{a rehearsal room}.\end{block}\vfill\begin{center}\Large\blue{scarce resource} $\longrightarrow$ \blue{choice} $\longrightarrow$ \orange{trade-off}\end{center}}
 \end{frame}
 
 \end{document}
