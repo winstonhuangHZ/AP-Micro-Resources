@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
   "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="493.327031pt" height="318.8664pt" viewBox="0 0 493.327031 318.8664" xmlns="http://www.w3.org/2000/svg" version="1.1">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="456.48pt" height="287.352pt" viewBox="0 0 456.48 287.352" xmlns="http://www.w3.org/2000/svg" version="1.1">
  <metadata>
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2026-10-27T11:57:08.647761</dc:date>
+    <dc:date>2026-10-27T17:52:25.749074</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -21,79 +21,55 @@
  </defs>
  <g id="figure_1">
   <g id="patch_1">
-   <path d="M 0 318.8664
-L 493.327031 318.8664
-L 493.327031 0
-L 0 0
+   <path d="M 0 287.352 
+L 456.48 287.352 
+L 456.48 0 
+L 0 0 
 z
 " style="fill: #ffffff"/>
   </g>
   <g id="axes_1">
    <g id="patch_2">
-    <path d="M 27.5544 185.25096
-L 137.4984 185.25096
-L 137.4984 131.65704
-L 27.5544 131.65704
+    <path d="M 16.884 185.0508 
+L 128.124 185.0508 
+L 128.124 102.3012 
+L 16.884 102.3012 
 z
-" clip-path="url(#p31854fad4a)" style="fill: #ffffff; stroke: #1f6feb; stroke-width: 2; stroke-linejoin: miter"/>
+" clip-path="url(#pd37a71a701)" style="fill: #ffffff; stroke: #1f6feb; stroke-width: 2; stroke-linejoin: miter"/>
    </g>
    <g id="patch_3">
-    <path d="M 335.3976 185.25096
-L 445.3416 185.25096
-L 445.3416 131.65704
-L 335.3976 131.65704
+    <path d="M 328.356 185.0508 
+L 439.596 185.0508 
+L 439.596 102.3012 
+L 328.356 102.3012 
 z
-" clip-path="url(#p31854fad4a)" style="fill: #ffffff; stroke: #e76f51; stroke-width: 2; stroke-linejoin: miter"/>
+" clip-path="url(#pd37a71a701)" style="fill: #ffffff; stroke: #e76f51; stroke-width: 2; stroke-linejoin: miter"/>
    </g>
    <g id="patch_4">
-    <path d="M 141.697464 155.47656
-Q 229.851571 155.47656 315.769611 155.47656
-" clip-path="url(#p31854fad4a)" style="fill: none; stroke: #2a9d8f; stroke-width: 2; stroke-linecap: round"/>
-    <path d="M 309.369611 152.27656
-L 315.769611 155.47656
-L 309.369611 158.67656
+    <path d="M 132.350292 139.0788 
+Q 221.565567 139.0788 308.544773 139.0788 
+" clip-path="url(#pd37a71a701)" style="fill: none; stroke: #2a9d8f; stroke-width: 2; stroke-linecap: round"/>
+    <path d="M 302.144773 135.8788 
+L 308.544773 139.0788 
+L 302.144773 142.2788 
 z
-" clip-path="url(#p31854fad4a)" style="fill: #2a9d8f; stroke: #2a9d8f; stroke-width: 2; stroke-linecap: round"/>
+" clip-path="url(#pd37a71a701)" style="fill: #2a9d8f; stroke: #2a9d8f; stroke-width: 2; stroke-linecap: round"/>
    </g>
    <g id="patch_5">
-    <path d="M 322.404962 164.40888
-Q 232.050583 164.40888 143.932271 164.40888
-" clip-path="url(#p31854fad4a)" style="fill: none; stroke: #2a9d8f; stroke-width: 2; stroke-linecap: round"/>
-    <path d="M 150.332271 167.60888
-L 143.932271 164.40888
-L 150.332271 161.20888
+    <path d="M 315.23302 152.8704 
+Q 223.790993 152.8704 134.585034 152.8704 
+" clip-path="url(#pd37a71a701)" style="fill: none; stroke: #2a9d8f; stroke-width: 2; stroke-linecap: round"/>
+    <path d="M 140.985034 156.0704 
+L 134.585034 152.8704 
+L 140.985034 149.6704 
 z
-" clip-path="url(#p31854fad4a)" style="fill: #2a9d8f; stroke: #2a9d8f; stroke-width: 2; stroke-linecap: round"/>
+" clip-path="url(#pd37a71a701)" style="fill: #2a9d8f; stroke: #2a9d8f; stroke-width: 2; stroke-linecap: round"/>
    </g>
-   <g id="text_1">
-    <text style="font-weight: 700; font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #17324d" x="82.5264" y="161.76525" transform="rotate(-0 82.5264 161.76525)">Producer A</text>
-   </g>
-   <g id="text_2">
-    <text style="font-weight: 700; font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #17324d" x="390.3696" y="161.76525" transform="rotate(-0 390.3696 161.76525)">Producer B</text>
-   </g>
-   <g id="text_3">
-    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #2a9d8f" x="229.85136" y="150.196847" transform="rotate(-0 229.85136 150.196847)">Food</text>
-   </g>
-   <g id="text_4">
-    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #2a9d8f" x="232.05024" y="177.589295" transform="rotate(-0 232.05024 177.589295)">Cloth</text>
-   </g>
-   <g id="text_5">
-    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #17324d" x="236.448" y="218.0028" transform="rotate(-0 236.448 218.0028)">Specialization → exchange → a larger attainable consumption set</text>
-   </g>
-  </g>
-  <g id="text_6">
-   <text style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17324d" x="5.76" y="16.397812" transform="rotate(-0 5.76 16.397812)">Specialization and mutually beneficial trade</text>
-  </g>
-  <g id="text_7">
-   <text style="font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #5f7184" x="5.76" y="29.502516" transform="rotate(-0 5.76 29.502516)">Opportunity cost determines specialization; terms of trade connect the two producers.</text>
-  </g>
-  <g id="text_8">
-   <text style="font-size: 7.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #5f7184" x="5.76" y="311.338041" transform="rotate(-0 5.76 311.338041)">Source: APMICRO illustrative data / comparative-advantage.csv.  |  Schematic teaching diagram; arrows show direction of trade.</text>
   </g>
  </g>
  <defs>
-  <clipPath id="p31854fad4a">
-   <rect x="16.56" y="69.1308" width="439.776" height="178.6464"/>
+  <clipPath id="pd37a71a701">
+   <rect x="5.76" y="5.76" width="444.96" height="275.832"/>
   </clipPath>
  </defs>
 </svg>

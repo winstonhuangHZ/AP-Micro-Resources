@@ -4,7 +4,7 @@ This is the visual design index for the 36-session course. Each session should h
 
 ## Production rules
 
-- **Python charts:** generate from public data at build time, save the data snapshot and script, and include a source note on the figure itself.
+- **Python charts:** generate from public data at build time and save the data snapshot and script. Export graph-only assets: keep economic axes, legends, projection lines, and key teaching markers in the image; put figure titles, captions, panel titles, classroom use, and source/attribution text in the LaTeX files and this index.
 - **Concept diagrams:** draw locally as SVG/PDF/PNG so labels remain consistent across handouts and slides.
 - **Wikimedia Commons:** category pages are discovery indexes. Before copying a file, open its individual description page and record the exact license, author, source, and attribution text.
 - **Historical images:** use them to open a discussion or provide context. Do not treat a single photograph as statistical evidence.

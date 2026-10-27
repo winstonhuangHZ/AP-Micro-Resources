@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
   "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="386.330156pt" height="312.84pt" viewBox="0 0 386.330156 312.84" xmlns="http://www.w3.org/2000/svg" version="1.1">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="338.749062pt" height="300.628437pt" viewBox="0 0 338.749062 300.628437" xmlns="http://www.w3.org/2000/svg" version="1.1">
  <metadata>
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2026-10-27T11:57:37.868400</dc:date>
+    <dc:date>2026-10-27T17:52:48.294256</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -21,132 +21,111 @@
  </defs>
  <g id="figure_1">
   <g id="patch_1">
-   <path d="M 0 312.84
-L 386.330156 312.84
-L 386.330156 0
-L 0 0
+   <path d="M 0 300.628437 
+L 338.749062 300.628437 
+L 338.749062 0 
+L 0 0 
 z
 " style="fill: #ffffff"/>
   </g>
   <g id="axes_1">
    <g id="patch_2">
-    <path d="M 164.188 213.1
-L 308.708 213.1
-L 308.708 68.58
-L 164.188 68.58
+    <path d="M 73.269062 265.48 
+L 332.989063 265.48 
+L 332.989063 5.76 
+L 73.269062 5.76 
 z
 " style="fill: #ffffff"/>
    </g>
-   <g clip-path="url(#p7e58c6acae)">
+   <g clip-path="url(#pa6f2288513)">
     <image xlink:href="data:image/png;base64,
-iVBORw0KGgoAAAANSUhEUgAAAMkAAADJCAYAAACJxhYFAAACOUlEQVR4nO3VoQ3CUABFUUqaBoFkDNbtVgxAGAFBugFYUnPlrzhngmdu3vTc3t8Th3F7raMnsHMePQCOTiQQRAJBJBBEAkEkEEQCQSQQRAJBJBBEAkEkEEQCQSQQRAJBJBBEAkEkEEQCQSQQRAJBJBBEAkEkEEQCQSQQRAJBJBBEAkEkEEQCQSQQRAJBJBBEAkEkEEQCQSQQRAJBJBBEAkEkEEQCQSQQRAJBJBBEAkEkEEQCQSQQRAJBJBBEAkEkEEQCQSQQRAJBJBBEAkEkEEQCQSQQRAJBJBBEAkEkEEQCQSQQRAJBJBBEAkEkEEQCQSQQRAJBJBBEAkEkEEQCQSQQRAJBJBBEAkEkEEQCQSQQRAJBJBBEAkEkEEQCQSQQRAJBJBBEAkEkEEQCQSQQRAJBJBDm5fMYvYE/l+t99AR2PAkEkUAQCQSRQBAJBJFAEAkEkUAQCQSRQBAJBJFAEAkEkUAQCQSRQBAJBJFAEAkEkUAQCQSRQBAJBJFAEAkEkUAQCQSRQBAJBJFAEAkEkUAQCQSRQBAJBJFAEAkEkUAQCQSRQBAJBJFAEAkEkUAQCQSRQBAJBJFAEAkEkUAQCQSRQBAJBJFAEAkEkUAQCQSRQBAJBJFAEAkEkUAQCQSRQBAJBJFAEAkEkUAQCQSRQBAJBJFAEAkEkUAQCQSRQBAJBJFAEAkEkUAQCQSRQBAJBJFAEAkEkUAQCQSRQBAJBJFAEAkEkUAQCQSRQBAJBJFAEAkEkUAQCYQf6vsIyNgo4PAAAAAASUVORK5CYII=" id="imagef0bbba3faa" transform="scale(1 -1) translate(0 -144.72)" x="164.188" y="-68.38" width="144.72" height="144.72"/>
+iVBORw0KGgoAAAANSUhEUgAAAWkAAAFpCAYAAABee9lOAAAFMUlEQVR4nO3WsQkCUQAFQU8OMTC0jGvXrizgsAQDsQOtwOzDX2Smghctb9nfz88B/sT1cZs9AYY6zh4AwG8iDRAm0gBhIg0QJtIAYSINECbSAGEiDRAm0gBhIg0QJtIAYSINECbSAGEiDRAm0gBhIg0QJtIAYSINECbSAGEiDRAm0gBhIg0QJtIAYSINECbSAGEiDRAm0gBhIg0QJtIAYSINECbSAGEiDRAm0gBhIg0QJtIAYSINECbSAGEiDRAm0gBhIg0QJtIAYSINECbSAGEiDRAm0gBhIg0QJtIAYSINECbSAGEiDRAm0gBhIg0QJtIAYSINECbSAGEiDRAm0gBhIg0QJtIAYSINECbSAGEiDRAm0gBhIg0QJtIAYSINECbSAGEiDRAm0gBhIg0QJtIAYSINECbSAGEiDRAm0gBhIg0QJtIAYSINECbSAGEiDRAm0gBhIg0QJtIAYSINECbSAGEiDRAm0gBhIg0QJtIAYSINECbSAGEiDRAm0gBhIg0QJtIAYSINECbSAGEiDRAm0gBhIg0QJtIAYSINECbSAGEiDRAm0gBhIg0QJtIAYSINECbSAGEiDRAm0gBhIg0QJtIAYSINECbSAGEiDRAm0gBhIg0QJtIAYSINECbSAGEiDRAm0gBhIg0QJtIAYSINECbSAGEiDRAm0gBhIg0QJtIAYSINECbSAGEiDRAm0gBhIg0QJtIAYSINECbSAGEiDRAm0gBhIg0QJtIAYSINECbSAGEiDRAm0gBhIg0QJtIAYSINECbSAGEiDRAm0gBhIg0QJtIAYSINECbSAGEiDRAm0gBhIg0QJtIAYSINECbSAGEiDRAm0gBhIg0QJtIAYSINECbSAGEiDRAm0gBhIg0QJtIAYSINECbSAGEiDRAm0gBhIg0QJtIAYSINELaeXvfZG2CY82WbPQGG8qQBwkQaIEykAcJEGiBMpAHCRBogTKQBwkQaIEykAcJEGiBMpAHCRBogTKQBwkQaIEykAcJEGiBMpAHCRBogTKQBwkQaIEykAcJEGiBMpAHCRBogTKQBwkQaIEykAcJEGiBMpAHCRBogTKQBwkQaIEykAcJEGiBMpAHCRBogTKQBwkQaIEykAcJEGiBMpAHCRBogTKQBwkQaIEykAcJEGiBMpAHCRBogTKQBwkQaIEykAcJEGiBMpAHCRBogTKQBwkQaIEykAcJEGiBMpAHCRBogTKQBwkQaIEykAcJEGiBMpAHCRBogTKQBwkQaIEykAcJEGiBMpAHCRBogTKQBwkQaIEykAcJEGiBMpAHCRBogTKQBwkQaIEykAcJEGiBMpAHCRBogTKQBwkQaIEykAcJEGiBMpAHCRBogTKQBwkQaIEykAcJEGiBMpAHCRBogTKQBwkQaIEykAcJEGiBMpAHCRBogTKQBwkQaIEykAcJEGiBMpAHCRBogTKQBwkQaIEykAcJEGiBMpAHCRBogTKQBwkQaIEykAcJEGiBMpAHCRBogTKQBwkQaIEykAcJEGiBMpAHCRBogTKQBwkQaIEykAcJEGiBMpAHCRBogTKQBwkQaIEykAcJEGiBMpAHCRBogTKQBwkQaIEykAcJEGiBMpAHCRBogTKQBwkQaIEykAcJEGiBMpAHCRBogTKQBwkQaIEykAcJEGiBMpAHCRBogTKQBwkQaIEykAcJEGiBMpAHCRBogTKQBwkQaIEykAcJEGiBMpAHCRBogTKQBwkQaIEykAcJEGiBMpAHCRBogTKQBwkQaIEykAcJEGiBMpAHCvi35CgiQwetgAAAAAElFTkSuQmCC" id="image3871fe0fd0" transform="scale(1 -1) translate(0 -259.92)" x="73.269062" y="-5.56" width="259.92" height="259.92"/>
    </g>
    <g id="matplotlib.axis_1">
     <g id="xtick_1">
      <g id="line2d_1">
       <defs>
-       <path id="m7e97dd529d" d="M 0 0
-L 0 3.5
+       <path id="mca4a14fde5" d="M 0 0 
+L 0 3.5 
 " style="stroke: #5f7184; stroke-width: 0.8"/>
       </defs>
       <g>
-       <use xlink:href="#m7e97dd529d" x="200.318" y="213.1" style="fill: #5f7184; stroke: #5f7184; stroke-width: 0.8"/>
+       <use xlink:href="#mca4a14fde5" x="138.199062" y="265.48" style="fill: #5f7184; stroke: #5f7184; stroke-width: 0.8"/>
       </g>
      </g>
      <g id="text_1">
-      <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #5f7184" x="200.318" y="226.938594" transform="rotate(-0 200.318 226.938594)">Cooperate</text>
+      <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #5f7184" x="138.199062" y="279.318594" transform="rotate(-0 138.199062 279.318594)">Cooperate</text>
      </g>
     </g>
     <g id="xtick_2">
      <g id="line2d_2">
       <g>
-       <use xlink:href="#m7e97dd529d" x="272.578" y="213.1" style="fill: #5f7184; stroke: #5f7184; stroke-width: 0.8"/>
+       <use xlink:href="#mca4a14fde5" x="268.059062" y="265.48" style="fill: #5f7184; stroke: #5f7184; stroke-width: 0.8"/>
       </g>
      </g>
      <g id="text_2">
-      <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #5f7184" x="272.578" y="226.938594" transform="rotate(-0 272.578 226.938594)">Defect</text>
+      <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #5f7184" x="268.059062" y="279.318594" transform="rotate(-0 268.059062 279.318594)">Defect</text>
      </g>
     </g>
     <g id="text_3">
-     <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #17324d" x="236.448" y="240.40875" transform="rotate(-0 236.448 240.40875)">Firm B</text>
+     <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #17324d" x="203.129063" y="292.78875" transform="rotate(-0 203.129063 292.78875)">Firm B</text>
     </g>
    </g>
    <g id="matplotlib.axis_2">
     <g id="ytick_1">
      <g id="line2d_3">
-      <path d="M 164.188 104.71
-L 308.708 104.71
-" clip-path="url(#p7e58c6acae)" style="fill: none; stroke: #d9e3ec; stroke-opacity: 0.8; stroke-width: 0.7; stroke-linecap: square"/>
+      <path d="M 73.269062 70.69 
+L 332.989063 70.69 
+" clip-path="url(#pa6f2288513)" style="fill: none; stroke: #d9e3ec; stroke-opacity: 0.8; stroke-width: 0.7; stroke-linecap: square"/>
      </g>
      <g id="line2d_4">
       <defs>
-       <path id="mf2bd01bcc5" d="M 0 0
-L -3.5 0
+       <path id="m4ece08e874" d="M 0 0 
+L -3.5 0 
 " style="stroke: #5f7184; stroke-width: 0.8"/>
       </defs>
       <g>
-       <use xlink:href="#mf2bd01bcc5" x="164.188" y="104.71" style="fill: #5f7184; stroke: #5f7184; stroke-width: 0.8"/>
+       <use xlink:href="#m4ece08e874" x="73.269062" y="70.69" style="fill: #5f7184; stroke: #5f7184; stroke-width: 0.8"/>
       </g>
      </g>
      <g id="text_4">
-      <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #5f7184" x="157.188" y="108.129297" transform="rotate(-0 157.188 108.129297)">Cooperate</text>
+      <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #5f7184" x="66.269062" y="74.109297" transform="rotate(-0 66.269062 74.109297)">Cooperate</text>
      </g>
     </g>
     <g id="ytick_2">
      <g id="line2d_5">
-      <path d="M 164.188 176.97
-L 308.708 176.97
-" clip-path="url(#p7e58c6acae)" style="fill: none; stroke: #d9e3ec; stroke-opacity: 0.8; stroke-width: 0.7; stroke-linecap: square"/>
+      <path d="M 73.269062 200.55 
+L 332.989063 200.55 
+" clip-path="url(#pa6f2288513)" style="fill: none; stroke: #d9e3ec; stroke-opacity: 0.8; stroke-width: 0.7; stroke-linecap: square"/>
      </g>
      <g id="line2d_6">
       <g>
-       <use xlink:href="#mf2bd01bcc5" x="164.188" y="176.97" style="fill: #5f7184; stroke: #5f7184; stroke-width: 0.8"/>
+       <use xlink:href="#m4ece08e874" x="73.269062" y="200.55" style="fill: #5f7184; stroke: #5f7184; stroke-width: 0.8"/>
       </g>
      </g>
      <g id="text_5">
-      <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #5f7184" x="157.188" y="180.389297" transform="rotate(-0 157.188 180.389297)">Defect</text>
+      <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #5f7184" x="66.269062" y="203.969297" transform="rotate(-0 66.269062 203.969297)">Defect</text>
      </g>
     </g>
     <g id="text_6">
-     <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #17324d" x="104.277375" y="140.84" transform="rotate(-90 104.277375 140.84)">Firm A</text>
+     <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #17324d" x="13.358437" y="135.62" transform="rotate(-90 13.358437 135.62)">Firm A</text>
     </g>
    </g>
    <g id="patch_3">
-    <path d="M 164.188 213.1
-L 164.188 68.58
+    <path d="M 73.269062 265.48 
+L 73.269062 5.76 
 " style="fill: none; stroke: #17324d; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
    </g>
    <g id="patch_4">
-    <path d="M 164.188 213.1
-L 308.708 213.1
+    <path d="M 73.269062 265.48 
+L 332.989063 265.48 
 " style="fill: none; stroke: #17324d; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
    </g>
-   <g id="text_7">
-    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #17324d" x="200.318" y="107.469375" transform="rotate(-0 200.318 107.469375)">8, 8</text>
-   </g>
-   <g id="text_8">
-    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #17324d" x="272.578" y="107.469375" transform="rotate(-0 272.578 107.469375)">2, 10</text>
-   </g>
-   <g id="text_9">
-    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #17324d" x="200.318" y="179.729375" transform="rotate(-0 200.318 179.729375)">10, 2</text>
-   </g>
-   <g id="text_10">
-    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #17324d" x="272.578" y="179.729375" transform="rotate(-0 272.578 179.729375)">4, 4</text>
-   </g>
-  </g>
-  <g id="text_11">
-   <text style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17324d" x="5.76" y="16.397812" transform="rotate(-0 5.76 16.397812)">Payoff matrix: strategic interdependence</text>
-  </g>
-  <g id="text_12">
-   <text style="font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #5f7184" x="5.76" y="29.178516" transform="rotate(-0 5.76 29.178516)">Each player's payoff depends on both firms' choices.</text>
-  </g>
-  <g id="text_13">
-   <text style="font-size: 7.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #5f7184" x="5.76" y="305.311641" transform="rotate(-0 5.76 305.311641)">Source: APMICRO illustrative data / oligopoly-payoffs.csv.  |  Cells show Firm A payoff, Firm B payoff.</text>
   </g>
  </g>
  <defs>
-  <clipPath id="p7e58c6acae">
-   <rect x="164.188" y="68.58" width="144.52" height="144.52"/>
+  <clipPath id="pa6f2288513">
+   <rect x="73.269062" y="5.76" width="259.72" height="259.72"/>
   </clipPath>
  </defs>
 </svg>
