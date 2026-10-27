@@ -1,0 +1,9 @@
+asset_id,session,component,title,local_path,source,license_or_terms,status,checked_on
+H01,Session 01,H01,Objectives and vocabulary,APMICRO-Teaching/Handouts/session-01/en/shared.tex,Original text aligned to College Board CED MKT-1.A and MKT-1.B,Repository license,prototype,2026-10-27
+H02,Session 01,H02,Retrieval and prediction,APMICRO-Teaching/Handouts/session-01/en/shared.tex,Original prompt modeled on local Unit 1 practice topics,Repository license,prototype,2026-10-27
+H03,Session 01,H03,Resource allocation scenario,APMICRO-Teaching/Handouts/session-01/en/shared.tex,Original synthetic classroom scenario,Repository license,prototype,2026-10-27
+G01,Session 01,G01,Choice and opportunity-cost card,APMICRO-Teaching/Visual-Plan/assets/diagrams/session-01-choice-opportunity-cost-card.png,Generated locally in repository,Repository license,used,2026-10-27
+G02,Session 01,G02,Three-resource scarcity panel,APMICRO-Teaching/Visual-Plan/assets/exports/figures/session-01-three-resource-scarcity-panel.png,Generated locally in repository,Repository license,used,2026-10-27
+P01,Session 01,P01,Economic-system comparison,APMICRO-Teaching/Handouts/session-01/en/shared.tex,Original comparison table aligned to College Board CED MKT-1.B,Repository license,prototype,2026-10-27
+T01,Session 01,T01,AP transfer task,APMICRO-Teaching/Handouts/session-01/en/shared.tex,Original prompts; local TB_11 and TB_12 used as topic references only,Repository license,prototype,2026-10-27
+E01,Session 01,E01,Exit ticket,APMICRO-Teaching/Handouts/session-01/en/shared.tex,Original retrieval prompt,Repository license,prototype,2026-10-27
