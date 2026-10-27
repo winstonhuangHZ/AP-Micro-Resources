@@ -64,7 +64,7 @@
 }
 \newcommand{\shortanswer}[1][0.26\linewidth]{\rule{#1}{0.45pt}}
 \newcommand{\teachernote}[1]{\ifteacher\begin{tcolorbox}[colback=green!4,colframe=Answer!65!black,title=Teacher note,fonttitle=\bfseries,boxsep=4pt,left=5pt,right=5pt,top=4pt,bottom=4pt]#1\end{tcolorbox}\fi}
-\newcommand{\answer}[1]{\ifteacher\textcolor{Answer}{\textbf{Answer:} #1}\fi}
+\newcommand{\answer}[1]{\ifteacher\textcolor{Answer}{\footnotesize\textbf{Answer:} #1}\fi}
 \newcommand{\teacherfill}[1]{\ifteacher\textcolor{Answer}{#1}\else\rule{0.70\linewidth}{0.35pt}\fi}
 \newcommand{\studentoranswer}[2]{\ifteacher\textcolor{Answer}{#2}\else #1\fi}
 
@@ -127,7 +127,7 @@ A student's 30-minute lunch break & \tableanswerline[0.58\linewidth] \\
 \textbf{A trade-off} is the set of alternatives that must be considered when a scarce resource has more than one possible use. The value of the best alternative given up is the \textbf{opportunity cost}; this phrase is a bridge to the deeper PPC and cost-benefit work in Sessions 2 and 4.
 \end{modelbox}
 
-\newpage
+\ifteacher\else\newpage\fi
 
 % --------------------------------------------------------------------------
 % Page 2
@@ -156,6 +156,7 @@ Physical capital & Produced tools, machines, buildings, and equipment used to pr
 \end{itemize}
 \end{warningbox}
 
+\ifteacher\newpage\fi
 \sectiontitle{H03 · The three allocation questions}{15--30 minutes}
 Every economic system must coordinate answers to three questions. Complete the examples for a community clinic with a fixed budget, staff, and building.
 
@@ -176,7 +177,7 @@ For whom to produce? & Who will receive or consume the output? & \shortanswer[0.
 
 \answer{Possible completion: staff and time; what to produce and for whom to produce.}
 
-\newpage
+\ifteacher\else\newpage\fi
 
 % --------------------------------------------------------------------------
 % Page 3

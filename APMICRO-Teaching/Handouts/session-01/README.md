@@ -59,4 +59,4 @@ directory.
 
 The latest visual check used rendered PNG pages and confirmed that both
 editions have no clipping or overlapping response areas. Student edition: 7
-pages. Teacher edition: 9 pages.
+pages. Teacher edition: 8 pages.

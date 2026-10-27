@@ -45,7 +45,7 @@
 - Compile English editions with XeLaTeX. The source uses `libertinus` and `unicode-math` where available, with the local TeX distribution providing the font files.
 - Use letter paper, approximately 0.68–0.72 inch margins, 10.5–11 pt body text, restrained dark blue/teal/orange fills, and high-contrast labels that also work in grayscale.
 - Keep reusable visual assets free of editorial titles and put the classroom prompt and caption in LaTeX. Keep student writing lines at least 0.28 inch apart.
-- The student edition is seven pages after the prototype's writing space and visual checks: retrieval and objectives; core model; allocation systems; choice/PPF bridge; AP transfer and exit ticket. The teacher edition follows the same page order and reveals answers in muted answer boxes across nine pages.
+- The student edition is seven pages after the prototype's writing space and visual checks: retrieval and objectives; core model; allocation systems; choice/PPF bridge; AP transfer and exit ticket. The teacher edition follows the same page order and reveals answers in muted answer boxes across eight pages.
 
 ## Student and teacher versions
 
