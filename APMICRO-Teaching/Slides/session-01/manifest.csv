@@ -1,0 +1,12 @@
+slide,component,title,handout_link,asset_path,source,license_or_terms,status
+1,OPEN,Lesson identity,,none,Original slide text,Repository license,checked
+2,H02,Opening question,H02,none,Original prompt aligned to Session 01 handout,Repository license,checked
+3,H01,Official objectives,H01,none,College Board CED MKT-1.A and MKT-1.B,Official source cited in handout plan,checked
+4,H01,Scarcity and trade-offs,H01,none,Original synthesis aligned to CED,Repository license,checked
+5,H03,Three allocation questions,H03,none,Original clinic example aligned to CED MKT-1.B,Repository license,checked
+6,P01,Economic systems,P01,none,Original comparison aligned to CED MKT-1.B,Repository license,checked
+7,G02,Resource bundle visual,G02,../../Visual-Plan/assets/exports/figures/session-01-three-resource-scarcity-panel.png,Generated locally in repository,Repository license,checked
+8,G01,Choice and opportunity cost,G01,../../Visual-Plan/assets/diagrams/session-01-choice-opportunity-cost-card.png,Generated locally in repository,Repository license,checked
+9,G01,PPF bridge,G01,none,Editable TikZ sketch matched to handout,Repository license,checked
+10,T01,AP transfer,T01,none,Original prompt aligned to local Unit 1 practice topics,Repository license,checked
+11,E01,Exit ticket,E01,none,Original retrieval prompt,Repository license,checked
