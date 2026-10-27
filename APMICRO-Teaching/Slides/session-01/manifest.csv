@@ -2,12 +2,13 @@ pdf_pages,component,title,overlay_sequence,handout_link,asset_path,source,licens
 1,OPEN,Lesson identity,static,,none,Original slide text,Repository license,checked
 2-3,H02,Opening question,question -> lesson target,H02,none,Original prompt aligned to Session 01 handout,Repository license,checked
 4,H01,Official targets,static,H01,none,College Board CED MKT-1.A and MKT-1.B,Official source cited in handout plan,checked
-5-7,H01,Scarcity and trade-offs,resource image -> constraints -> conclusion,H01,../../Visual-Plan/assets/exports/figures/session-01-three-resource-scarcity-panel.png,Generated locally in repository,Repository license,checked
-8-10,H01,Causal chain,scarcity -> choice -> opportunity cost,H01,none,Original synthesis aligned to CED,Repository license,checked
-11-14,H03,Three allocation questions,what -> how -> for whom -> synthesis,H03,none,Original allocation sequence aligned to CED MKT-1.B,Repository license,checked
-15-18,P01,Economic systems,frame -> market -> command -> mixed/conclusion,P01,none,Original comparison aligned to CED MKT-1.B,Repository license,checked
-19-21,G02,Resource bundle visual,image -> resource labels -> trade-off,G02,../../Visual-Plan/assets/exports/figures/session-01-three-resource-scarcity-panel.png,Generated locally in repository,Repository license,checked
-22-24,G01,Choice and opportunity cost,choice -> foregone alternative -> definition,G01,../../Visual-Plan/assets/diagrams/session-01-choice-opportunity-cost-card.png,Generated locally in repository,Repository license,checked
-25-28,G01,PPF bridge,curve -> A/B points -> projections -> conclusion,G01,none,Editable TikZ sketch matched to handout,Repository license,checked
-29-31,T01,AP transfer,question -> evidence -> answer,T01,none,Original prompt aligned to local Unit 1 practice topics,Repository license,checked
-32-34,E01,Exit ticket,prompt -> response space -> model answer,E01,none,Original retrieval prompt,Repository license,checked
+5-7,H01,Factors of production,resource -> land/labor/capital -> non-rival knowledge,H01,none,College Board CED MKT-1.A.2 with short source wording,Official source cited in slide,checked
+8-10,H01,Scarcity and trade-offs,resource image -> constraints -> conclusion,H01,../../Visual-Plan/assets/exports/figures/session-01-three-resource-scarcity-panel.png,Generated locally in repository,Repository license,checked
+11-13,H01,Causal chain,scarcity -> choice -> next-best alternative,H01,none,College Board CED MKT-1.A.1; CORE Econ; MIT OCW,Short source notes on slide,checked
+14-17,H03,Three allocation questions,what -> how -> for whom -> synthesis,H03,none,Original allocation sequence aligned to CED MKT-1.B,Repository license,checked
+18-21,P01,Economic systems,frame -> market -> command -> mixed/conclusion,P01,none,Original comparison aligned to CED MKT-1.B.2 and MIT OCW,Short source notes on slide,checked
+22-24,G02,Resource bundle visual,image -> resource labels -> trade-off,G02,../../Visual-Plan/assets/exports/figures/session-01-three-resource-scarcity-panel.png,Generated locally in repository,Repository license,checked
+25-27,G01,Choice and opportunity cost,choice -> next-best alternative -> definition,G01,../../Visual-Plan/assets/diagrams/session-01-choice-opportunity-cost-card.png,CORE Econ and MIT OCW terminology,Short source notes on slide,checked
+28-31,G01,PPC preview,curve -> A/B points -> projections -> Session 02 bridge,G01,none,Editable TikZ sketch matched to handout,Repository license,checked
+32-34,T01,AP transfer,question -> evidence -> answer,T01,none,Original prompt aligned to local Unit 1 practice topics,Repository license,checked
+35-37,E01,Exit ticket,prompt -> response space -> model answer,E01,none,Original retrieval prompt,Repository license,checked

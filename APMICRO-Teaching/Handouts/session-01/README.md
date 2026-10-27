@@ -7,7 +7,7 @@
 - Official objectives: `MKT-1.A`, `MKT-1.B`
 - CED pages: 41–42
 - Student product: a resource-allocation comparison and one PPF-style trade-off explanation
-- Status: prototype; source compiled and visually checked on 2026-10-27
+- Status: compiled and visually checked on 2026-10-27
 
 ## Files
 
@@ -59,4 +59,5 @@ directory.
 
 The latest visual check used rendered PNG pages and confirmed that both
 editions have no clipping or overlapping response areas. Student edition: 7
-pages. Teacher edition: 8 pages.
+pages. Teacher edition: 8 pages. The shared source uses the same
+next-best-alternative terminology as the aligned slide deck.

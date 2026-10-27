@@ -9,7 +9,7 @@
 - Language: English primary edition
 - Template: classic Beamer `Madrid`
 - Status: revised prototype with teaching overlays
-- Final PDF pages: 34
+- Final PDF pages: 37 overlay pages
 
 ## Files
 
@@ -18,9 +18,11 @@
 - Manifest: [`manifest.csv`](manifest.csv)
 
 The deck follows the accepted Session 01 handout sequence. Each instructional
-frame uses Beamer overlays so the PDF presents one teaching step per page:
-question before explanation, visual before labels, evidence before answer, and
-prompt before model response.
+frame uses Beamer overlays so the PDF presents one teaching step per page. The
+footer shows the physical PDF page number, including overlay pages, rather than
+the number of logical Beamer frames. The teaching sequence is question before
+explanation, visual before labels, evidence before answer, and prompt before
+model response.
 
 ## Build
 
@@ -34,6 +36,19 @@ cp build/Session-01-Scarcity.pdf Session-01-Scarcity.pdf
 The source uses XeLaTeX, Computer Modern via Latin Modern, a 16:9 canvas, and the classic `Madrid`
 Beamer theme. Auxiliary files remain in the ignored `build/` directory.
 
+## Concept alignment
+
+The wording follows the official Unit 1 framework while using short open-textbook
+phrases where they help classroom explanation:
+
+- `MKT-1.A.1` and `MKT-1.A.2`: scarcity, factors of production, and non-rival established knowledge.
+- `MKT-1.B.1` and `MKT-1.B.2`: the three allocation questions and coordinating mechanisms.
+- MIT OpenCourseWare 14.01 Lecture 1: constrained choice, trade-offs, opportunity cost, and command coordination.
+- CORE Econ, Unit 3.3: the next-best alternative and the net benefit of the foregone option.
+
+The PPC frame is explicitly marked as a Session 02 preview. It introduces the
+trade-off shown by movement along a boundary without teaching the full PPC model.
+
 ## Overlay structure
 
 | PDF pages | Group | Teaching sequence |
@@ -41,15 +56,16 @@ Beamer theme. Auxiliary files remain in the ignored `build/` directory.
 | 1 | Opening title | Lesson identity |
 | 2–3 | `H02` opening | Question → today’s answer |
 | 4 | `H01` targets | Official objectives |
-| 5–7 | `H01` scarcity visual | Resource image → constraints → conclusion |
-| 8–10 | `H01` causal chain | Scarcity → choice → opportunity cost |
-| 11–14 | `H03` allocation | What → how → for whom → synthesis |
-| 15–18 | `P01` systems | Frame → market → command → mixed/conclusion |
-| 19–21 | `G02` resource bundle | Image → labels → trade-off |
-| 22–24 | `G01` opportunity cost | Choice → foregone alternative → definition |
-| 25–28 | `G01` PPF bridge | Curve → A/B points → projections → conclusion |
-| 29–31 | `T01` AP transfer | Question → evidence → answer |
-| 32–34 | `E01` exit ticket | Prompt → response space → model answer |
+| 5–7 | `H01` factors | Resource → land/labor/capital → non-rival knowledge |
+| 8–10 | `H01` scarcity visual | Resource image → constraints → conclusion |
+| 11–13 | `H01` causal chain | Scarcity → choice → next-best alternative |
+| 14–17 | `H03` allocation | What → how → for whom → synthesis |
+| 18–21 | `P01` systems | Frame → market → command → mixed/conclusion |
+| 22–24 | `G02` resource bundle | Image → labels → trade-off |
+| 25–27 | `G01` opportunity cost | Choice → next-best alternative → definition |
+| 28–31 | `G01` PPC preview | Boundary → A/B points → projections → Session 02 bridge |
+| 32–34 | `T01` AP transfer | Question → evidence → answer |
+| 35–37 | `E01` exit ticket | Prompt → response space → model answer |
 
 ## Visual assets and licensing
 
@@ -64,7 +80,7 @@ recorded in `Visual-Plan/assets/source/sources.csv`.
 
 ## Visual QA
 
-The final 34-page PDF was rendered to PNG at 160 dpi and reviewed page by page
+The final 37-page PDF was rendered to PNG at 160 dpi and reviewed page by page
 and as a contact sheet on 2026-10-27. The review checked the Madrid title bars,
 overlay order, text size, image proportions, TikZ geometry, margins, clipping,
 overlap, and whitespace. The final build has no fatal errors, overfull boxes,

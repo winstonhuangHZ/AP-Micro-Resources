@@ -40,6 +40,10 @@
 \setbeamerfont{block title}{family=\rmfamily,series=\bfseries,size=\fontsize{14}{17}\selectfont}
 \setbeamerfont{block body}{family=\rmfamily,size=\fontsize{15}{19}\selectfont}
 \setbeamertemplate{navigation symbols}{}
+% The PDF is used as a page-by-page teaching handout.  Madrid's default
+% footer counts logical frames, which hides overlay pages from the printed
+% sequence.  Use Beamer's physical presentation page counter instead.
+\setbeamertemplate{page number in head/foot}[totalpagenumber]
 \setbeamertemplate{itemize item}{\color{APBlue}$\blacktriangleright$}
 \setbeamertemplate{blocks}[rounded][shadow=false]
 \setbeamertemplate{frametitle continuation}{}
@@ -55,6 +59,7 @@
 \newcommand{\teal}[1]{\textcolor{APTeal}{\textbf{#1}}}
 \newcommand{\orange}[1]{\textcolor{APOrange}{\textbf{#1}}}
 \newcommand{\muted}[1]{\textcolor{Muted}{#1}}
+\newcommand{\sourceNote}[1]{\vspace{0.16cm}\begin{center}\scriptsize\muted{#1}\end{center}}
 \newcommand{\prompt}[1]{\begin{center}\Large\color{APBlue}\textit{#1}\end{center}}
 \newcommand{\answerline}{\rule{0.78\linewidth}{0.5pt}}
 
@@ -70,8 +75,17 @@
 
 \begin{frame}{Official targets for Session 01}
   \begin{block}{By the end of the lesson}\large I can connect a limited resource to a specific choice and a specific foregone alternative.\end{block}
-  \vspace{0.25cm}\begin{itemize}\setlength{\itemsep}{0.20cm}\item Define resources and explain why \blue{scarcity creates trade-offs}.\item Answer \blue{what, how, and for whom}.\item Compare \blue{market, command, and mixed systems}.\item Explain \orange{opportunity cost} as the best alternative given up.\end{itemize}
+  \vspace{0.25cm}\begin{itemize}\setlength{\itemsep}{0.16cm}\item Define resources and explain why \blue{scarcity creates trade-offs}.\item Identify \blue{land, labor, and capital}; recognize that established knowledge may be non-rival.\item Answer \blue{what, how, and for whom}.\item Compare \blue{market, command, and mixed systems}.\item Explain \orange{opportunity cost} as the benefit of the next-best alternative forgone.\end{itemize}
   \vfill\begin{center}\small\muted{College Board CED: MKT-1.A · MKT-1.B}\end{center}
+\end{frame}
+
+\begin{frame}<1-3>{Resources and factors of production}
+  \vfill\begin{center}
+    \only<1>{\Huge\blue{Resource}\par\vspace{0.24cm}\Large An input used to satisfy wants or produce goods and services.}
+    \only<2>{\Huge\blue{Factors of production}\par\vspace{0.24cm}\Large Land, labor, and capital are common inputs used to produce output.}
+    \only<3>{\Huge\teal{Established knowledge}\par\vspace{0.24cm}\Large It can often be used by several producers at once, so it may be non-rival.}
+  \end{center}\vfill
+  \sourceNote{College Board CED, MKT-1.A.2 · “established knowledge ... may not be scarce due to its non-rival nature”}
 \end{frame}
 
 % Scarcity: resource visual -> constraints -> conclusion
@@ -88,10 +102,13 @@
 % Definitions: definition -> mechanism -> conclusion
 \begin{frame}<1-3>{The causal chain}
   \vfill\begin{center}
-    \only<1>{\Huge\blue{Scarcity}\par\vspace{0.25cm}\Large Resources are limited relative to desired uses.}
+    \only<1>{\Huge\blue{Scarcity}\par\vspace{0.25cm}\Large Resources are insufficient to satisfy all wants and needs.}
     \only<2>{\Huge\blue{Choice}\par\vspace{0.25cm}\Large A decision-maker selects one use for a scarce resource.}
-    \only<3>{\Huge\orange{Opportunity cost}\par\vspace{0.25cm}\Large The value of the best alternative given up.}
-  \end{center}\vfill
+    \only<3>{\Huge\orange{Opportunity cost}\par\vspace{0.25cm}\Large The benefit of the next-best alternative forgone.}
+  \end{center}
+  \only<1>{\sourceNote{College Board CED, MKT-1.A.1}}
+  \only<3>{\sourceNote{CORE Econ, Unit 3.3 · MIT OpenCourseWare, Lecture 1}}
+  \vfill
 \end{frame}
 
 % Allocation questions: what -> how -> for whom -> synthesis
@@ -107,7 +124,7 @@
 % Economic systems: frame -> market -> command -> mixed/conclusion
 \begin{frame}<1-4>{Economic systems coordinate scarce resources}
   \only<1>{\vfill\prompt{A system is a way of coordinating choices.}\vfill}
-  \only<2->{\begin{columns}[T,totalwidth=\textwidth]\column{0.31\textwidth}\only<2->{\Large\blue{Market}\par\vspace{0.15cm}Prices, incentives, and voluntary exchange guide decisions.}\column{0.31\textwidth}\only<3->{\Large\orange{Command}\par\vspace{0.15cm}Central planning and administrative direction guide decisions.}\column{0.31\textwidth}\only<4->{\Large\teal{Mixed}\par\vspace{0.15cm}Markets operate alongside public rules or provision.}\end{columns}\vfill\only<4>{\begin{center}\muted{The coordinating mechanism changes; scarcity remains.}\end{center}}}
+  \only<2->{\begin{columns}[T,totalwidth=\textwidth]\column{0.31\textwidth}\only<2->{\Large\blue{Market}\par\vspace{0.15cm}Prices, incentives, and voluntary exchange coordinate decisions.}\column{0.31\textwidth}\only<3->{\Large\orange{Command}\par\vspace{0.15cm}A central authority directs substantial resource use.}\column{0.31\textwidth}\only<4->{\Large\teal{Mixed}\par\vspace{0.15cm}Market and public institutions coordinate together.}\end{columns}\vfill\only<4>{\begin{center}\muted{Each system uses a coordinating mechanism to allocate scarce resources and distribute output.}\end{center}\sourceNote{College Board CED, MKT-1.B.2 · MIT OpenCourseWare, Lecture 1}}}
 \end{frame}
 
 % Resource bundle: image -> labels -> trade-off
@@ -120,16 +137,16 @@
 \end{frame}
 
 % Choice: selection -> foregone alternative -> definition
-\begin{frame}<1-3>{Opportunity cost names the benefit left behind}
+\begin{frame}<1-3>{Opportunity cost names the next-best alternative}
   \begin{columns}[T,totalwidth=\textwidth]\column{0.56\textwidth}\centering\includegraphics[width=0.82\linewidth,height=0.44\textheight,keepaspectratio]{session-01-choice-opportunity-cost-card.png}\column{0.37\textwidth}
     \only<1>{\vspace{0.55cm}\Large\blue{Choice}\par\vspace{0.18cm}The decision-maker chooses A.}
     \only<2>{\vspace{0.55cm}\Large\blue{What is given up?}\par\vspace{0.18cm}The next-best alternative is B.}
-    \only<3>{\vspace{0.55cm}\Large\orange{Opportunity cost}\par\vspace{0.18cm}The benefit from B is the opportunity cost of choosing A.}
+    \only<3>{\vspace{0.55cm}\Large\orange{Opportunity cost}\par\vspace{0.18cm}The benefit from B—the next-best alternative—is the opportunity cost of choosing A.}
   \end{columns}
 \end{frame}
 
 % PPF bridge: curve -> points -> projections -> conclusion
-\begin{frame}<1-4>{A movement along a boundary shows a trade-off}
+\begin{frame}<1-4>{PPC preview: a movement along the boundary}
   \begin{columns}[T,totalwidth=\textwidth]\column{0.64\textwidth}\centering
     \begin{tikzpicture}[x=0.50cm,y=0.29cm,>=Latex]
       \draw[->,thick,APBlue] (0,0) -- (11,0) node[below right,font=\sffamily\normalsize] {Good A};
@@ -139,10 +156,10 @@
       \only<3->{\draw[densely dashed,Muted] (3.2,0) -- (3.2,7.9) (0,7.9) -- (3.2,7.9);\draw[densely dashed,Muted] (6.6,0) -- (6.6,4.7) (0,4.7) -- (6.6,4.7);\draw[->,very thick,APOrange] (3.55,7.45) -- (6.15,5.15);}
     \end{tikzpicture}
   \column{0.30\textwidth}
-    \only<1>{\vspace{0.7cm}\Large\blue{Start with the boundary.}\par\vspace{0.18cm}It shows feasible combinations of two goods.}
+    \only<1>{\vspace{0.7cm}\Large\blue{Start with the boundary.}\par\vspace{0.18cm}This PPC preview shows feasible combinations of two goods. Formal PPC analysis begins in Session 02.}
     \only<2>{\vspace{0.7cm}\Large\blue{Compare A and B.}\par\vspace{0.18cm}Both points lie on the same boundary.}
     \only<3>{\vspace{0.7cm}\Large\blue{Project to the axes.}\par\vspace{0.18cm}Good A rises while Good B falls.}
-    \only<4>{\vspace{0.7cm}\Large\orange{Trade-off}\par\vspace{0.18cm}Moving from A to B gives up Good B.}
+    \only<4>{\vspace{0.7cm}\Large\orange{Trade-off}\par\vspace{0.18cm}Moving from A to B gives up Good B.\sourceNote{College Board CED, MKT-1.C.1 · Session 02 develops efficiency, growth, and numerical opportunity cost.}}
   \end{columns}
 \end{frame}
 
