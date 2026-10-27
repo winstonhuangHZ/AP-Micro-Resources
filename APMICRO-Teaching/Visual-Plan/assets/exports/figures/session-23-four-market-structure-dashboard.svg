@@ -1,0 +1,638 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="493.2pt" height="388.512pt" viewBox="0 0 493.2 388.512" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-27T11:19:39.448900</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.5, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 388.512 
+L 493.2 388.512 
+L 493.2 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 20.20162 145.548732 
+L 241.128 145.548732 
+L 241.128 91.248 
+L 20.20162 91.248 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <defs>
+       <path id="m8766d4e002" d="M 0 0 
+L 0 3.5 
+" style="stroke: #5f7184; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m8766d4e002" x="51.385008" y="145.548732" style="fill: #5f7184; stroke: #5f7184; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="font-size: 9px; font-family: 'DejaVu Sans'; fill: #5f7184" transform="translate(12.50143 195.988847) rotate(-25)">Perfect competition</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <g>
+       <use xlink:href="#m8766d4e002" x="104.238209" y="145.548732" style="fill: #5f7184; stroke: #5f7184; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="font-size: 9px; font-family: 'DejaVu Sans'; fill: #5f7184" transform="translate(54.094464 206.49025) rotate(-25)">Monopolistic competition</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3">
+      <g>
+       <use xlink:href="#m8766d4e002" x="157.09141" y="145.548732" style="fill: #5f7184; stroke: #5f7184; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="font-size: 9px; font-family: 'DejaVu Sans'; fill: #5f7184" transform="translate(138.948331 176.645939) rotate(-25)">Oligopoly</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#m8766d4e002" x="209.944611" y="145.548732" style="fill: #5f7184; stroke: #5f7184; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="font-size: 9px; font-family: 'DejaVu Sans'; fill: #5f7184" transform="translate(191.268156 177.143374) rotate(-25)">Monopoly</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_5">
+      <path d="M 20.20162 145.548732 
+L 241.128 145.548732 
+" clip-path="url(#p0da72a9bcb)" style="fill: none; stroke: #d9e3ec; stroke-opacity: 0.8; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_6">
+      <defs>
+       <path id="ma8a7482797" d="M 0 0 
+L -3.5 0 
+" style="stroke: #5f7184; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#ma8a7482797" x="20.20162" y="145.548732" style="fill: #5f7184; stroke: #5f7184; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #5f7184" x="13.20162" y="148.968029" transform="rotate(-0 13.20162 148.968029)">0</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_7">
+      <path d="M 20.20162 125.803012 
+L 241.128 125.803012 
+" clip-path="url(#p0da72a9bcb)" style="fill: none; stroke: #d9e3ec; stroke-opacity: 0.8; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_8">
+      <g>
+       <use xlink:href="#ma8a7482797" x="20.20162" y="125.803012" style="fill: #5f7184; stroke: #5f7184; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #5f7184" x="13.20162" y="129.222308" transform="rotate(-0 13.20162 129.222308)">2</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_9">
+      <path d="M 20.20162 106.057291 
+L 241.128 106.057291 
+" clip-path="url(#p0da72a9bcb)" style="fill: none; stroke: #d9e3ec; stroke-opacity: 0.8; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_10">
+      <g>
+       <use xlink:href="#ma8a7482797" x="20.20162" y="106.057291" style="fill: #5f7184; stroke: #5f7184; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #5f7184" x="13.20162" y="109.476588" transform="rotate(-0 13.20162 109.476588)">4</text>
+     </g>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 30.243728 145.548732 
+L 72.526289 145.548732 
+L 72.526289 96.18443 
+L 30.243728 96.18443 
+z
+" clip-path="url(#p0da72a9bcb)" style="fill: #2a9d8f"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 83.096929 145.548732 
+L 125.37949 145.548732 
+L 125.37949 106.057291 
+L 83.096929 106.057291 
+z
+" clip-path="url(#p0da72a9bcb)" style="fill: #1f6feb"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 135.95013 145.548732 
+L 178.232691 145.548732 
+L 178.232691 125.803012 
+L 135.95013 125.803012 
+z
+" clip-path="url(#p0da72a9bcb)" style="fill: #7353a6"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 188.803331 145.548732 
+L 231.085892 145.548732 
+L 231.085892 135.675872 
+L 188.803331 135.675872 
+z
+" clip-path="url(#p0da72a9bcb)" style="fill: #e76f51"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 20.20162 145.548732 
+L 20.20162 91.248 
+" style="fill: none; stroke: #17324d; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 20.20162 145.548732 
+L 241.128 145.548732 
+" style="fill: none; stroke: #17324d; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_8">
+    <text style="font-weight: 700; font-size: 10.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17324d" x="20.20162" y="85.248" transform="rotate(-0 20.20162 85.248)">Firms</text>
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="patch_9">
+    <path d="M 266.51362 145.548732 
+L 487.44 145.548732 
+L 487.44 91.248 
+L 266.51362 91.248 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_3">
+    <g id="xtick_5">
+     <g id="line2d_11">
+      <g>
+       <use xlink:href="#m8766d4e002" x="297.697008" y="145.548732" style="fill: #5f7184; stroke: #5f7184; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_9">
+      <text style="font-size: 9px; font-family: 'DejaVu Sans'; fill: #5f7184" transform="translate(258.81343 195.988847) rotate(-25)">Perfect competition</text>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_12">
+      <g>
+       <use xlink:href="#m8766d4e002" x="350.550209" y="145.548732" style="fill: #5f7184; stroke: #5f7184; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_10">
+      <text style="font-size: 9px; font-family: 'DejaVu Sans'; fill: #5f7184" transform="translate(300.406464 206.49025) rotate(-25)">Monopolistic competition</text>
+     </g>
+    </g>
+    <g id="xtick_7">
+     <g id="line2d_13">
+      <g>
+       <use xlink:href="#m8766d4e002" x="403.40341" y="145.548732" style="fill: #5f7184; stroke: #5f7184; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_11">
+      <text style="font-size: 9px; font-family: 'DejaVu Sans'; fill: #5f7184" transform="translate(385.260331 176.645939) rotate(-25)">Oligopoly</text>
+     </g>
+    </g>
+    <g id="xtick_8">
+     <g id="line2d_14">
+      <g>
+       <use xlink:href="#m8766d4e002" x="456.256611" y="145.548732" style="fill: #5f7184; stroke: #5f7184; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_12">
+      <text style="font-size: 9px; font-family: 'DejaVu Sans'; fill: #5f7184" transform="translate(437.580156 177.143374) rotate(-25)">Monopoly</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_4">
+    <g id="ytick_4">
+     <g id="line2d_15">
+      <path d="M 266.51362 145.548732 
+L 487.44 145.548732 
+" clip-path="url(#p2627f357c0)" style="fill: none; stroke: #d9e3ec; stroke-opacity: 0.8; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_16">
+      <g>
+       <use xlink:href="#ma8a7482797" x="266.51362" y="145.548732" style="fill: #5f7184; stroke: #5f7184; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_13">
+      <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #5f7184" x="259.51362" y="148.968029" transform="rotate(-0 259.51362 148.968029)">0</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_17">
+      <path d="M 266.51362 125.803012 
+L 487.44 125.803012 
+" clip-path="url(#p2627f357c0)" style="fill: none; stroke: #d9e3ec; stroke-opacity: 0.8; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_18">
+      <g>
+       <use xlink:href="#ma8a7482797" x="266.51362" y="125.803012" style="fill: #5f7184; stroke: #5f7184; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_14">
+      <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #5f7184" x="259.51362" y="129.222308" transform="rotate(-0 259.51362 129.222308)">2</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_19">
+      <path d="M 266.51362 106.057291 
+L 487.44 106.057291 
+" clip-path="url(#p2627f357c0)" style="fill: none; stroke: #d9e3ec; stroke-opacity: 0.8; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_20">
+      <g>
+       <use xlink:href="#ma8a7482797" x="266.51362" y="106.057291" style="fill: #5f7184; stroke: #5f7184; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_15">
+      <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #5f7184" x="259.51362" y="109.476588" transform="rotate(-0 259.51362 109.476588)">4</text>
+     </g>
+    </g>
+   </g>
+   <g id="patch_10">
+    <path d="M 276.555728 145.548732 
+L 318.838289 145.548732 
+L 318.838289 135.675872 
+L 276.555728 135.675872 
+z
+" clip-path="url(#p2627f357c0)" style="fill: #2a9d8f"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 329.408929 145.548732 
+L 371.69149 145.548732 
+L 371.69149 106.057291 
+L 329.408929 106.057291 
+z
+" clip-path="url(#p2627f357c0)" style="fill: #1f6feb"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 382.26213 145.548732 
+L 424.544691 145.548732 
+L 424.544691 96.18443 
+L 382.26213 96.18443 
+z
+" clip-path="url(#p2627f357c0)" style="fill: #7353a6"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 435.115331 145.548732 
+L 477.397892 145.548732 
+L 477.397892 115.930151 
+L 435.115331 115.930151 
+z
+" clip-path="url(#p2627f357c0)" style="fill: #e76f51"/>
+   </g>
+   <g id="patch_14">
+    <path d="M 266.51362 145.548732 
+L 266.51362 91.248 
+" style="fill: none; stroke: #17324d; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_15">
+    <path d="M 266.51362 145.548732 
+L 487.44 145.548732 
+" style="fill: none; stroke: #17324d; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_16">
+    <text style="font-weight: 700; font-size: 10.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17324d" x="266.51362" y="85.248" transform="rotate(-0 266.51362 85.248)">Product differentiation</text>
+   </g>
+  </g>
+  <g id="axes_3">
+   <g id="patch_16">
+    <path d="M 20.20162 287.172732 
+L 241.128 287.172732 
+L 241.128 232.872 
+L 20.20162 232.872 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_5">
+    <g id="xtick_9">
+     <g id="line2d_21">
+      <g>
+       <use xlink:href="#m8766d4e002" x="51.385008" y="287.172732" style="fill: #5f7184; stroke: #5f7184; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_17">
+      <text style="font-size: 9px; font-family: 'DejaVu Sans'; fill: #5f7184" transform="translate(12.50143 337.612847) rotate(-25)">Perfect competition</text>
+     </g>
+    </g>
+    <g id="xtick_10">
+     <g id="line2d_22">
+      <g>
+       <use xlink:href="#m8766d4e002" x="104.238209" y="287.172732" style="fill: #5f7184; stroke: #5f7184; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_18">
+      <text style="font-size: 9px; font-family: 'DejaVu Sans'; fill: #5f7184" transform="translate(54.094464 348.11425) rotate(-25)">Monopolistic competition</text>
+     </g>
+    </g>
+    <g id="xtick_11">
+     <g id="line2d_23">
+      <g>
+       <use xlink:href="#m8766d4e002" x="157.09141" y="287.172732" style="fill: #5f7184; stroke: #5f7184; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_19">
+      <text style="font-size: 9px; font-family: 'DejaVu Sans'; fill: #5f7184" transform="translate(138.948331 318.269939) rotate(-25)">Oligopoly</text>
+     </g>
+    </g>
+    <g id="xtick_12">
+     <g id="line2d_24">
+      <g>
+       <use xlink:href="#m8766d4e002" x="209.944611" y="287.172732" style="fill: #5f7184; stroke: #5f7184; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_20">
+      <text style="font-size: 9px; font-family: 'DejaVu Sans'; fill: #5f7184" transform="translate(191.268156 318.767374) rotate(-25)">Monopoly</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_6">
+    <g id="ytick_7">
+     <g id="line2d_25">
+      <path d="M 20.20162 287.172732 
+L 241.128 287.172732 
+" clip-path="url(#pc3fb9c9c00)" style="fill: none; stroke: #d9e3ec; stroke-opacity: 0.8; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_26">
+      <g>
+       <use xlink:href="#ma8a7482797" x="20.20162" y="287.172732" style="fill: #5f7184; stroke: #5f7184; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_21">
+      <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #5f7184" x="13.20162" y="290.592029" transform="rotate(-0 13.20162 290.592029)">0</text>
+     </g>
+    </g>
+    <g id="ytick_8">
+     <g id="line2d_27">
+      <path d="M 20.20162 267.427012 
+L 241.128 267.427012 
+" clip-path="url(#pc3fb9c9c00)" style="fill: none; stroke: #d9e3ec; stroke-opacity: 0.8; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_28">
+      <g>
+       <use xlink:href="#ma8a7482797" x="20.20162" y="267.427012" style="fill: #5f7184; stroke: #5f7184; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_22">
+      <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #5f7184" x="13.20162" y="270.846308" transform="rotate(-0 13.20162 270.846308)">2</text>
+     </g>
+    </g>
+    <g id="ytick_9">
+     <g id="line2d_29">
+      <path d="M 20.20162 247.681291 
+L 241.128 247.681291 
+" clip-path="url(#pc3fb9c9c00)" style="fill: none; stroke: #d9e3ec; stroke-opacity: 0.8; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_30">
+      <g>
+       <use xlink:href="#ma8a7482797" x="20.20162" y="247.681291" style="fill: #5f7184; stroke: #5f7184; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_23">
+      <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #5f7184" x="13.20162" y="251.100588" transform="rotate(-0 13.20162 251.100588)">4</text>
+     </g>
+    </g>
+   </g>
+   <g id="patch_17">
+    <path d="M 30.243728 287.172732 
+L 72.526289 287.172732 
+L 72.526289 277.299872 
+L 30.243728 277.299872 
+z
+" clip-path="url(#pc3fb9c9c00)" style="fill: #2a9d8f"/>
+   </g>
+   <g id="patch_18">
+    <path d="M 83.096929 287.172732 
+L 125.37949 287.172732 
+L 125.37949 257.554151 
+L 83.096929 257.554151 
+z
+" clip-path="url(#pc3fb9c9c00)" style="fill: #1f6feb"/>
+   </g>
+   <g id="patch_19">
+    <path d="M 135.95013 287.172732 
+L 178.232691 287.172732 
+L 178.232691 247.681291 
+L 135.95013 247.681291 
+z
+" clip-path="url(#pc3fb9c9c00)" style="fill: #7353a6"/>
+   </g>
+   <g id="patch_20">
+    <path d="M 188.803331 287.172732 
+L 231.085892 287.172732 
+L 231.085892 237.80843 
+L 188.803331 237.80843 
+z
+" clip-path="url(#pc3fb9c9c00)" style="fill: #e76f51"/>
+   </g>
+   <g id="patch_21">
+    <path d="M 20.20162 287.172732 
+L 20.20162 232.872 
+" style="fill: none; stroke: #17324d; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_22">
+    <path d="M 20.20162 287.172732 
+L 241.128 287.172732 
+" style="fill: none; stroke: #17324d; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_24">
+    <text style="font-weight: 700; font-size: 10.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17324d" x="20.20162" y="226.872" transform="rotate(-0 20.20162 226.872)">Price power</text>
+   </g>
+  </g>
+  <g id="axes_4">
+   <g id="patch_23">
+    <path d="M 266.51362 287.172732 
+L 487.44 287.172732 
+L 487.44 232.872 
+L 266.51362 232.872 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_7">
+    <g id="xtick_13">
+     <g id="line2d_31">
+      <g>
+       <use xlink:href="#m8766d4e002" x="297.697008" y="287.172732" style="fill: #5f7184; stroke: #5f7184; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_25">
+      <text style="font-size: 9px; font-family: 'DejaVu Sans'; fill: #5f7184" transform="translate(258.81343 337.612847) rotate(-25)">Perfect competition</text>
+     </g>
+    </g>
+    <g id="xtick_14">
+     <g id="line2d_32">
+      <g>
+       <use xlink:href="#m8766d4e002" x="350.550209" y="287.172732" style="fill: #5f7184; stroke: #5f7184; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_26">
+      <text style="font-size: 9px; font-family: 'DejaVu Sans'; fill: #5f7184" transform="translate(300.406464 348.11425) rotate(-25)">Monopolistic competition</text>
+     </g>
+    </g>
+    <g id="xtick_15">
+     <g id="line2d_33">
+      <g>
+       <use xlink:href="#m8766d4e002" x="403.40341" y="287.172732" style="fill: #5f7184; stroke: #5f7184; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_27">
+      <text style="font-size: 9px; font-family: 'DejaVu Sans'; fill: #5f7184" transform="translate(385.260331 318.269939) rotate(-25)">Oligopoly</text>
+     </g>
+    </g>
+    <g id="xtick_16">
+     <g id="line2d_34">
+      <g>
+       <use xlink:href="#m8766d4e002" x="456.256611" y="287.172732" style="fill: #5f7184; stroke: #5f7184; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_28">
+      <text style="font-size: 9px; font-family: 'DejaVu Sans'; fill: #5f7184" transform="translate(437.580156 318.767374) rotate(-25)">Monopoly</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_8">
+    <g id="ytick_10">
+     <g id="line2d_35">
+      <path d="M 266.51362 287.172732 
+L 487.44 287.172732 
+" clip-path="url(#p73311773ca)" style="fill: none; stroke: #d9e3ec; stroke-opacity: 0.8; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_36">
+      <g>
+       <use xlink:href="#ma8a7482797" x="266.51362" y="287.172732" style="fill: #5f7184; stroke: #5f7184; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_29">
+      <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #5f7184" x="259.51362" y="290.592029" transform="rotate(-0 259.51362 290.592029)">0</text>
+     </g>
+    </g>
+    <g id="ytick_11">
+     <g id="line2d_37">
+      <path d="M 266.51362 267.427012 
+L 487.44 267.427012 
+" clip-path="url(#p73311773ca)" style="fill: none; stroke: #d9e3ec; stroke-opacity: 0.8; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_38">
+      <g>
+       <use xlink:href="#ma8a7482797" x="266.51362" y="267.427012" style="fill: #5f7184; stroke: #5f7184; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_30">
+      <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #5f7184" x="259.51362" y="270.846308" transform="rotate(-0 259.51362 270.846308)">2</text>
+     </g>
+    </g>
+    <g id="ytick_12">
+     <g id="line2d_39">
+      <path d="M 266.51362 247.681291 
+L 487.44 247.681291 
+" clip-path="url(#p73311773ca)" style="fill: none; stroke: #d9e3ec; stroke-opacity: 0.8; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_40">
+      <g>
+       <use xlink:href="#ma8a7482797" x="266.51362" y="247.681291" style="fill: #5f7184; stroke: #5f7184; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_31">
+      <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #5f7184" x="259.51362" y="251.100588" transform="rotate(-0 259.51362 251.100588)">4</text>
+     </g>
+    </g>
+   </g>
+   <g id="patch_24">
+    <path d="M 276.555728 287.172732 
+L 318.838289 287.172732 
+L 318.838289 277.299872 
+L 276.555728 277.299872 
+z
+" clip-path="url(#p73311773ca)" style="fill: #2a9d8f"/>
+   </g>
+   <g id="patch_25">
+    <path d="M 329.408929 287.172732 
+L 371.69149 287.172732 
+L 371.69149 267.427012 
+L 329.408929 267.427012 
+z
+" clip-path="url(#p73311773ca)" style="fill: #1f6feb"/>
+   </g>
+   <g id="patch_26">
+    <path d="M 382.26213 287.172732 
+L 424.544691 287.172732 
+L 424.544691 247.681291 
+L 382.26213 247.681291 
+z
+" clip-path="url(#p73311773ca)" style="fill: #7353a6"/>
+   </g>
+   <g id="patch_27">
+    <path d="M 435.115331 287.172732 
+L 477.397892 287.172732 
+L 477.397892 237.80843 
+L 435.115331 237.80843 
+z
+" clip-path="url(#p73311773ca)" style="fill: #e76f51"/>
+   </g>
+   <g id="patch_28">
+    <path d="M 266.51362 287.172732 
+L 266.51362 232.872 
+" style="fill: none; stroke: #17324d; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_29">
+    <path d="M 266.51362 287.172732 
+L 487.44 287.172732 
+" style="fill: none; stroke: #17324d; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_32">
+    <text style="font-weight: 700; font-size: 10.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17324d" x="266.51362" y="226.872" transform="rotate(-0 266.51362 226.872)">Entry barriers</text>
+   </g>
+  </g>
+  <g id="text_33">
+   <text style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17324d" x="5.76" y="16.397812" transform="rotate(-0 5.76 16.397812)">Four market structures at a glance</text>
+  </g>
+  <g id="text_34">
+   <text style="font-size: 7.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #5f7184" x="11.232" y="380.983641" transform="rotate(-0 11.232 380.983641)">Source: Original illustrative model data.  |  Ordinal teaching comparison; values are synthetic.</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p0da72a9bcb">
+   <rect x="20.20162" y="91.248" width="220.92638" height="54.300732"/>
+  </clipPath>
+  <clipPath id="p2627f357c0">
+   <rect x="266.51362" y="91.248" width="220.92638" height="54.300732"/>
+  </clipPath>
+  <clipPath id="pc3fb9c9c00">
+   <rect x="20.20162" y="232.872" width="220.92638" height="54.300732"/>
+  </clipPath>
+  <clipPath id="p73311773ca">
+   <rect x="266.51362" y="232.872" width="220.92638" height="54.300732"/>
+  </clipPath>
+ </defs>
+</svg>

@@ -18,7 +18,7 @@ This is the visual design index for the 36-session course. Each session should h
    - Type: `Python/diagram`
    - Classroom use: Three constrained inputs feeding three competing uses; introduce scarcity and trade-offs.
    - Source / method: `Generated locally from a simple allocation table.`
-   - Status: `planned`
+   - Status: `rendered`
 
 2. **Choice and opportunity-cost card**
    - Type: `Concept diagram`
@@ -38,7 +38,7 @@ This is the visual design index for the 36-session course. Each session should h
    - Type: `Python chart`
    - Classroom use: Show efficient, inefficient, and unattainable points with a growth shift.
    - Source / method: `Generated locally; use clear labels and one-color annotations.`
-   - Status: `data-ready`
+   - Status: `rendered`
 
 2. **PPC movement animation frames**
    - Type: `Concept diagram`
@@ -58,13 +58,13 @@ This is the visual design index for the 36-session course. Each session should h
    - Type: `Python/diagram`
    - Classroom use: Two producers, opportunity costs, specialization arrows, and terms of trade.
    - Source / method: `Generated locally from the lesson’s production table.`
-   - Status: `data-ready`
+   - Status: `rendered`
 
 2. **Comparative-advantage heatmap**
    - Type: `Python chart`
    - Classroom use: Color-code opportunity cost by producer and product to make the lower opportunity cost visible.
    - Source / method: `Generated locally; no external asset.`
-   - Status: `data-ready`
+   - Status: `rendered`
 
 3. **Port and container trade photograph**
    - Type: `Real-world photo`
@@ -78,7 +78,7 @@ This is the visual design index for the 36-session course. Each session should h
    - Type: `Python chart`
    - Classroom use: Compare total and marginal reasoning in one decision.
    - Source / method: `Generated locally from a classroom choice dataset.`
-   - Status: `planned`
+   - Status: `rendered`
 
 2. **MB and MC crossing diagram**
    - Type: `Concept diagram`
@@ -98,7 +98,7 @@ This is the visual design index for the 36-session course. Each session should h
    - Type: `Python chart`
    - Classroom use: Plot demand and supply, label equilibrium price and quantity, and keep a clean blank version.
    - Source / method: `Generated locally from a simple linear schedule.`
-   - Status: `data-ready`
+   - Status: `rendered`
 
 2. **Demand shifters icon strip**
    - Type: `Concept diagram`
@@ -118,7 +118,7 @@ This is the visual design index for the 36-session course. Each session should h
    - Type: `Python chart`
    - Classroom use: Compare elastic and inelastic responses to the same price change.
    - Source / method: `Generated locally; use identical axes for comparison.`
-   - Status: `data-ready`
+   - Status: `rendered`
 
 2. **Elasticity slider sequence**
    - Type: `Concept diagram`
@@ -138,7 +138,7 @@ This is the visual design index for the 36-session course. Each session should h
    - Type: `Python chart`
    - Classroom use: Show how total revenue changes across elastic, unit elastic, and inelastic regions.
    - Source / method: `Generated locally from a demand schedule.`
-   - Status: `data-ready`
+   - Status: `rendered`
 
 2. **Substitute/complement network**
    - Type: `Concept diagram`
@@ -150,7 +150,7 @@ This is the visual design index for the 36-session course. Each session should h
    - Type: `Python/diagram`
    - Classroom use: Place necessities, normal goods, and inferior goods on an income-response ladder.
    - Source / method: `Generated locally from hypothetical data; clearly label as illustrative.`
-   - Status: `planned; optional extension`
+   - Status: `rendered; optional extension`
 
 ### Session 8 · Unit 2 · Market equilibrium and surplus
 
@@ -158,7 +158,7 @@ This is the visual design index for the 36-session course. Each session should h
    - Type: `Python chart`
    - Classroom use: Shade CS, PS, and total surplus with old/new labels.
    - Source / method: `Generated locally from a linear market model.`
-   - Status: `data-ready`
+   - Status: `rendered`
 
 2. **Auction price ladder**
    - Type: `Concept diagram`
@@ -178,7 +178,7 @@ This is the visual design index for the 36-session course. Each session should h
    - Type: `Python chart`
    - Classroom use: Show price below equilibrium and above equilibrium with quantity supplied/demanded labels.
    - Source / method: `Generated locally; keep a blank student version.`
-   - Status: `data-ready`
+   - Status: `rendered`
 
 2. **Shock-to-equilibrium storyboard**
    - Type: `Concept diagram`
@@ -198,7 +198,7 @@ This is the visual design index for the 36-session course. Each session should h
    - Type: `Python/diagram`
    - Classroom use: Four mini-graphs with the same market axes and policy labels.
    - Source / method: `Generated locally; one reusable slide asset.`
-   - Status: `data-ready`
+   - Status: `rendered`
 
 2. **Tax wedge and incidence diagram**
    - Type: `Concept diagram`
@@ -218,13 +218,13 @@ This is the visual design index for the 36-session course. Each session should h
    - Type: `Python chart`
    - Classroom use: Show domestic price, imports, CS, PS, government revenue, and DWL.
    - Source / method: `Generated locally from a trade schedule.`
-   - Status: `data-ready`
+   - Status: `rendered`
 
 2. **Trade route map**
    - Type: `Python/diagram`
    - Classroom use: Draw an importer/exporter map with goods and price arrows.
    - Source / method: `Generated locally; use a simple outline map.`
-   - Status: `planned`
+   - Status: `rendered`
 
 3. **Container port photograph**
    - Type: `Real-world photo`
@@ -238,13 +238,13 @@ This is the visual design index for the 36-session course. Each session should h
    - Type: `Python chart`
    - Classroom use: Show the relationship among total, average, and marginal product.
    - Source / method: `Generated locally from a production table.`
-   - Status: `data-ready`
+   - Status: `rendered`
 
 2. **Production-table heatmap**
    - Type: `Python chart`
    - Classroom use: Color the stages of increasing and diminishing marginal returns.
    - Source / method: `Generated locally; use the same table as the handout.`
-   - Status: `data-ready`
+   - Status: `rendered`
 
 3. **Factory production line photograph**
    - Type: `Real-world photo`
@@ -258,7 +258,7 @@ This is the visual design index for the 36-session course. Each session should h
    - Type: `Python chart`
    - Classroom use: Use a coordinated six-panel chart with consistent output axis.
    - Source / method: `Generated locally from a cost table.`
-   - Status: `data-ready`
+   - Status: `rendered`
 
 2. **Cost-table annotation visual**
    - Type: `Concept diagram`
@@ -278,7 +278,7 @@ This is the visual design index for the 36-session course. Each session should h
    - Type: `Python chart`
    - Classroom use: Show economies, constant returns, and diseconomies of scale.
    - Source / method: `Generated locally with clearly illustrative values.`
-   - Status: `data-ready`
+   - Status: `rendered`
 
 2. **Accounting versus economic profit ledger**
    - Type: `Concept diagram`
@@ -298,7 +298,7 @@ This is the visual design index for the 36-session course. Each session should h
    - Type: `Python chart`
    - Classroom use: Highlight the output where MR intersects MC and map price/revenue/cost.
    - Source / method: `Generated locally; include a blank annotation version.`
-   - Status: `data-ready`
+   - Status: `rendered`
 
 2. **Profit rectangle sequence**
    - Type: `Concept diagram`
@@ -310,7 +310,7 @@ This is the visual design index for the 36-session course. Each session should h
    - Type: `Python/diagram`
    - Classroom use: Output, price, revenue, cost, and profit in a compact table-card.
    - Source / method: `Generated locally from the same graph data.`
-   - Status: `data-ready; optional extension`
+   - Status: `rendered; optional extension`
 
 ### Session 16 · Unit 3 · Produce, shut down, enter, or exit
 
@@ -318,7 +318,7 @@ This is the visual design index for the 36-session course. Each session should h
    - Type: `Python chart`
    - Classroom use: Compare price with AVC and ATC; label produce, shut down, profit, and loss regions.
    - Source / method: `Generated locally.`
-   - Status: `data-ready`
+   - Status: `rendered`
 
 2. **Entry and exit flowchart**
    - Type: `Concept diagram`
@@ -338,7 +338,7 @@ This is the visual design index for the 36-session course. Each session should h
    - Type: `Python chart`
    - Classroom use: Place industry equilibrium beside a representative firm’s horizontal demand curve.
    - Source / method: `Generated locally with matching labels.`
-   - Status: `planned`
+   - Status: `rendered`
 
 2. **Perfect-competition assumptions card**
    - Type: `Concept diagram`
@@ -364,7 +364,7 @@ This is the visual design index for the 36-session course. Each session should h
    - Type: `Python chart`
    - Classroom use: Illustrate how market share concentration changes across industries.
    - Source / method: `Use public industry-share data later; start with clearly labeled illustrative data.`
-   - Status: `planned`
+   - Status: `rendered`
 
 3. **Infrastructure or network photograph**
    - Type: `Real-world photo`
@@ -378,7 +378,7 @@ This is the visual design index for the 36-session course. Each session should h
    - Type: `Python chart`
    - Classroom use: Show output, price, profit, consumer surplus, and DWL.
    - Source / method: `Generated locally.`
-   - Status: `data-ready`
+   - Status: `rendered`
 
 2. **Entry-barrier storyboard**
    - Type: `Concept diagram`
@@ -398,7 +398,7 @@ This is the visual design index for the 36-session course. Each session should h
    - Type: `Python chart`
    - Classroom use: Compare one-price monopoly with two or more consumer segments.
    - Source / method: `Generated locally with illustrative demand schedules.`
-   - Status: `planned`
+   - Status: `rendered`
 
 2. **Price-menu cards**
    - Type: `Concept diagram`
@@ -418,7 +418,7 @@ This is the visual design index for the 36-session course. Each session should h
    - Type: `Python chart`
    - Classroom use: Show profit/loss in the short run and tangency/zero-profit adjustment in the long run.
    - Source / method: `Generated locally.`
-   - Status: `planned`
+   - Status: `rendered`
 
 2. **Product differentiation collage**
    - Type: `Concept diagram/photo grid`
@@ -438,7 +438,7 @@ This is the visual design index for the 36-session course. Each session should h
    - Type: `Python chart`
    - Classroom use: Color-code payoffs, dominant strategies, and Nash equilibrium.
    - Source / method: `Generated locally from a two-firm example.`
-   - Status: `data-ready`
+   - Status: `rendered`
 
 2. **Repeated-game decision tree**
    - Type: `Concept diagram`
@@ -458,13 +458,13 @@ This is the visual design index for the 36-session course. Each session should h
    - Type: `Python/diagram`
    - Classroom use: One page comparing price, output, profit, efficiency, and barriers.
    - Source / method: `Generated locally from Unit 4 visuals.`
-   - Status: `planned`
+   - Status: `rendered`
 
 2. **Efficiency comparison bars**
    - Type: `Python chart`
    - Classroom use: Compare competitive output, monopoly output, and DWL.
    - Source / method: `Generated locally; label as model comparison.`
-   - Status: `data-ready`
+   - Status: `rendered`
 
 3. **Four-market photo strip**
    - Type: `Real-world photo grid`
@@ -484,7 +484,7 @@ This is the visual design index for the 36-session course. Each session should h
    - Type: `Python chart`
    - Classroom use: Display product price, marginal product, and MRP in aligned rows.
    - Source / method: `Generated locally from a production table.`
-   - Status: `data-ready`
+   - Status: `rendered`
 
 3. **Workplace hiring photograph**
    - Type: `Real-world photo`
@@ -498,7 +498,7 @@ This is the visual design index for the 36-session course. Each session should h
    - Type: `Python chart`
    - Classroom use: Show productivity, product price, migration, education, and alternative opportunities as shifters.
    - Source / method: `Generated locally with separate mini-panels.`
-   - Status: `planned`
+   - Status: `rendered`
 
 2. **Labor-supply determinants map**
    - Type: `Concept diagram`
@@ -518,7 +518,7 @@ This is the visual design index for the 36-session course. Each session should h
    - Type: `Python chart`
    - Classroom use: Show labor demand, labor supply, equilibrium wage, and employment.
    - Source / method: `Generated locally.`
-   - Status: `data-ready`
+   - Status: `rendered`
 
 2. **MRP versus factor price decision chart**
    - Type: `Concept diagram`
@@ -538,7 +538,7 @@ This is the visual design index for the 36-session course. Each session should h
    - Type: `Python chart`
    - Classroom use: Show employment and wage under monopsony and compare with competition.
    - Source / method: `Generated locally.`
-   - Status: `data-ready`
+   - Status: `rendered`
 
 2. **Single-employer labor-market map**
    - Type: `Concept diagram`
@@ -558,7 +558,7 @@ This is the visual design index for the 36-session course. Each session should h
    - Type: `Python chart`
    - Classroom use: Show efficient quantity, market quantity, and DWL.
    - Source / method: `Generated locally.`
-   - Status: `data-ready`
+   - Status: `rendered`
 
 2. **Efficiency triangle animation frames**
    - Type: `Concept diagram`
@@ -578,7 +578,7 @@ This is the visual design index for the 36-session course. Each session should h
    - Type: `Python chart`
    - Classroom use: Compare MSC above MPC and MSB above MPB with policy corrections.
    - Source / method: `Generated locally.`
-   - Status: `planned`
+   - Status: `rendered`
 
 2. **Pigouvian tax/subsidy decision tree**
    - Type: `Concept diagram`
@@ -604,7 +604,7 @@ This is the visual design index for the 36-session course. Each session should h
    - Type: `Python chart`
    - Classroom use: Show provision as contributions rise while individual incentives to free ride remain.
    - Source / method: `Generated locally from an illustrative class model.`
-   - Status: `data-ready`
+   - Status: `rendered`
 
 3. **Streetlight or public park photograph**
    - Type: `Real-world photo`
@@ -618,13 +618,13 @@ This is the visual design index for the 36-session course. Each session should h
    - Type: `Python/diagram`
    - Classroom use: Compare tax, subsidy, price control, regulation, and antitrust across market structures.
    - Source / method: `Generated locally from Unit 2, 4, and 6 visuals.`
-   - Status: `planned`
+   - Status: `rendered`
 
 2. **Great Depression unemployment-rate timeline**
    - Type: `Python chart`
    - Classroom use: Use UNRATE with historical recession markers as policy-context background; keep macro extension clearly labeled.
    - Source / method: `FRED-UNRATE; download at build time.`
-   - Status: `data-ready`
+   - Status: `rendered`
 
 3. **Great Depression breadline or bank-run photograph**
    - Type: `Historical photo`
@@ -638,13 +638,13 @@ This is the visual design index for the 36-session course. Each session should h
    - Type: `Python chart`
    - Classroom use: Show equality line, Lorenz curve, and changing Gini values.
    - Source / method: `Use FRED-GINI for a data context and draw the curve locally.`
-   - Status: `data-ready`
+   - Status: `rendered`
 
 2. **Income-distribution histogram**
    - Type: `Python chart`
    - Classroom use: Compare a compressed and a more unequal distribution using transparent illustrative data.
    - Source / method: `Generated locally; label hypothetical distributions.`
-   - Status: `planned`
+   - Status: `rendered`
 
 3. **Housing or opportunity photograph**
    - Type: `Real-world photo`
@@ -664,7 +664,7 @@ This is the visual design index for the 36-session course. Each session should h
    - Type: `Python chart`
    - Classroom use: Combine quantity, price, surplus, and DWL changes for one policy case.
    - Source / method: `Generated locally from a selected FRQ-style scenario.`
-   - Status: `data-ready`
+   - Status: `rendered`
 
 3. **Government response photograph**
    - Type: `Historical/real-world photo`
@@ -678,7 +678,7 @@ This is the visual design index for the 36-session course. Each session should h
    - Type: `Python/diagram`
    - Classroom use: PPC, supply-demand, cost, perfect competition, monopoly, and externality mini-graphs.
    - Source / method: `Generated locally from the course graph library.`
-   - Status: `planned`
+   - Status: `rendered`
 
 2. **Blank graph practice sheet**
    - Type: `Concept diagram`
@@ -698,13 +698,13 @@ This is the visual design index for the 36-session course. Each session should h
    - Type: `Python chart`
    - Classroom use: Accuracy and response time by Unit and error type.
    - Source / method: `Generated locally from student practice logs; no personal identifiers.`
-   - Status: `planned`
+   - Status: `rendered`
 
 2. **Error-type heatmap**
    - Type: `Python chart`
    - Classroom use: Concept, graph, calculation, reading, and expression errors by topic.
    - Source / method: `Generated locally from a CSV template.`
-   - Status: `planned`
+   - Status: `rendered`
 
 3. **MCQ workflow card**
    - Type: `Concept diagram`
@@ -724,7 +724,7 @@ This is the visual design index for the 36-session course. Each session should h
    - Type: `Python/diagram`
    - Classroom use: Map response components to point opportunities and common misses.
    - Source / method: `Generated locally from a generic rubric structure; do not reproduce restricted text.`
-   - Status: `planned`
+   - Status: `rendered`
 
 3. **Exam-readiness timeline**
    - Type: `Concept diagram`
@@ -749,14 +749,14 @@ The first source-image batch is marked `completed` below. These are source candi
 | `completed` | [`gas-station-price-analysis-1938.jpg`](assets/source/gas-station-price-analysis-1938.jpg) | Prices, taxes, fuel markets, and policy discussion. | Public domain |
 | `completed` | [`gas-station-price-board-austria.jpg`](assets/source/gas-station-price-board-austria.jpg) | Price changes, elasticity, and consumer response. | CC BY-SA 4.0 |
 | `completed` | [`great-depression-bank-run-michigan-1933.jpg`](assets/source/great-depression-bank-run-michigan-1933.jpg) | Bank run, deposit confidence, government and financial-crisis context. | Public domain |
-| `completed` | [`great-depression-times-square-line-1930.jpg`](assets/source/great-depression-times-square-line-1930.jpg) | Unemployment, relief, and Great Depression opening prompt. | Public domain |
+| `completed` | [`great-depression-times-square-line-1930.jpg`](assets/source/great-depression-times-square-line-1930.jpg) | Unemployment, relief, and Great Depression historical-policy context. | Public domain |
 | `completed` | [`grocery-store-widtsoe-utah.jpg`](assets/source/grocery-store-widtsoe-utah.jpg) | Consumer choice, necessities, substitutes, and shortage prompts. | Public domain |
 | `completed` | [`groton-new-london-airport-terminal.jpg`](assets/source/groton-new-london-airport-terminal.jpg) | Airline market, oligopoly, and strategic interdependence. | CC BY-SA 3.0 |
 | `completed` | [`inside-hospital.jpg`](assets/source/inside-hospital.jpg) | Monopsony and local labor-market context. | Public domain |
 | `completed` | [`machine-cutting-factory-workshop.jpg`](assets/source/machine-cutting-factory-workshop.jpg) | Production process, inputs, and marginal product. | CC BY 2.0 |
 | `completed` | [`mariner-bank-building.jpg`](assets/source/mariner-bank-building.jpg) | Banking institutions and local financial-market context. | Public domain |
 | `completed` | [`media-pennsylvania-theater.jpg`](assets/source/media-pennsylvania-theater.jpg) | Price discrimination through cinema and entertainment examples. | Public domain |
-| `completed` | [`new-deal-collage.jpg`](assets/source/new-deal-collage.jpg) | Government objectives, New Deal, and public-policy context. | Public domain |
+| `completed` | [`new-deal-collage.jpg`](assets/source/new-deal-collage.jpg) | New Deal and historical public-policy context; macro extension. | Public domain |
 | `completed` | [`old-movie-theater-roadhouse.jpg`](assets/source/old-movie-theater-roadhouse.jpg) | Entertainment markets and differentiated products. | Public domain |
 | `completed` | [`pennsylvania-railroad-freight-station.jpg`](assets/source/pennsylvania-railroad-freight-station.jpg) | Trade infrastructure, transportation, and barriers to entry. | CC BY-SA 4.0 |
 | `completed` | [`portland-farmers-market-8177757645.jpg`](assets/source/portland-farmers-market-8177757645.jpg) | Market exchange and producer/consumer surplus. | CC BY-SA 2.0 |
@@ -805,4 +805,4 @@ APMICRO-Teaching/Visual-Plan/assets/
 └── exports/       # slide-ready and handout-ready exports
 ```
 
-Public data snapshots and illustrative model tables are tracked in [`assets/data/README.md`](assets/data/README.md) and [`assets/data/manifest.csv`](assets/data/manifest.csv). A `data-ready` status means the input table exists; the final chart still needs to be rendered and checked.
+Public data snapshots and illustrative model tables are tracked in [`assets/data/README.md`](assets/data/README.md) and [`assets/data/manifest.csv`](assets/data/manifest.csv). Rendered Python figures are listed in [`assets/exports/figures/figure-manifest.csv`](assets/exports/figures/figure-manifest.csv) and exported as PNG, SVG, and PDF.

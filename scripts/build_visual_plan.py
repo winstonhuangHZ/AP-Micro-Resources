@@ -210,12 +210,19 @@ def write_plan():
          '- **Historical images:** use them to open a discussion or provide context. Do not treat a single photograph as statistical evidence.',
          '- **Macro and banking extensions:** indicator, government, and banking visuals are context modules. They supplement AP Microeconomics and should be labeled as extensions when they are outside the official Unit objective.',
          '', '## Session plans','']
+    figure_manifest = VIS / 'assets' / 'exports' / 'figures' / 'figure-manifest.csv'
+    rendered_names = set()
+    if figure_manifest.exists():
+        with figure_manifest.open(newline='', encoding='utf-8') as f:
+            rendered_names = {row['visual'] for row in csv.DictReader(f)}
     for session,unit,topic,items in V:
         out += [f'### Session {session} · {unit} · {topic}','']
         for i,(name,kind,purpose,source,status) in enumerate(items,1):
             planned_status = status
             data_ready = (VIS / 'assets' / 'data' / 'manifest.csv').exists()
-            if data_ready and name in DATA_READY_NAMES and status == 'planned':
+            if name in rendered_names:
+                planned_status = 'rendered'
+            elif data_ready and name in DATA_READY_NAMES and status == 'planned':
                 planned_status = 'data-ready'
             if i == 3:
                 planned_status = f'{planned_status}; optional extension'
@@ -259,7 +266,7 @@ def write_plan():
             '├── wikimedia/     # files with license records',
             '└── exports/       # slide-ready and handout-ready exports',
             '```','',
-            'Public data snapshots and illustrative model tables are tracked in [`assets/data/README.md`](assets/data/README.md) and [`assets/data/manifest.csv`](assets/data/manifest.csv). A `data-ready` status means the input table exists; the final chart still needs to be rendered and checked.','']
+            'Public data snapshots and illustrative model tables are tracked in [`assets/data/README.md`](assets/data/README.md) and [`assets/data/manifest.csv`](assets/data/manifest.csv). Rendered Python figures are listed in [`assets/exports/figures/figure-manifest.csv`](assets/exports/figures/figure-manifest.csv) and exported as PNG, SVG, and PDF.','']
     (VIS/'visual-plan-36-sessions.md').write_text('\n'.join(out),encoding='utf-8')
 
 

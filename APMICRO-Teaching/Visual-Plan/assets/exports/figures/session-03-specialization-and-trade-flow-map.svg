@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="498.079031pt" height="318.8664pt" viewBox="0 0 498.079031 318.8664" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-27T11:19:07.330592</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.5, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 318.8664 
+L 498.079031 318.8664 
+L 498.079031 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 17.1432 208.88028 
+L 130.9752 208.88028 
+L 130.9752 144.38052 
+L 17.1432 144.38052 
+z
+" clip-path="url(#p5e2f5d2508)" style="fill: #ffffff; stroke: #1f6feb; stroke-width: 2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 335.8728 208.88028 
+L 449.7048 208.88028 
+L 449.7048 144.38052 
+L 335.8728 144.38052 
+z
+" clip-path="url(#p5e2f5d2508)" style="fill: #ffffff; stroke: #e76f51; stroke-width: 2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 135.254391 173.04708 
+Q 226.596367 173.04708 315.702274 173.04708 
+" clip-path="url(#p5e2f5d2508)" style="fill: none; stroke: #2a9d8f; stroke-width: 2; stroke-linecap: round"/>
+    <path d="M 309.302274 169.84708 
+L 315.702274 173.04708 
+L 309.302274 176.24708 
+z
+" clip-path="url(#p5e2f5d2508)" style="fill: #2a9d8f; stroke: #2a9d8f; stroke-width: 2; stroke-linecap: round"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 322.490731 183.79704 
+Q 228.871824 183.79704 137.488985 183.79704 
+" clip-path="url(#p5e2f5d2508)" style="fill: none; stroke: #2a9d8f; stroke-width: 2; stroke-linecap: round"/>
+    <path d="M 143.888985 186.99704 
+L 137.488985 183.79704 
+L 143.888985 180.59704 
+z
+" clip-path="url(#p5e2f5d2508)" style="fill: #2a9d8f; stroke: #2a9d8f; stroke-width: 2; stroke-linecap: round"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #17324d" x="74.0592" y="179.94165" transform="rotate(-0 74.0592 179.94165)">Producer A</text>
+   </g>
+   <g id="text_2">
+    <text style="font-weight: 700; font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #17324d" x="392.7888" y="179.94165" transform="rotate(-0 392.7888 179.94165)">Producer B</text>
+   </g>
+   <g id="text_3">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #2a9d8f" x="226.59408" y="166.131491" transform="rotate(-0 226.59408 166.131491)">Food</text>
+   </g>
+   <g id="text_4">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #2a9d8f" x="228.87072" y="199.098035" transform="rotate(-0 228.87072 199.098035)">Cloth</text>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #17324d" x="233.424" y="248.2968" transform="rotate(-0 233.424 248.2968)">Specialization → exchange → a larger attainable consumption set</text>
+   </g>
+  </g>
+  <g id="text_6">
+   <text style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17324d" x="10.512" y="16.397812" transform="rotate(-0 10.512 16.397812)">Specialization and mutually beneficial trade</text>
+  </g>
+  <g id="text_7">
+   <text style="font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #5f7184" x="10.512" y="29.502516" transform="rotate(-0 10.512 29.502516)">Opportunity cost determines specialization; terms of trade connect the two producers.</text>
+  </g>
+  <g id="text_8">
+   <text style="font-size: 7.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #5f7184" x="10.512" y="311.338041" transform="rotate(-0 10.512 311.338041)">Source: APMICRO illustrative data / comparative-advantage.csv.  |  Schematic teaching diagram; arrows show direction of trade.</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p5e2f5d2508">
+   <rect x="5.76" y="69.1308" width="455.328" height="214.9992"/>
+  </clipPath>
+ </defs>
+</svg>

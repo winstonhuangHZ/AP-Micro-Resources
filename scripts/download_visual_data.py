@@ -155,7 +155,7 @@ def build_derived() -> list[dict]:
 
     fed = average_by_month(read_fred(RAW / SERIES["FEDFUNDS"][0], "FEDFUNDS"))
     m2 = average_by_month(read_fred(RAW / SERIES["M2SL"][0], "M2SL"))
-    cpi_yoy = {row["date"]: float(row["inflation_yoy_pct"]) for row in cpi_rows}
+    cpi_yoy = {month_key(row["date"]): float(row["inflation_yoy_pct"]) for row in cpi_rows}
     unrate = average_by_month(read_fred(RAW / SERIES["UNRATE"][0], "UNRATE"))
     sp500 = average_by_month(read_fred(RAW / SERIES["SP500"][0], "SP500"))
     months = sorted(set(fed) | set(m2) | set(cpi_yoy) | set(unrate) | set(sp500))

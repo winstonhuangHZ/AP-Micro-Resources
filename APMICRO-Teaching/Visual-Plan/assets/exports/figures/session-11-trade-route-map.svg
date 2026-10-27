@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="486.72pt" height="312.84pt" viewBox="0 0 486.72 312.84" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-27T11:19:21.881916</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.5, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 312.84 
+L 486.72 312.84 
+L 486.72 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 12.888 205.002 
+L 141.192 205.002 
+L 141.192 142.038 
+L 12.888 142.038 
+z
+" clip-path="url(#p4d68510e66)" style="fill: #ffffff; stroke: #2a9d8f; stroke-width: 2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 345.528 205.002 
+L 473.832 205.002 
+L 473.832 142.038 
+L 345.528 142.038 
+z
+" clip-path="url(#p4d68510e66)" style="fill: #ffffff; stroke: #1f6feb; stroke-width: 2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 145.568834 163.026 
+Q 243.360985 163.026 338.469853 163.026 
+" clip-path="url(#p4d68510e66)" style="fill: none; stroke: #2a9d8f; stroke-width: 2.4; stroke-linecap: round"/>
+    <path d="M 331.669853 159.626 
+L 338.469853 163.026 
+L 331.669853 166.426 
+z
+" clip-path="url(#p4d68510e66)" style="fill: #2a9d8f; stroke: #2a9d8f; stroke-width: 2.4; stroke-linecap: round"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 341.151166 184.014 
+Q 243.359015 184.014 148.250147 184.014 
+" clip-path="url(#p4d68510e66)" style="fill: none; stroke: #e9c46a; stroke-width: 2.4; stroke-linecap: round"/>
+    <path d="M 155.050147 187.414 
+L 148.250147 184.014 
+L 155.050147 180.614 
+z
+" clip-path="url(#p4d68510e66)" style="fill: #e9c46a; stroke: #e9c46a; stroke-width: 2.4; stroke-linecap: round"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #17324d" x="77.04" y="168.273" transform="rotate(-0 77.04 168.273)">Exporter</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 8.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #5f7184" x="77.04" y="185.763" transform="rotate(-0 77.04 185.763)">Lower opportunity cost</text>
+   </g>
+   <g id="text_3">
+    <text style="font-weight: 700; font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #17324d" x="409.68" y="168.273" transform="rotate(-0 409.68 168.273)">Importer</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 8.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #5f7184" x="409.68" y="185.763" transform="rotate(-0 409.68 185.763)">Higher opportunity cost</text>
+   </g>
+   <g id="text_5">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #2a9d8f" x="243.36" y="154.281" transform="rotate(-0 243.36 154.281)">Goods flow</text>
+   </g>
+   <g id="text_6">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #17324d" x="243.36" y="192.759" transform="rotate(-0 243.36 192.759)">Payment flow</text>
+   </g>
+  </g>
+  <g id="text_7">
+   <text style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17324d" x="11.16" y="16.397812" transform="rotate(-0 11.16 16.397812)">Trade connects specialized producers</text>
+  </g>
+  <g id="text_8">
+   <text style="font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #5f7184" x="11.16" y="29.178516" transform="rotate(-0 11.16 29.178516)">A schematic route map keeps the price and quantity arrows visible before students add the graph.</text>
+  </g>
+  <g id="text_9">
+   <text style="font-size: 7.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #5f7184" x="11.16" y="305.311641" transform="rotate(-0 11.16 305.311641)">Source: Original illustrative model diagram.  |  Schematic trade-route visual; no geographic claims.</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p4d68510e66">
+   <rect x="5.76" y="68.58" width="475.2" height="209.88"/>
+  </clipPath>
+ </defs>
+</svg>
