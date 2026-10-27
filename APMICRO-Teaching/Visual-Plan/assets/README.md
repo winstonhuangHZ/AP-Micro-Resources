@@ -2,11 +2,11 @@
 
 Reserved layout for future asset production:
 
-- `source/` — original downloaded source images and their metadata; keep these files unchanged
+- `source/` — 42 downloaded source images and their metadata; keep these files unchanged
 - `source/ap-reference-crops/` — reference-only graph crops from existing AP PDFs, with source-page metadata and reuse warnings
 - `data/` — public CSV snapshots and retrieval dates
-- `python/` — chart-generation scripts
-- `diagrams/` — original SVG/PDF/PNG diagrams
+- `python/` — chart-generation scripts, including the reproducible concept-diagram builder
+- `diagrams/` — 28 original SVG/PDF/PNG concept diagrams with `diagram-manifest.csv`
 - `wikimedia/` — optional compatibility area for source files that need a separate Wikimedia-specific grouping
 - `exports/` — slide-ready and handout-ready versions
 

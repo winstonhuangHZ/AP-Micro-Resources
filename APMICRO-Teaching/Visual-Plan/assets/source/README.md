@@ -4,7 +4,7 @@ This folder stores original source image files selected for AP Microeconomics te
 
 ## Current contents
 
-The first batch contains 30 source images covering Great Depression, bank-run, Wall Street, markets, factories, trade, prices, firms, labor, public goods, banking, and education context. Each image has a row in [`sources.csv`](sources.csv) with its Wikimedia Commons file page, direct file URL, intended lesson use, machine-readable metadata where available, licensing note, byte count, and SHA-256.
+The source library now contains 42 source images covering Great Depression, bank-run, Wall Street, markets, factories, trade, prices, firms, labor, public goods, banking, and education context. Each image has a row in [`sources.csv`](sources.csv) with its Wikimedia Commons file page, direct file URL, intended lesson use, machine-readable metadata where available, licensing note, byte count, and SHA-256.
 
 ## Workflow
 
