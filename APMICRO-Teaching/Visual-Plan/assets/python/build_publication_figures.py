@@ -247,6 +247,16 @@ def load_csv(rel: str) -> pd.DataFrame:
     return pd.read_csv(DATA / rel)
 
 
+def interpolated_curve(x, y, points: int = 600):
+    """Interpolate a calculated table for a smooth, reproducible drawing."""
+    x = np.asarray(x, dtype=float)
+    y = np.asarray(y, dtype=float)
+    valid = np.isfinite(x) & np.isfinite(y)
+    x, y = x[valid], y[valid]
+    dense_x = np.linspace(x.min(), x.max(), points)
+    return dense_x, np.interp(dense_x, x, y)
+
+
 def make_scarcity():
     fig, ax = figure("Scarcity makes trade-offs visible", "A fixed resource bundle must be divided among competing uses.")
     uses = ["Food", "Shelter", "Education"]
@@ -548,7 +558,9 @@ def make_lratc():
 
 def make_profit_max():
     d=load_csv("illustrative/monopoly.csv"); fig,ax=figure("Profit maximization occurs where marginal revenue meets marginal cost", "The firm chooses output first, then reads price from the demand curve.")
-    ax.plot(d.quantity,d.price,color=BLUE,linewidth=2.3,label="Demand / price"); ax.plot(d.quantity,d.mr,color=PURPLE,linewidth=2.3,label="MR"); ax.plot(d.quantity,d.mc,color=ORANGE,linewidth=2.3,label="MC")
+    for column, color, label in [("price", BLUE, "Demand / price"), ("mr", PURPLE, "MR"), ("mc", ORANGE, "MC")]:
+        x_plot, y_plot = interpolated_curve(d.quantity, d[column])
+        ax.plot(x_plot, y_plot, color=color, linewidth=2.3, label=label)
     idx=np.argmin(np.abs(d.mr-d.mc)); q=d.quantity.iloc[idx]; p=d.price.iloc[idx]; atc=d.atc.iloc[idx]
     ax.set_xlim(0, 50); ax.set_ylim(0, 105); mark_equilibrium(ax, q, p, "Q*", "P*", f"Q* = {q:.0f}; P* = {p:.0f}"); project_y(ax, atc, "ATC*", q, color=TEAL); ax.plot([q,q],[atc,p],color=TEAL,linewidth=6,alpha=.3)
     econ_axes(ax, "Output (Q)", "Price / cost ($)"); ax.legend(frameon=False,ncol=3,fontsize=8,loc="upper right"); polish(fig,ax,"Source: APMICRO illustrative data / monopoly.csv.","Synthetic MR-MC schedule.")
@@ -577,7 +589,18 @@ def make_shutdown():
 def make_market_firm():
     fig,axs=plt.subplots(1,2,figsize=(8.6,4.2),constrained_layout=False); fig.suptitle("Industry equilibrium and the representative firm",x=.08,y=.965,ha="left",fontsize=14,fontweight="bold",color=INK)
     draw_market(axs[0],lambda q:100-q,lambda q:20+.5*q,"Industry",xlim=(0,100),ylim=(0,105),equilibrium=True)
-    q=np.linspace(0,100,200); axs[1].axhline(47,color=BLUE,linewidth=2.4,label="D = MR = P"); axs[1].plot(q,20+.5*q,color=ORANGE,linewidth=2.4,label="MC"); axs[1].set_title("Representative firm",loc="left",fontsize=10.5,fontweight="bold"); axs[1].set_xlim(0,100); axs[1].set_ylim(0,105); project_x(axs[1], 54, "Q*", 47, color=INK); project_y(axs[1], 47, "P*", 54, color=INK); change_arrow(axs[1], (30, 47), (54, 47), "Q ↑ to Q*", color=BLUE, text_offset=(0, 7)); econ_axes(axs[1], "Firm output (q)", "Price / cost ($)"); axs[1].legend(frameon=False,fontsize=8)
+    d = load_csv("illustrative/competitive-firm.csv")
+    q_star_i = (d["marginal_cost"] - d["market_price"]).abs().idxmin()
+    q_star = float(d.loc[q_star_i, "quantity"])
+    price = float(d.loc[q_star_i, "market_price"])
+    axs[1].axhline(price,color=BLUE,linewidth=2.4,label="D = MR = P")
+    x_mc, y_mc = interpolated_curve(d.quantity, d.marginal_cost)
+    axs[1].plot(x_mc,y_mc,color=ORANGE,linewidth=2.4,label="MC")
+    axs[1].set_title("Representative firm",loc="left",fontsize=10.5,fontweight="bold")
+    axs[1].set_xlim(0,100); axs[1].set_ylim(0,105)
+    project_x(axs[1], q_star, "Q*", price, color=INK); project_y(axs[1], price, "P*", q_star, color=INK)
+    change_arrow(axs[1], (30, price), (q_star, price), "Q ↑ to Q*", color=BLUE, text_offset=(0, 7))
+    econ_axes(axs[1], "Firm output (q)", "Price / cost ($)"); axs[1].legend(frameon=False,fontsize=8)
     polish(fig,axs,"Source: APMICRO illustrative model data.","Schematic perfect-competition comparison.")
     save(fig,17,"Market-versus-firm two-panel graph","Original illustrative model data","Schematic perfect-competition comparison.")
 
@@ -593,7 +616,10 @@ def make_concentration():
 
 def make_monopoly():
     d=load_csv("illustrative/monopoly.csv"); fig,ax=figure("Monopoly output, price, and deadweight loss", "A monopoly restricts output relative to the competitive benchmark in this stylized model.")
-    ax.plot(d.quantity,d.price,color=BLUE,linewidth=2.4,label="Demand"); ax.plot(d.quantity,d.mr,color=PURPLE,linewidth=2.4,label="MR"); ax.plot(d.quantity,d.mc,color=ORANGE,linewidth=2.4,label="MC"); ax.plot(d.quantity,d.atc,color=TEAL,linewidth=2.1,label="ATC")
+    for column, color, label, width in [("price", BLUE, "Demand", 2.4), ("mr", PURPLE, "MR", 2.4), ("mc", ORANGE, "MC", 2.4), ("atc", TEAL, "ATC", 2.1)]:
+        source = d[d.quantity >= 2.0] if column == "atc" else d
+        x_plot, y_plot = interpolated_curve(source.quantity, source[column])
+        ax.plot(x_plot,y_plot,color=color,linewidth=width,label=label)
     idx=np.argmin(np.abs(d.mr-d.mc)); q=float(d.quantity.iloc[idx]); p=float(d.price.iloc[idx]);
     q_comp=float(d.quantity.iloc[np.argmin(np.abs(d.price-d.mc))]); p_comp=float(d.price.iloc[np.argmin(np.abs(d.price-d.mc))])
     ax.set_xlim(0, 50); ax.set_ylim(0, 105); mark_equilibrium(ax, q, p, "Q_M", "P_M", "Monopoly choice"); project_x(ax, q_comp, "Q_C", p_comp, color=TEAL); project_y(ax, p_comp, "P_C", q_comp, color=TEAL); change_arrow(ax, (q_comp, 17), (q, 17), "Q_M < Q_C", color=RED, bidirectional=True, text_offset=(0, -4)); econ_axes(ax, "Output (Q)", "Price / cost ($)"); ax.legend(frameon=False,ncol=4,fontsize=8,loc="upper right"); polish(fig,ax,"Source: APMICRO illustrative data / monopoly.csv.","Synthetic monopoly model.")
@@ -609,13 +635,16 @@ def make_price_discrimination():
 
 
 def make_mono_comp():
-    fig,axs=plt.subplots(1,2,figsize=(8.6,4.2),constrained_layout=False); fig.suptitle("Monopolistic competition adjusts through entry and exit",x=.08,y=.965,ha="left",fontsize=14,fontweight="bold",color=INK)
-    q=np.linspace(0,80,200)
-    for ax,shift,label in [(axs[0],0,"Short run: economic profit"),(axs[1],18,"Long run: zero economic profit")]:
-        demand=100-shift-0.9*q; mr=100-shift-1.8*q; mc=18+0.55*q; atc=62-0.25*q+0.006*q*q
-        ax.plot(q,demand,color=BLUE,linewidth=2.2,label="D"); ax.plot(q,mr,color=PURPLE,linewidth=2.2,label="MR"); ax.plot(q,mc,color=ORANGE,linewidth=2.2,label="MC"); ax.plot(q,atc,color=TEAL,linewidth=2.2,label="ATC"); ax.set_title(label,loc="left",fontsize=10.5,fontweight="bold"); ax.set_xlim(0,80); ax.set_ylim(0,105); econ_axes(ax, "Output (Q)", "Price / cost ($)")
+    fig,axs=plt.subplots(1,2,figsize=(8.6,5.4),constrained_layout=False); fig.suptitle("Monopolistic competition adjusts through entry and exit",x=.08,y=.965,ha="left",fontsize=14,fontweight="bold",color=INK)
+    d = load_csv("illustrative/monopolistic-competition.csv")
+    for ax,demand_col,mr_col,label in [(axs[0],"demand_short_run","mr_short_run","Short run: economic profit"),(axs[1],"demand_long_run","mr_long_run","Long run: zero economic profit")]:
+        for column, color, curve_label in [(demand_col, BLUE, "D"), (mr_col, PURPLE, "MR"), ("marginal_cost", ORANGE, "MC"), ("atc", TEAL, "ATC")]:
+            source = d[d.quantity >= 4.0] if column == "atc" else d
+            x_plot, y_plot = interpolated_curve(source.quantity, source[column])
+            ax.plot(x_plot,y_plot,color=color,linewidth=2.2,label=curve_label)
+        ax.set_title(label,loc="left",fontsize=10.5,fontweight="bold"); ax.set_xlim(0,80); ax.set_ylim(0,70); econ_axes(ax, "Output (Q)", "Price / cost ($)")
     change_arrow(axs[0], (56, 50), (36, 50), "entry shifts D left", color=PURPLE, text_offset=(0, 7), connectionstyle="arc3,rad=0.12")
-    change_arrow(axs[1], (36, 32), (36, 50), "P ↓", color=PURPLE, text_offset=(7, 0))
+    change_arrow(axs[1], (36, 50), (36, 32), "P ↓", color=PURPLE, text_offset=(7, 0))
     axs[0].legend(frameon=False,fontsize=8,ncol=4,loc="upper right")
     polish(fig,axs,"Source: Original illustrative model data.","Stylized monopolistic-competition comparison.")
     save(fig,21,"Short-run versus long-run monopolistic competition","Original illustrative model data","Stylized comparison.")
@@ -750,9 +779,22 @@ def make_policy_evidence():
 
 def make_six_core():
     fig,axs=plt.subplots(2,3,figsize=(9,6.1),constrained_layout=False); fig.suptitle("Six core AP Micro graph templates",x=.08,y=.97,ha="left",fontsize=14,fontweight="bold",color=INK)
-    q=np.linspace(0,100,100)
-    panels=[("Demand / supply",lambda ax:(ax.plot(q,100-q,color=BLUE),ax.plot(q,20+.5*q,color=ORANGE))), ("PPC",lambda ax:ax.plot(q,100*np.sqrt(np.maximum(0,1-(q/100)**2)),color=BLUE)), ("Cost curves",lambda ax:(ax.plot(q,20+.6*q,color=ORANGE),ax.plot(q,60-0.4*q+0.006*q*q,color=BLUE))), ("Monopoly",lambda ax:(ax.plot(q,100-q,color=BLUE),ax.plot(q,100-2*q,color=PURPLE),ax.plot(q,20+.6*q,color=ORANGE))), ("Factor market",lambda ax:(ax.plot(q,100-0.7*q,color=BLUE),ax.plot(q,20+0.6*q,color=ORANGE))), ("Externality",lambda ax:(ax.plot(q,90-q,color=BLUE),ax.plot(q,10+q,color=ORANGE),ax.plot(q,24+q,color=RED)))]
-    for ax,(title,fn) in zip(axs.flat,panels): fn(ax); ax.set_title(title,loc="left",fontsize=9.5,fontweight="bold"); ax.set_xticks([]); ax.set_yticks([]); ax.spines["top"].set_visible(False); ax.spines["right"].set_visible(False); ax.grid(False)
+    market = load_csv("illustrative/demand-supply.csv")
+    ppc = load_csv("illustrative/ppc.csv")
+    costs = load_csv("illustrative/cost-curves.csv").dropna(subset=["quantity"])
+    monopoly = load_csv("illustrative/monopoly.csv")
+    factors = load_csv("illustrative/factor-market.csv")
+    externality = load_csv("illustrative/externalities.csv")
+    panels = [
+        ("Demand / supply", lambda ax: (ax.plot(market.quantity, market.demand_price, color=BLUE), ax.plot(market.quantity, market.supply_price, color=ORANGE))),
+        ("PPC", lambda ax: ax.plot(ppc.x_good_a, ppc.y_good_b, color=BLUE)),
+        ("Cost curves", lambda ax: (ax.plot(costs.quantity, costs.marginal_cost, color=ORANGE), ax.plot(costs.quantity, costs.atc, color=BLUE))),
+        ("Monopoly", lambda ax: (ax.plot(monopoly.quantity, monopoly.price, color=BLUE), ax.plot(monopoly.quantity, monopoly.mr, color=PURPLE), ax.plot(monopoly.quantity, monopoly.mc, color=ORANGE))),
+        ("Factor market", lambda ax: (ax.plot(factors.labor, factors.mrp, color=BLUE), ax.plot(factors.labor, factors.factor_price, color=ORANGE))),
+        ("Externality", lambda ax: (ax.plot(externality.quantity, externality.marginal_benefit, color=BLUE), ax.plot(externality.quantity, externality.private_marginal_cost, color=ORANGE), ax.plot(externality.quantity, externality.social_marginal_cost, color=RED))),
+    ]
+    for ax,(title,fn) in zip(axs.flat,panels):
+        fn(ax); ax.set_title(title,loc="left",fontsize=9.5,fontweight="bold"); ax.set_xticks([]); ax.set_yticks([]); ax.spines["top"].set_visible(False); ax.spines["right"].set_visible(False); ax.grid(False)
     polish(fig,axs,"Source: Original illustrative model graphs.","Template poster; labels should be added in the lesson-specific version.")
     save(fig,34,"Six-core-graphs poster","Original illustrative model graphs","Template poster.")
 

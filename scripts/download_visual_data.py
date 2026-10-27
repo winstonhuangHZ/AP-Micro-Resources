@@ -9,10 +9,19 @@ from __future__ import annotations
 import csv
 import hashlib
 import math
+import sys
 import urllib.request
 from datetime import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from build_consistent_cost_models import (  # noqa: E402
+    build_competitive_firm_schedule,
+    build_monopolistic_competition_schedule,
+    build_monopoly_schedule,
+    build_short_run_cost_schedule,
+)
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -193,13 +202,15 @@ def build_illustrative() -> list[dict]:
     for labor, output in enumerate(total):
         production.append({"labor": labor, "total_product": output, "average_product": round(output / labor, 4) if labor else "", "marginal_product": output - total[labor - 1] if labor else ""})
     specs.append(("production-function.csv", ["labor", "total_product", "average_product", "marginal_product"], production, "Illustrative production table for TP, AP, and MP."))
-    costs = []
-    for q in range(1, 21):
-        fc, vc = 100, 10 * q + 2 * q * q
-        costs.append({"quantity": q, "fixed_cost": fc, "variable_cost": vc, "total_cost": fc + vc, "atc": round((fc + vc) / q, 4), "avc": round(vc / q, 4), "marginal_cost": 10 + 2 * (2 * q - 1)})
-    specs.append(("cost-curves.csv", ["quantity", "fixed_cost", "variable_cost", "total_cost", "atc", "avc", "marginal_cost"], costs, "Illustrative short-run cost schedule."))
+    for filename, frame, notes in [
+        ("cost-curves.csv", build_short_run_cost_schedule(), "Calculated short-run cost schedule; MC is U-shaped and crosses AVC and ATC at their minima."),
+        ("monopoly.csv", build_monopoly_schedule(), "Calculated monopoly schedule with a U-shaped short-run MC and integrated VC/ATC."),
+        ("competitive-firm.csv", build_competitive_firm_schedule(), "Calculated representative-firm schedule with a U-shaped short-run MC."),
+        ("monopolistic-competition.csv", build_monopolistic_competition_schedule(), "Calculated monopolistic-competition schedule with a U-shaped short-run MC and ATC-consistent costs."),
+    ]:
+        frame = frame.where(frame.notna(), "")
+        specs.append((filename, list(frame.columns), frame.to_dict(orient="records"), notes))
     specs.append(("lratc.csv", ["output", "lratc"], [{"output": q, "lratc": round(80 - 1.5 * q + 0.03 * q * q, 4)} for q in range(1, 51)], "Illustrative long-run average total cost curve."))
-    specs.append(("monopoly.csv", ["quantity", "price", "mr", "mc", "atc"], [{"quantity": q, "price": 100 - q, "mr": 100 - 2 * q, "mc": 20 + q, "atc": round(60 - 0.5 * q + 0.02 * q * q, 4)} for q in range(0, 51, 2)], "Illustrative monopoly and profit-maximization schedule."))
     specs.append(("oligopoly-payoffs.csv", ["strategy_a", "strategy_b", "payoff_a", "payoff_b"], [{"strategy_a": "Cooperate", "strategy_b": "Cooperate", "payoff_a": 8, "payoff_b": 8}, {"strategy_a": "Cooperate", "strategy_b": "Defect", "payoff_a": 2, "payoff_b": 10}, {"strategy_a": "Defect", "strategy_b": "Cooperate", "payoff_a": 10, "payoff_b": 2}, {"strategy_a": "Defect", "strategy_b": "Defect", "payoff_a": 4, "payoff_b": 4}], "Illustrative payoff matrix."))
     specs.append(("factor-market.csv", ["labor", "mrp", "factor_price", "competitive_employment"], [{"labor": q, "mrp": 100 - 3 * q, "factor_price": 40, "competitive_employment": 20} for q in range(0, 31, 2)], "Illustrative MRP and competitive factor-market schedule."))
     specs.append(("monopsony.csv", ["labor", "labor_supply_wage", "mfc", "mrp"], [{"labor": q, "labor_supply_wage": 20 + q, "mfc": 20 + 2 * q, "mrp": 100 - 2 * q} for q in range(0, 31, 2)], "Illustrative monopsony schedule."))

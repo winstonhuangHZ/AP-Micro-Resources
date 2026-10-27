@@ -14,41 +14,32 @@ minimum. Values are illustrative and are not estimates for a real firm.
 """
 from __future__ import annotations
 
+import sys
 from pathlib import Path
 
-import numpy as np
 import pandas as pd
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
+from build_consistent_cost_models import (  # noqa: E402
+    DATA,
+    build_short_run_cost_schedule,
+    write_all_models,
+)
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / "APMICRO-Teaching" / "Visual-Plan" / "assets" / "data" / "illustrative" / "cost-curves.csv"
+OUT = DATA / "cost-curves.csv"
 
 
 def build_schedule() -> pd.DataFrame:
-    quantity = np.arange(0.0, 20.0001, 0.05)
-    fixed_cost = np.full_like(quantity, 60.0)
-    variable_cost = 0.25 * quantity**3 - 3.0 * quantity**2 + 18.0 * quantity
-    total_cost = fixed_cost + variable_cost
-    avc = np.full_like(quantity, np.nan)
-    atc = np.full_like(quantity, np.nan)
-    positive = quantity > 0
-    avc[positive] = variable_cost[positive] / quantity[positive]
-    atc[positive] = total_cost[positive] / quantity[positive]
-    marginal_cost = 0.75 * quantity**2 - 6.0 * quantity + 18.0
-    return pd.DataFrame({
-        "quantity": quantity,
-        "fixed_cost": fixed_cost,
-        "variable_cost": variable_cost,
-        "total_cost": total_cost,
-        "atc": atc,
-        "avc": avc,
-        "marginal_cost": marginal_cost,
-    })
+    return build_short_run_cost_schedule()
 
 
 def main() -> None:
     OUT.parent.mkdir(parents=True, exist_ok=True)
     data = build_schedule()
+    write_all_models()
     data.to_csv(OUT, index=False, float_format="%.6f")
     avc_i = data["avc"].idxmin()
     atc_i = data["atc"].idxmin()

@@ -13,11 +13,11 @@
 | Unit 1–6 HW | [APMICRO-Unit-HW/](APMICRO-Unit-HW/) · [详细索引](APMICRO-Unit-HW/INDEX.md) | 84 PDFs |
 | 官方课程文件 | [APMICRO-Official-Docs/](APMICRO-Official-Docs/) | 4 PDFs |
 | 开放教材与课程资料 | [APMICRO-Open-Resources/](APMICRO-Open-Resources/) | 61 PDF/EPUB |
-| 教学资料总目录 | [APMICRO-Teaching/](APMICRO-Teaching/) | 254 files |
+| 教学资料总目录 | [APMICRO-Teaching/](APMICRO-Teaching/) | 259 files |
 | 教案与课时设计 | [APMICRO-Teaching/Lesson-Plans/](APMICRO-Teaching/Lesson-Plans/) · [官方目标说明](APMICRO-Teaching/Lesson-Plans/OFFICIAL-LEARNING-OBJECTIVES.md) · [LaTeX README](APMICRO-Teaching/Lesson-Plans/latex/README.md) | 31 files |
 | 讲义 | [APMICRO-Teaching/Handouts/](APMICRO-Teaching/Handouts/) | 1 files |
 | PPT / Slides | [APMICRO-Teaching/Slides/](APMICRO-Teaching/Slides/) | 1 files |
-| 配图设计与素材目录 | [APMICRO-Teaching/Visual-Plan/](APMICRO-Teaching/Visual-Plan/) | 221 files |
+| 配图设计与素材目录 | [APMICRO-Teaching/Visual-Plan/](APMICRO-Teaching/Visual-Plan/) | 226 files |
 | 研究来源与论坛入口 | [AP-Microeconomics-Research-Sources.md](AP-Microeconomics-Research-Sources.md) | — |
 | MCQ 镜像和在线题库线索 | [MCQ-Mirror-Notes.md](MCQ-Mirror-Notes.md) | — |
 

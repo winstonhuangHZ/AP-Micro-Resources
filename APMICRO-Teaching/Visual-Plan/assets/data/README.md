@@ -10,7 +10,7 @@ The current batch uses official FRED CSV snapshots for public indicators and loc
 
 - `raw/` — unchanged FRED CSV snapshots.
 - `derived/` — locally calculated inflation, growth, recession joins, and aligned dashboards.
-- `illustrative/` — synthetic tables for PPC, supply and demand, elasticity, costs, market structures, factor markets, externalities, and review templates. These are models, not measured real-world observations.
+- `illustrative/` — synthetic tables for PPC, supply and demand, elasticity, costs, market structures, factor markets, externalities, and review templates. These are models, not measured real-world observations. The cost, monopoly, competitive-firm, and monopolistic-competition schedules are calculated from integrated MC models so MC, AVC, and ATC retain their required relationships.
 - `manifest.csv` — source URL, retrieval date, byte count, SHA-256, and licensing notes for every CSV.
 
 ## Rebuild
