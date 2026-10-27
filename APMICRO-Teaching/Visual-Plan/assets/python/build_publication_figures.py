@@ -11,7 +11,7 @@ from pathlib import Path
 
 import matplotlib.pyplot as plt
 from matplotlib.colors import LinearSegmentedColormap
-from matplotlib.patches import FancyArrowPatch, Rectangle
+from matplotlib.patches import FancyArrowPatch, Rectangle, Patch
 import numpy as np
 import pandas as pd
 
@@ -93,19 +93,21 @@ def clean_polish(fig, axes, rect=None):
             ax._left_title.set_visible(False)
             ax._right_title.set_text("")
             ax._right_title.set_visible(False)
-            if ax.legend_ is not None:
-                ax.legend_.remove()
             for text in list(ax.texts):
                 if text.get_gid() != "ap-marker":
                     text.remove()
             style_axes(ax)
+            ensure_curve_legend(ax)
     if getattr(fig, "_suptitle", None) is not None:
         fig._suptitle.set_visible(False)
     fig.tight_layout(rect=rect or [0.08, 0.08, 0.98, 0.98])
 
 
 def style_axes(ax, xlabel=None, ylabel=None, zero=False):
-    ax.grid(axis="y", color=GRID, linewidth=0.7, alpha=0.8)
+    if getattr(ax, "_ap_no_grid", False):
+        ax.grid(False, which="both")
+    else:
+        ax.grid(axis="y", color=GRID, linewidth=0.7, alpha=0.8)
     ax.set_axisbelow(True)
     ax.spines["top"].set_visible(False)
     ax.spines["right"].set_visible(False)
@@ -119,11 +121,52 @@ def style_axes(ax, xlabel=None, ylabel=None, zero=False):
         ax.axhline(0, color=INK, linewidth=0.8)
 
 
+def disable_grid(ax):
+    """Disable major and minor grid lines and preserve that choice in polish."""
+    ax._ap_no_grid = True
+    ax.grid(False, which="both")
+    ax.xaxis.grid(False, which="both")
+    ax.yaxis.grid(False, which="both")
+
+
+def ensure_curve_legend(ax, fontsize=None):
+    """Keep curve names in graph-only exports without restoring editorial text.
+
+    Most plot calls already provide labels.  The earlier graph-only cleanup
+    removed every legend, which left unlabeled Demand/MC/ATC/AVC lines in the
+    exported assets.  Preserve an explicitly positioned legend and create a
+    compact one only when a labeled artist has no legend yet.
+    """
+    handles, labels = ax.get_legend_handles_labels()
+    pairs = [(h, l) for h, l in zip(handles, labels) if l and not l.startswith("_")]
+    if not pairs:
+        return
+    if ax.legend_ is None:
+        ncol = 2 if len(pairs) >= 3 else 1
+        ax.legend(
+            [h for h, _ in pairs], [l for _, l in pairs],
+            frameon=False,
+            fontsize=fontsize or (7.2 if len(pairs) >= 3 else 8.0),
+            ncol=ncol,
+            loc="best",
+            handlelength=1.6,
+            handletextpad=0.45,
+            borderpad=0.2,
+            labelspacing=0.25,
+            columnspacing=0.8,
+        )
+    else:
+        ax.legend_.set_zorder(20)
+
+
 def econ_axes(ax, xlabel="Quantity (Q)", ylabel="Price (P)", origin=True):
     """Apply AP Micro style axis names and mark the origin."""
     # Leave room for custom AP projection labels below/left of the axes.
-    ax.set_xlabel(xlabel, labelpad=36)
-    ax.set_ylabel(ylabel, labelpad=29)
+    ax.set_xlabel(xlabel, labelpad=48)
+    # Keep AP projection labels between the spine and the axis title.  The
+    # larger pad is intentional: several graphs carry P_b/P_s, P_M/P_C, or
+    # W_M beside the same vertical axis.
+    ax.set_ylabel(ylabel, labelpad=50)
     style_axes(ax)
     if origin and ax.get_xlim()[0] <= 0 <= ax.get_xlim()[1] and ax.get_ylim()[0] <= 0 <= ax.get_ylim()[1]:
         origin = ax.annotate("0", xy=(0, 0), xytext=(-7, -9), textcoords="offset points",
@@ -140,14 +183,8 @@ def project_point(ax, x, y, x_label, y_label, color=MUTED, linewidth=0.9, label_
     suppress_numeric_ticks(ax)
     x_pad = 0.035 * (xmax - xmin)
     y_pad = 0.035 * (ymax - ymin)
-    x_text = ax.text(x, -0.10, format_label(x_label), transform=ax.get_xaxis_transform(),
-                     ha="center", va="top", fontsize=8.5, color=INK,
-                     fontweight="bold", clip_on=False)
-    x_text.set_gid("ap-marker")
-    y_text = ax.text(-0.13, y, format_label(y_label), transform=ax.get_yaxis_transform(),
-                     ha="right", va="center", fontsize=8.5, color=INK,
-                     fontweight="bold", clip_on=False)
-    y_text.set_gid("ap-marker")
+    _add_x_projection_label(ax, x, x_label)
+    _add_y_projection_label(ax, y, y_label)
 
 
 def project_x(ax, x, x_label, y=None, color=MUTED, linewidth=0.9, label_offset=0):
@@ -157,10 +194,51 @@ def project_x(ax, x, x_label, y=None, color=MUTED, linewidth=0.9, label_offset=0
     ax.plot([x, x], [ymin, y], color=color, linewidth=linewidth, linestyle=(0, (3, 3)), zorder=1)
     suppress_numeric_ticks(ax)
     y_pad = 0.035 * (ymax - ymin)
-    marker = ax.text(x, -0.10 - label_offset * 0.050, format_label(x_label), transform=ax.get_xaxis_transform(),
-                     ha="center", va="top", fontsize=8.5, color=INK,
-                     fontweight="bold", clip_on=False)
+    _add_x_projection_label(ax, x, x_label, label_offset=label_offset)
+
+
+def _add_x_projection_label(ax, x, x_label, label_offset=0):
+    """Place an x-axis projection label without colliding with nearby labels."""
+    xmin, xmax = ax.get_xlim()
+    span = max(float(xmax - xmin), 1e-9)
+    value = float(x)
+    label = str(x_label)
+    # Mathtext labels such as Q_D^W occupy more horizontal space than their
+    # plain character count suggests.  Use a deliberately generous footprint
+    # so adjacent projections are staggered before they become unreadable.
+    width = max(0.075, 0.018 * len(label) + 0.020)
+    level = max(0, int(round(float(label_offset))))
+    existing = []
+    for text in ax.texts:
+        if getattr(text, "_ap_x_marker", False):
+            ex = getattr(text, "_ap_x_value", None)
+            ew = getattr(text, "_ap_x_width", 0.05)
+            el = getattr(text, "_ap_x_level", 0)
+            if ex is not None:
+                existing.append((float(ex), float(ew), int(el)))
+    while any(
+        current_level == level
+        and abs((value - ex) / span) < (width + ew) / 2 + 0.012
+        for ex, ew, current_level in existing
+    ):
+        level += 1
+    marker = ax.text(
+        value,
+        -0.055 - level * 0.030,
+        format_label(label),
+        transform=ax.get_xaxis_transform(),
+        ha="center",
+        va="top",
+        fontsize=8.5,
+        color=INK,
+        fontweight="bold",
+        clip_on=False,
+    )
     marker.set_gid("ap-marker")
+    marker._ap_x_marker = True
+    marker._ap_x_value = value
+    marker._ap_x_width = width
+    marker._ap_x_level = level
 
 
 def project_y(ax, y, y_label, x=None, color=MUTED, linewidth=0.9, label_offset=0, label_y_offset=0):
@@ -170,12 +248,55 @@ def project_y(ax, y, y_label, x=None, color=MUTED, linewidth=0.9, label_offset=0
         x = xmax
     ax.plot([xmin, x], [y, y], color=color, linewidth=linewidth, linestyle=(0, (3, 3)), zorder=1)
     suppress_numeric_ticks(ax)
-    marker = ax.text(-0.13 - label_offset * 0.055,
-                     y + label_y_offset * 0.035 * (ymax - ymin),
-                     format_label(y_label), transform=ax.get_yaxis_transform(),
-                     ha="right", va="center", fontsize=8.5, color=INK,
-                     fontweight="bold", clip_on=False)
+    _add_y_projection_label(
+        ax,
+        y + label_y_offset * 0.035 * (ymax - ymin),
+        y_label,
+        label_offset=label_offset,
+    )
+
+
+def _add_y_projection_label(ax, y, y_label, label_offset=0):
+    """Place a y-axis projection label close to the axis and stagger overlaps."""
+    ymin, ymax = ax.get_ylim()
+    span = max(float(ymax - ymin), 1e-9)
+    value = float(y)
+    label = str(y_label)
+    # Keep a little extra vertical clearance for mathtext ascenders and
+    # subscripts (P_b/P_s, P_M/P_C, and similar pairs).
+    height = 0.100
+    level = max(0, int(round(float(label_offset))))
+    existing = []
+    for text in ax.texts:
+        if getattr(text, "_ap_y_marker", False):
+            ey = getattr(text, "_ap_y_value", None)
+            eh = getattr(text, "_ap_y_height", 0.045)
+            el = getattr(text, "_ap_y_level", 0)
+            if ey is not None:
+                existing.append((float(ey), float(eh), int(el)))
+    while any(
+        current_level == level
+        and abs((value - ey) / span) < (height + eh) / 2 + 0.015
+        for ey, eh, current_level in existing
+    ):
+        level += 1
+    marker = ax.text(
+        -0.055 - level * 0.032,
+        value,
+        format_label(label),
+        transform=ax.get_yaxis_transform(),
+        ha="right",
+        va="center",
+        fontsize=8.5,
+        color=INK,
+        fontweight="bold",
+        clip_on=False,
+    )
     marker.set_gid("ap-marker")
+    marker._ap_y_marker = True
+    marker._ap_y_value = value
+    marker._ap_y_height = height
+    marker._ap_y_level = level
 
 
 def mark_equilibrium(ax, x, y, x_label="Q*", y_label="P*", point_label=None, color=INK):
@@ -199,12 +320,11 @@ def polish(fig, axes, source: str, note: str = ""):
             ax._left_title.set_visible(False)
             ax._right_title.set_text("")
             ax._right_title.set_visible(False)
-            if ax.legend_ is not None:
-                ax.legend_.remove()
             for text in list(ax.texts):
                 if text.get_gid() != "ap-marker":
                     text.remove()
             style_axes(ax)
+            ensure_curve_legend(ax)
     if getattr(fig, "_suptitle", None) is not None:
         fig._suptitle.set_visible(False)
     fig.tight_layout(rect=[0.08, 0.08, 0.98, 0.98])
@@ -235,7 +355,7 @@ def add_label(ax, x, y, text, color=INK, ha="left", va="bottom", size=9, weight=
     value = str(text)
     keep = bool(re.fullmatch(
         r"(?:Q_[A-Za-z0-9*]+|P_[A-Za-z0-9*]+|Q\*|P\*|Q [↑↓]|P [↑↓]|"
-        r"L(?:₁|₂|\*)?|W(?:₁|₂|\*)?|MC = (?:AVC|ATC)|Q_D > Q_S|Q_S > Q_D)",
+        r"L(?:₁|₂|\*)?|W(?:₁|₂|\*)?|MC = (?:AVC|ATC)|MFC = MRP|Q_D > Q_S|Q_S > Q_D)",
         value,
     ))
     if not keep:
@@ -367,14 +487,27 @@ def make_trade_flow():
 def make_comp_adv_heatmap():
     d = load_csv("illustrative/comparative-advantage.csv").pivot(index="producer", columns="product", values="opportunity_cost")
     fig, ax = figure("Comparative advantage is a relative-cost relationship", "Lower opportunity cost identifies the producer with comparative advantage.")
-    cmap = LinearSegmentedColormap.from_list("cost", [PALE_TEAL, GOLD, PALE_ORANGE])
-    im = ax.imshow(d.values, cmap=cmap, aspect="auto")
+    cmap = LinearSegmentedColormap.from_list(
+        "opportunity-cost",
+        ["#F7FBFF", "#C6DBEF", "#6BAED6", "#2171B5"],
+    )
+    im = ax.imshow(d.values, cmap=cmap, aspect="auto", interpolation="nearest")
     ax.set_xticks(range(len(d.columns)), d.columns); ax.set_yticks(range(len(d.index)), d.index)
     for i in range(d.shape[0]):
         for j in range(d.shape[1]):
-            ax.text(j, i, f"{d.iloc[i,j]:.1f}", ha="center", va="center", fontweight="bold")
+            value = float(d.iloc[i, j])
+            cell_text = ax.text(
+                j,
+                i,
+                f"{value:.1f}",
+                ha="center",
+                va="center",
+                fontweight="bold",
+                color="white" if value >= 1.5 else INK,
+            )
+            cell_text.set_gid("ap-marker")
     ax.set_xlabel("Product"); ax.set_ylabel("Producer"); ax.set_title("Opportunity cost", loc="left", fontsize=10.5, fontweight="bold")
-    style_axes(ax); ax.grid(False)
+    disable_grid(ax); style_axes(ax)
     polish(fig, ax, "Source: APMICRO illustrative data / comparative-advantage.csv.", "Lower values indicate lower opportunity cost.")
     save(fig, 3, "Comparative-advantage heatmap", "APMICRO illustrative data / comparative-advantage.csv", "Lower values indicate lower opportunity cost.")
 
@@ -427,7 +560,7 @@ def make_elasticity():
 def make_total_revenue():
     d = load_csv("illustrative/elasticity-and-revenue.csv")
     fig, ax = bare_figure(figsize=(7.2, 4.8))
-    ax.plot(d.quantity, d.revenue, color=BLUE, linewidth=2.6)
+    ax.plot(d.quantity, d.revenue, color=BLUE, linewidth=2.6, label="Total revenue")
     peak = d.loc[d.revenue.idxmax()]
     ax.scatter([peak.quantity], [peak.revenue], color=ORANGE, s=48, zorder=3)
     add_label(ax, peak.quantity + 2, peak.revenue + 80, "Unit-elastic midpoint", color=ORANGE, weight="bold")
@@ -467,7 +600,7 @@ def make_shortage_surplus():
     fig, axs = plt.subplots(1,2,figsize=(8.0,5.0), constrained_layout=False)
     q=np.linspace(0,100,301); demand=100-q; supply=20+.5*q; qe=53.333; pe=46.667
     for ax, price, label, color, qd, qs in [(axs[0],35,"Shortage",RED,65,30),(axs[1],65,"Surplus",TEAL,35,90)]:
-        ax.plot(q,demand,color=BLUE,linewidth=2.2,label="Demand"); ax.plot(q,supply,color=ORANGE,linewidth=2.2,label="Supply"); ax.axhline(price,color=color,linewidth=1.8)
+        ax.plot(q,demand,color=BLUE,linewidth=2.2,label="Demand"); ax.plot(q,supply,color=ORANGE,linewidth=2.2,label="Supply"); ax.axhline(price,color=color,linewidth=1.8,label="Controlled price")
         ax.set_xlim(0,100); ax.set_ylim(0,105)
         ax.scatter([qd,qs],[price,price],color=[BLUE,ORANGE],s=30,zorder=4)
         project_x(ax, qd, "Q_D", price, color=BLUE); project_x(ax, qs, "Q_S", price, color=ORANGE); project_y(ax, price, "P_c" if label == "Shortage" else "P_f", max(qd, qs), color=color)
@@ -490,21 +623,21 @@ def make_policy_grid():
     for ax,(label,policy,color) in zip(axs.flat,items):
         ax.set_xlim(0,80); ax.set_ylim(0,105)
         if label == "Per-unit tax":
-            ax.plot(q,demand,color=BLUE,linewidth=1.9,label="D"); ax.plot(q,supply,color=ORANGE,linewidth=1.9,label="S"); ax.plot(q,supply+policy,color=RED,linewidth=1.9,label="S + tax");
+            ax.plot(q,demand,color=BLUE,linewidth=1.9,label="Demand"); ax.plot(q,supply,color=ORANGE,linewidth=1.9,label="Supply"); ax.plot(q,supply+policy,color=RED,linewidth=1.9,label="Supply + tax");
             q_tax = (100 - 10 - policy) / (1.20 + 1.00)
             p_buyer = 100 - 1.20*q_tax; p_seller = 10 + 1.00*q_tax
             ax.vlines(q_tax, p_seller, p_buyer, color=color, linewidth=3.0, alpha=.6); project_x(ax, q_tax, "Q_tax", p_buyer, color=color, label_offset=2.0); project_y(ax, p_buyer, "P_b", q_tax, color=BLUE, label_y_offset=0.7); project_y(ax, p_seller, "P_s", q_tax, color=ORANGE, label_offset=1.5, label_y_offset=-0.7)
             change_arrow(ax, (q_tax + 5, p_seller), (q_tax + 5, p_buyer), "tax wedge", color=color, bidirectional=True, text_offset=(18, 6))
             change_arrow(ax, (q_tax, 22), (q_tax - 10, 22), "Q ↓", color=RED, text_offset=(0, -5))
         elif label == "Subsidy":
-            ax.plot(q,demand,color=BLUE,linewidth=1.9,label="D"); ax.plot(q,supply,color=ORANGE,linewidth=1.9,label="S"); ax.plot(q,supply-policy,color=PURPLE,linewidth=1.9,label="S − subsidy");
+            ax.plot(q,demand,color=BLUE,linewidth=1.9,label="Demand"); ax.plot(q,supply,color=ORANGE,linewidth=1.9,label="Supply"); ax.plot(q,supply-policy,color=PURPLE,linewidth=1.9,label="Supply − subsidy");
             q_sub = (100 - 10 + policy) / (1.20 + 1.00)
             p_buyer = 100 - 1.20*q_sub; p_seller = 10 + 1.00*q_sub
             ax.vlines(q_sub, p_buyer, p_seller, color=color, linewidth=3.0, alpha=.6); project_x(ax, q_sub, "Q_sub", p_seller, color=color, label_offset=2.0); project_y(ax, p_buyer, "P_b", q_sub, color=BLUE, label_y_offset=-0.7); project_y(ax, p_seller, "P_s", q_sub, color=ORANGE, label_offset=1.5, label_y_offset=0.7)
             change_arrow(ax, (q_sub + 5, p_buyer), (q_sub + 5, p_seller), "subsidy wedge", color=color, bidirectional=True, text_offset=(20, 8))
             change_arrow(ax, (q_sub, 22), (q_sub + 10, 22), "Q ↑", color=PURPLE, text_offset=(0, -5))
         else:
-            ax.plot(q,demand,color=BLUE,linewidth=1.9,label="D"); ax.plot(q,supply,color=ORANGE,linewidth=1.9,label="S"); ax.axhline(policy,color=color,linewidth=1.8,label="Policy price")
+            ax.plot(q,demand,color=BLUE,linewidth=1.9,label="Demand"); ax.plot(q,supply,color=ORANGE,linewidth=1.9,label="Supply"); ax.axhline(policy,color=color,linewidth=1.8,label="Controlled price")
             qd = (100-policy)/1.20; qs = (policy-10)/1.00
             project_x(ax, qd, "Q_D", policy, color=BLUE); project_x(ax, qs, "Q_S", policy, color=ORANGE); project_y(ax, policy, "P_c" if label == "Price ceiling" else "P_f", max(qd, qs), color=color)
             p_eq = (1.00 * 100.0 + 1.20 * 10.0) / (1.20 + 1.00)
@@ -567,8 +700,9 @@ def make_production_heatmap():
     for i in range(matrix.shape[0]):
         for j in range(matrix.shape[1]):
             text_color = "white" if matrix[i, j] >= threshold else INK
-            ax.text(j, i, f"{matrix[i,j]:.0f}", ha="center", va="center", fontsize=8, color=text_color)
-    ax.grid(False); clean_polish(fig,ax)
+            cell_text = ax.text(j, i, f"{matrix[i,j]:.0f}", ha="center", va="center", fontsize=8, color=text_color)
+            cell_text.set_gid("ap-marker")
+    disable_grid(ax); clean_polish(fig,ax)
     save(fig,12,"Production-table heatmap","APMICRO illustrative data / production-function.csv","Synthetic production table.", tight=False)
 
 
@@ -597,7 +731,7 @@ def make_costs():
 
 def make_lratc():
     d=load_csv("illustrative/lratc.csv"); fig,ax=bare_figure(figsize=(7.8,3.9))
-    ax.plot(d.output,d.lratc,color=BLUE,linewidth=2.7); i=d.lratc.idxmin(); ax.scatter([d.output[i]],[d.lratc[i]],color=ORANGE,s=50); add_label(ax,d.output[i]+2,d.lratc[i]+2,"Minimum efficient scale",color=ORANGE,weight="bold")
+    ax.plot(d.output,d.lratc,color=BLUE,linewidth=2.7,label="LRATC"); i=d.lratc.idxmin(); ax.scatter([d.output[i]],[d.lratc[i]],color=ORANGE,s=50); add_label(ax,d.output[i]+2,d.lratc[i]+2,"Minimum efficient scale",color=ORANGE,weight="bold")
     ax.axvspan(1,d.output[i],color=PALE_TEAL,alpha=.35); ax.axvspan(d.output[i],50,color=PALE_ORANGE,alpha=.25); ax.set_xlabel("Output (Q)"); ax.set_ylabel("Long-run average total cost ($)")
     clean_polish(fig,ax)
     save(fig,14,"LRATC economies-of-scale curve","APMICRO illustrative data / lratc.csv","Synthetic long-run cost curve.")
@@ -624,7 +758,19 @@ def make_firm_dashboard():
     fig,axs=plt.subplots(2,2,figsize=(7.5,5.6),constrained_layout=False); fig.suptitle("Firm decision dashboard",x=.08,y=.97,ha="left",fontsize=14,fontweight="bold",color=INK)
     labels=["Output","Price","Average cost","Profit per unit"]; vals=[q,price,atc,profit_per_unit]; colors=[BLUE,TEAL,ORANGE,GOLD]
     for ax,label,val,color in zip(axs.flat,labels,vals,colors):
-        ax.bar([0],[val],color=color,width=.55); ax.set_title(label,loc="left",fontsize=10.5,fontweight="bold"); ax.set_xticks([]); ax.set_ylim(0,100); ax.text(0,val+5,f"{val:.0f}",ha="center",fontweight="bold",fontsize=14); style_axes(ax)
+        ax.bar([0],[val],color=color,width=.55); ax.set_title(label,loc="left",fontsize=10.5,fontweight="bold"); ax.set_xticks([]); ax.set_ylim(0,100)
+        value_text = ax.text(0,val+5,f"{val:.0f}",ha="center",fontweight="bold",fontsize=14)
+        value_text.set_gid("ap-marker")
+        style_axes(ax)
+    fig.legend(
+        [Patch(facecolor=color, edgecolor="none") for color in colors],
+        labels,
+        frameon=False,
+        loc="upper center",
+        ncol=4,
+        bbox_to_anchor=(0.5, 0.995),
+        fontsize=8.5,
+    )
     polish(fig,axs,"Source: APMICRO illustrative data / monopoly.csv.","Illustrative firm snapshot; values are synthetic.")
     save(fig,15,"Firm decision dashboard","APMICRO illustrative data / monopoly.csv","Illustrative firm snapshot.")
 
@@ -713,19 +859,19 @@ def make_payoff():
     im=ax.imshow(matrix,cmap=LinearSegmentedColormap.from_list("pay",[PALE_ORANGE, GOLD, PALE_TEAL]),vmin=0,vmax=10); ax.set_xticks([0,1],["Cooperate","Defect"]); ax.set_yticks([0,1],["Cooperate","Defect"]); ax.set_xlabel("Firm B"); ax.set_ylabel("Firm A")
     for i in range(2):
         for j in range(2):
-            pair=d[(d.strategy_a==["Cooperate","Defect"][i])&(d.strategy_b==["Cooperate","Defect"][j])].iloc[0]; ax.text(j,i,f"{pair.payoff_a:.0f}, {pair.payoff_b:.0f}",ha="center",va="center",fontweight="bold")
-    ax.grid(False); clean_polish(fig,ax)
+            pair=d[(d.strategy_a==["Cooperate","Defect"][i])&(d.strategy_b==["Cooperate","Defect"][j])].iloc[0]; cell_text = ax.text(j,i,f"{pair.payoff_a:.0f}, {pair.payoff_b:.0f}",ha="center",va="center",fontweight="bold"); cell_text.set_gid("ap-marker")
+    disable_grid(ax); clean_polish(fig,ax)
     save(fig,22,"Payoff matrix heatmap","APMICRO illustrative data / oligopoly-payoffs.csv","Cells show Firm A payoff, Firm B payoff.")
 
 
 def make_efficiency_comparison():
     fig,axs=plt.subplots(1,2,figsize=(9.6,4.8),constrained_layout=False)
-    names=["Perfect comp.","Monopolistic comp.","Oligopoly","Monopoly"]; price=[38,48,58,72]; output=[92,76,65,48]; dwl=[0,8,14,26]
+    names=["Perfect\ncompetition","Monopolistic\ncompetition","Oligopoly","Monopoly"]; price=[38,48,58,72]; output=[92,76,65,48]; dwl=[0,8,14,26]
     x=np.arange(len(names))
-    axs[0].bar(x,price,color=[TEAL,BLUE,PURPLE,ORANGE]); axs[0].set_xticks(x,names,rotation=20,ha="right"); axs[0].set_ylabel("Relative price"); style_axes(axs[0])
+    axs[0].bar(x,price,color=[TEAL,BLUE,PURPLE,ORANGE]); axs[0].set_xticks(x,names,rotation=0,ha="center"); axs[0].set_ylabel("Relative price"); style_axes(axs[0])
     axs[1].bar(x,output,color=[TEAL,BLUE,PURPLE,ORANGE],label="Output")
     ax_dwl=axs[1].twinx(); ax_dwl.plot(x,dwl,color=RED,marker="o",linewidth=2.2,label="Relative DWL")
-    axs[1].set_xticks(x,names,rotation=20,ha="right"); axs[1].set_ylabel("Relative output"); ax_dwl.set_ylabel("Relative DWL",color=RED); ax_dwl.tick_params(axis="y",colors=RED)
+    axs[1].set_xticks(x,names,rotation=0,ha="center"); axs[1].set_ylabel("Relative output"); ax_dwl.set_ylabel("Relative DWL",color=RED); ax_dwl.tick_params(axis="y",colors=RED)
     lines, labels = axs[1].get_legend_handles_labels(); lines2, labels2 = ax_dwl.get_legend_handles_labels(); axs[1].legend(lines+lines2,labels+labels2,frameon=False,loc="upper right"); style_axes(axs[1]); ax_dwl.spines["top"].set_visible(False)
     clean_polish(fig,axs)
     save(fig,23,"Efficiency comparison bars","Original illustrative model data","Relative comparison.")
@@ -767,14 +913,17 @@ def make_monopsony():
     idx=np.argmin(np.abs(d.mfc-d.mrp)); q=float(d.labor.iloc[idx]); mfc=float(d.mfc.iloc[idx]); w=float(d.labor_supply_wage.iloc[idx])
     ax.set_xlim(0,30); ax.set_ylim(0,105)
     ax.scatter([q],[mfc],color=INK,s=42,zorder=5)
-    ax.plot([q,q],[0,mfc],color=INK,linewidth=0.9,linestyle=(0,(3,3)),zorder=1)
+    # Separate the decision projection from the wage read-off: first locate
+    # L_M at MFC = MRP, then read W_M from the labor-supply curve.
+    ax.plot([q,q],[w,mfc],color=INK,linewidth=0.9,linestyle=(0,(3,3)),zorder=1)
     ax.plot([0,q],[mfc,mfc],color=INK,linewidth=0.9,linestyle=(0,(3,3)),zorder=1)
     ax.scatter([q],[w],color=TEAL,s=42,zorder=5)
+    ax.plot([q,q],[0,w],color=TEAL,linewidth=0.9,linestyle=(0,(3,3)),zorder=1)
     ax.plot([0,q],[w,w],color=TEAL,linewidth=0.9,linestyle=(0,(3,3)),zorder=1)
     suppress_numeric_ticks(ax)
-    ax.text(q,-0.10,"$L_M$",transform=ax.get_xaxis_transform(),ha="center",va="top",fontsize=8.5,color=INK,fontweight="bold",clip_on=False)
-    ax.text(-0.13,mfc,"MFC = MRP",transform=ax.get_yaxis_transform(),ha="right",va="center",fontsize=8.5,color=INK,fontweight="bold",clip_on=False)
-    ax.text(-0.13,w,"$W_M$",transform=ax.get_yaxis_transform(),ha="right",va="center",fontsize=8.5,color=TEAL,fontweight="bold",clip_on=False)
+    _add_x_projection_label(ax, q, "L_M")
+    add_label(ax, 1.2, mfc + 3.0, "MFC = MRP", color=INK, size=8.2, weight="bold")
+    _add_y_projection_label(ax, w, "W_M", label_offset=1)
     add_label(ax,q+1,mfc+3,"decision point",color=INK,weight="bold")
     add_label(ax,q+1,w+2,"read wage from labor supply",color=TEAL,size=8.2)
     econ_axes(ax,"Quantity of labor (L)","Wage / marginal value ($)"); ax.legend(frameon=False,fontsize=8,ncol=3,loc="upper right"); polish(fig,ax,"Source: APMICRO illustrative data / monopsony.csv.","Synthetic monopsony schedule.")
@@ -828,7 +977,7 @@ def make_policy_dashboard():
 
 def make_unemployment():
     d=load_csv("derived/unemployment-with-recessions.csv"); d.date=pd.to_datetime(d.date); fig,ax=bare_figure(figsize=(8.2,4.5))
-    ax.plot(d.date,d.unemployment_rate,color=BLUE,linewidth=1.8); rec=d.recession.to_numpy(); dates=d.date.to_numpy(); in_rec=False; start=None
+    ax.plot(d.date,d.unemployment_rate,color=BLUE,linewidth=1.8,label="Unemployment rate"); rec=d.recession.to_numpy(); dates=d.date.to_numpy(); in_rec=False; start=None
     for date,flag in zip(dates,rec):
         if flag and not in_rec: start=date; in_rec=True
         if in_rec and (not flag or date==dates[-1]):
@@ -853,7 +1002,7 @@ def make_histogram():
 def make_policy_evidence():
     d=load_csv("derived/policy-and-indicators-dashboard.csv"); d.month=pd.to_datetime(d.month.astype(str), format="mixed"); fig,axs=plt.subplots(3,1,figsize=(8.2,5.4),sharex=True,constrained_layout=False)
     panels=[("inflation_yoy_pct", "Inflation (%)", RED), ("unemployment_rate","Unemployment (%)", BLUE),("fedfunds_pct","Fed funds (%)",PURPLE)]
-    for ax,(col,label,color) in zip(axs,panels): ax.plot(d.month,d[col],color=color,linewidth=1.6); ax.set_ylabel(label,fontsize=8.5); style_axes(ax)
+    for ax,(col,label,color) in zip(axs,panels): ax.plot(d.month,d[col],color=color,linewidth=1.6,label=label); ax.set_ylabel(label,fontsize=8.5); style_axes(ax)
     axs[-1].set_xlabel("Date"); clean_polish(fig,axs)
     save(fig,33,"Policy evidence dashboard","FRED CPIAUCSL, UNRATE, FEDFUNDS local dashboard","Macro extension.")
 
@@ -871,21 +1020,21 @@ def make_six_core():
     factors = load_csv("illustrative/factor-market.csv")
     externality = load_csv("illustrative/externalities.csv")
     panels = [
-        ("Demand / supply", lambda ax: (ax.plot(market.quantity, market.demand_price, color=BLUE), ax.plot(market.quantity, market.supply_price, color=ORANGE))),
-        ("PPC", lambda ax: ax.plot(ppc.x_good_a, ppc.y_good_b, color=BLUE)),
+        ("Demand / supply", lambda ax: (ax.plot(market.quantity, market.demand_price, color=BLUE, label="Demand"), ax.plot(market.quantity, market.supply_price, color=ORANGE, label="Supply"))),
+        ("PPC", lambda ax: ax.plot(ppc.x_good_a, ppc.y_good_b, color=BLUE, label="PPC")),
         ("Cost curves", lambda ax: (
-            ax.plot(cost_window.quantity, cost_window.marginal_cost, color=ORANGE),
-            ax.plot(cost_window.quantity, cost_window.atc, color=BLUE),
-            ax.plot(cost_window.quantity, cost_window.avc, color=TEAL),
+            ax.plot(cost_window.quantity, cost_window.marginal_cost, color=ORANGE, label="MC"),
+            ax.plot(cost_window.quantity, cost_window.atc, color=BLUE, label="ATC"),
+            ax.plot(cost_window.quantity, cost_window.avc, color=TEAL, label="AVC"),
             ax.set_xlim(3.5, 10.5),
             ax.set_ylim(0.0, 42.0),
         )),
-        ("Monopoly", lambda ax: (ax.plot(monopoly.quantity, monopoly.price, color=BLUE), ax.plot(monopoly.quantity, monopoly.mr, color=PURPLE), ax.plot(monopoly.quantity, monopoly.mc, color=ORANGE))),
-        ("Factor market", lambda ax: (ax.plot(factors.labor, factors.mrp, color=BLUE), ax.plot(factors.labor, factors.factor_price, color=ORANGE))),
-        ("Externality", lambda ax: (ax.plot(externality.quantity, externality.marginal_benefit, color=BLUE), ax.plot(externality.quantity, externality.private_marginal_cost, color=ORANGE), ax.plot(externality.quantity, externality.social_marginal_cost, color=RED))),
+        ("Monopoly", lambda ax: (ax.plot(monopoly.quantity, monopoly.price, color=BLUE, label="Demand"), ax.plot(monopoly.quantity, monopoly.mr, color=PURPLE, label="MR"), ax.plot(monopoly.quantity, monopoly.mc, color=ORANGE, label="MC"))),
+        ("Factor market", lambda ax: (ax.plot(factors.labor, factors.mrp, color=BLUE, label="MRP"), ax.plot(factors.labor, factors.factor_price, color=ORANGE, label="Factor price"))),
+        ("Externality", lambda ax: (ax.plot(externality.quantity, externality.marginal_benefit, color=BLUE, label="MB"), ax.plot(externality.quantity, externality.private_marginal_cost, color=ORANGE, label="PMC"), ax.plot(externality.quantity, externality.social_marginal_cost, color=RED, label="SMC"))),
     ]
     for ax,(title,fn) in zip(axs.flat,panels):
-        fn(ax); ax.set_title(title,loc="left",fontsize=9.5,fontweight="bold"); ax.set_xticks([]); ax.set_yticks([]); ax.spines["top"].set_visible(False); ax.spines["right"].set_visible(False); ax.grid(False)
+        fn(ax); ax.set_title(title,loc="left",fontsize=9.5,fontweight="bold"); ax.set_xticks([]); ax.set_yticks([]); ax.spines["top"].set_visible(False); ax.spines["right"].set_visible(False); disable_grid(ax)
     clean_polish(fig,axs)
     save(fig,34,"Six-core-graphs poster","Original illustrative model graphs","Template poster.")
 
@@ -904,8 +1053,10 @@ def make_error_heatmap():
     fig,ax=figure("Error-type heatmap", "A compact error profile helps decide which review activity should come next.")
     im=ax.imshow(vals,cmap=LinearSegmentedColormap.from_list("errors",["#EFF6FF",PALE_BLUE,ORANGE,RED]),aspect="auto"); ax.set_xticks(range(len(errors)),errors,rotation=20); ax.set_yticks(range(len(units)),units); ax.set_xlabel("Error type"); ax.set_ylabel("Unit")
     for i in range(vals.shape[0]):
-        for j in range(vals.shape[1]): ax.text(j,i,str(vals[i,j]),ha="center",va="center",fontweight="bold")
-    ax.grid(False); polish(fig,ax,"Source: Original synthetic practice log.","Template only; replace with anonymized student data.")
+        for j in range(vals.shape[1]):
+            cell_text = ax.text(j,i,str(vals[i,j]),ha="center",va="center",fontweight="bold")
+            cell_text.set_gid("ap-marker")
+    disable_grid(ax); polish(fig,ax,"Source: Original synthetic practice log.","Template only; replace with anonymized student data.")
     save(fig,35,"Error-type heatmap","Original synthetic practice log","Template only.")
 
 

@@ -6,7 +6,7 @@
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2026-10-27T17:53:03.749059</dc:date>
+    <dc:date>2026-10-27T19:07:29.356645</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -61,7 +61,7 @@ L 153.032727 146.258182
 L 161.214545 154.063636 
 L 169.396364 161.869091 
 L 177.578182 169.674545 
-" clip-path="url(#p1e4bac161e)" style="fill: none; stroke: #1f6feb; stroke-width: 1.5; stroke-linecap: square"/>
+" clip-path="url(#p2ad608f1ec)" style="fill: none; stroke: #1f6feb; stroke-width: 1.5; stroke-linecap: square"/>
    </g>
    <g id="line2d_2">
     <path d="M 13.941818 138.452727 
@@ -85,7 +85,7 @@ L 153.032727 72.106364
 L 161.214545 68.203636 
 L 169.396364 64.300909 
 L 177.578182 60.398182 
-" clip-path="url(#p1e4bac161e)" style="fill: none; stroke: #e76f51; stroke-width: 1.5; stroke-linecap: square"/>
+" clip-path="url(#p2ad608f1ec)" style="fill: none; stroke: #e76f51; stroke-width: 1.5; stroke-linecap: square"/>
    </g>
    <g id="patch_3">
     <path d="M 5.76 177.48 
@@ -96,6 +96,26 @@ L 5.76 5.76
     <path d="M 5.76 177.48 
 L 185.76 177.48 
 " style="fill: none; stroke: #17324d; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="legend_1">
+    <g id="line2d_3">
+     <path d="M 129.83375 14.63875 
+L 136.23375 14.63875 
+L 142.63375 14.63875 
+" style="fill: none; stroke: #1f6feb; stroke-width: 1.5; stroke-linecap: square"/>
+    </g>
+    <g id="text_1">
+     <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17324d" x="146.23375" y="17.43875" transform="rotate(-0 146.23375 17.43875)">Demand</text>
+    </g>
+    <g id="line2d_4">
+     <path d="M 129.83375 24.38125 
+L 136.23375 24.38125 
+L 142.63375 24.38125 
+" style="fill: none; stroke: #e76f51; stroke-width: 1.5; stroke-linecap: square"/>
+    </g>
+    <g id="text_2">
+     <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17324d" x="146.23375" y="27.18125" transform="rotate(-0 146.23375 27.18125)">Supply</text>
+    </g>
    </g>
   </g>
   <g id="axes_2">
@@ -109,7 +129,7 @@ z
    </g>
    <g id="matplotlib.axis_3"/>
    <g id="matplotlib.axis_4"/>
-   <g id="line2d_3">
+   <g id="line2d_5">
     <path d="M 204.741818 13.565455 
 L 212.923636 13.760747 
 L 221.105455 14.348029 
@@ -131,7 +151,7 @@ L 343.832727 87.43893
 L 352.014545 101.628154 
 L 360.196364 120.929482 
 L 368.378182 169.674545 
-" clip-path="url(#p85ccfbd74d)" style="fill: none; stroke: #1f6feb; stroke-width: 1.5; stroke-linecap: square"/>
+" clip-path="url(#p6ebe82b404)" style="fill: none; stroke: #1f6feb; stroke-width: 1.5; stroke-linecap: square"/>
    </g>
    <g id="patch_6">
     <path d="M 196.56 177.48 
@@ -142,6 +162,17 @@ L 196.56 5.76
     <path d="M 196.56 177.48 
 L 376.56 177.48 
 " style="fill: none; stroke: #17324d; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="legend_2">
+    <g id="line2d_6">
+     <path d="M 339.32625 14.63875 
+L 345.72625 14.63875 
+L 352.12625 14.63875 
+" style="fill: none; stroke: #1f6feb; stroke-width: 1.5; stroke-linecap: square"/>
+    </g>
+    <g id="text_3">
+     <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17324d" x="355.72625" y="17.43875" transform="rotate(-0 355.72625 17.43875)">PPC</text>
+    </g>
    </g>
   </g>
   <g id="axes_3">
@@ -155,7 +186,7 @@ z
    </g>
    <g id="matplotlib.axis_5"/>
    <g id="matplotlib.axis_6"/>
-   <g id="line2d_4">
+   <g id="line2d_7">
     <path d="M 387.36 152.181964 
 L 392.502857 152.672593 
 L 397.645714 152.917907 
@@ -191,9 +222,9 @@ L 557.074286 38.846764
 L 563.502857 29.302505 
 L 567.36 23.391964 
 L 567.36 23.391964 
-" clip-path="url(#p14c1c29921)" style="fill: none; stroke: #e76f51; stroke-width: 1.5; stroke-linecap: square"/>
+" clip-path="url(#p145eae9712)" style="fill: none; stroke: #e76f51; stroke-width: 1.5; stroke-linecap: square"/>
    </g>
-   <g id="line2d_5">
+   <g id="line2d_8">
     <path d="M 387.36 64.204669 
 L 391.217143 67.828681 
 L 395.074286 71.179293 
@@ -226,9 +257,9 @@ L 554.502857 99.797143
 L 562.217143 97.966514 
 L 567.36 96.621198 
 L 567.36 96.621198 
-" clip-path="url(#p14c1c29921)" style="fill: none; stroke: #1f6feb; stroke-width: 1.5; stroke-linecap: square"/>
+" clip-path="url(#p145eae9712)" style="fill: none; stroke: #1f6feb; stroke-width: 1.5; stroke-linecap: square"/>
    </g>
-   <g id="line2d_6">
+   <g id="line2d_9">
     <path d="M 387.36 134.294464 
 L 396.36 135.958002 
 L 405.36 137.371114 
@@ -251,7 +282,7 @@ L 549.36 125.923114
 L 558.36 123.079002 
 L 567.36 119.984464 
 L 567.36 119.984464 
-" clip-path="url(#p14c1c29921)" style="fill: none; stroke: #2a9d8f; stroke-width: 1.5; stroke-linecap: square"/>
+" clip-path="url(#p145eae9712)" style="fill: none; stroke: #2a9d8f; stroke-width: 1.5; stroke-linecap: square"/>
    </g>
    <g id="patch_9">
     <path d="M 387.36 177.48 
@@ -262,6 +293,35 @@ L 387.36 5.76
     <path d="M 387.36 177.48 
 L 567.36 177.48 
 " style="fill: none; stroke: #17324d; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="legend_3">
+    <g id="line2d_10">
+     <path d="M 499.251375 13.750875 
+L 505.011375 13.750875 
+L 510.771375 13.750875 
+" style="fill: none; stroke: #e76f51; stroke-width: 1.5; stroke-linecap: square"/>
+    </g>
+    <g id="text_4">
+     <text style="font-size: 7.2px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17324d" x="514.011375" y="16.270875" transform="rotate(-0 514.011375 16.270875)">MC</text>
+    </g>
+    <g id="line2d_11">
+     <path d="M 499.251375 22.519125 
+L 505.011375 22.519125 
+L 510.771375 22.519125 
+" style="fill: none; stroke: #1f6feb; stroke-width: 1.5; stroke-linecap: square"/>
+    </g>
+    <g id="text_5">
+     <text style="font-size: 7.2px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17324d" x="514.011375" y="25.039125" transform="rotate(-0 514.011375 25.039125)">ATC</text>
+    </g>
+    <g id="line2d_12">
+     <path d="M 533.140875 13.750875 
+L 538.900875 13.750875 
+L 544.660875 13.750875 
+" style="fill: none; stroke: #2a9d8f; stroke-width: 1.5; stroke-linecap: square"/>
+    </g>
+    <g id="text_6">
+     <text style="font-size: 7.2px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17324d" x="547.900875" y="16.270875" transform="rotate(-0 547.900875 16.270875)">AVC</text>
+    </g>
    </g>
   </g>
   <g id="axes_4">
@@ -275,19 +335,19 @@ z
    </g>
    <g id="matplotlib.axis_7"/>
    <g id="matplotlib.axis_8"/>
-   <g id="line2d_7">
+   <g id="line2d_13">
     <path d="M 13.941818 237.408449 
 L 177.578182 294.801497 
 L 177.578182 294.801497 
-" clip-path="url(#p4818425ba0)" style="fill: none; stroke: #1f6feb; stroke-width: 1.5; stroke-linecap: square"/>
+" clip-path="url(#p52261e129e)" style="fill: none; stroke: #1f6feb; stroke-width: 1.5; stroke-linecap: square"/>
    </g>
-   <g id="line2d_8">
+   <g id="line2d_14">
     <path d="M 13.941818 237.408449 
 L 177.578182 352.194545 
 L 177.578182 352.194545 
-" clip-path="url(#p4818425ba0)" style="fill: none; stroke: #7353a6; stroke-width: 1.5; stroke-linecap: square"/>
+" clip-path="url(#p52261e129e)" style="fill: none; stroke: #7353a6; stroke-width: 1.5; stroke-linecap: square"/>
    </g>
-   <g id="line2d_9">
+   <g id="line2d_15">
     <path d="M 13.941818 333.82877 
 L 18.032727 335.981009 
 L 22.123636 337.846283 
@@ -329,7 +389,7 @@ L 166.941818 218.99102
 L 172.669091 206.898305 
 L 177.578182 196.085455 
 L 177.578182 196.085455 
-" clip-path="url(#p4818425ba0)" style="fill: none; stroke: #e76f51; stroke-width: 1.5; stroke-linecap: square"/>
+" clip-path="url(#p52261e129e)" style="fill: none; stroke: #e76f51; stroke-width: 1.5; stroke-linecap: square"/>
    </g>
    <g id="patch_12">
     <path d="M 5.76 360 
@@ -340,6 +400,35 @@ L 5.76 188.28
     <path d="M 5.76 360 
 L 185.76 360 
 " style="fill: none; stroke: #17324d; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="legend_4">
+    <g id="line2d_16">
+     <path d="M 10.8 196.270875 
+L 16.56 196.270875 
+L 22.32 196.270875 
+" style="fill: none; stroke: #1f6feb; stroke-width: 1.5; stroke-linecap: square"/>
+    </g>
+    <g id="text_7">
+     <text style="font-size: 7.2px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17324d" x="25.56" y="198.790875" transform="rotate(-0 25.56 198.790875)">Demand</text>
+    </g>
+    <g id="line2d_17">
+     <path d="M 10.8 205.039125 
+L 16.56 205.039125 
+L 22.32 205.039125 
+" style="fill: none; stroke: #7353a6; stroke-width: 1.5; stroke-linecap: square"/>
+    </g>
+    <g id="text_8">
+     <text style="font-size: 7.2px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17324d" x="25.56" y="207.559125" transform="rotate(-0 25.56 207.559125)">MR</text>
+    </g>
+    <g id="line2d_18">
+     <path d="M 61.853625 196.270875 
+L 67.613625 196.270875 
+L 73.373625 196.270875 
+" style="fill: none; stroke: #e76f51; stroke-width: 1.5; stroke-linecap: square"/>
+    </g>
+    <g id="text_9">
+     <text style="font-size: 7.2px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17324d" x="76.613625" y="198.790875" transform="rotate(-0 76.613625 198.790875)">MC</text>
+    </g>
    </g>
   </g>
   <g id="axes_5">
@@ -353,7 +442,7 @@ z
    </g>
    <g id="matplotlib.axis_9"/>
    <g id="matplotlib.axis_10"/>
-   <g id="line2d_10">
+   <g id="line2d_19">
     <path d="M 204.741818 196.085455 
 L 215.650909 206.492727 
 L 226.56 216.9 
@@ -370,9 +459,9 @@ L 335.650909 320.972727
 L 346.56 331.38 
 L 357.469091 341.787273 
 L 368.378182 352.194545 
-" clip-path="url(#p2d5a1d4825)" style="fill: none; stroke: #1f6feb; stroke-width: 1.5; stroke-linecap: square"/>
+" clip-path="url(#pc35f3b598e)" style="fill: none; stroke: #1f6feb; stroke-width: 1.5; stroke-linecap: square"/>
    </g>
-   <g id="line2d_11">
+   <g id="line2d_20">
     <path d="M 204.741818 300.158182 
 L 215.650909 300.158182 
 L 226.56 300.158182 
@@ -389,7 +478,7 @@ L 335.650909 300.158182
 L 346.56 300.158182 
 L 357.469091 300.158182 
 L 368.378182 300.158182 
-" clip-path="url(#p2d5a1d4825)" style="fill: none; stroke: #e76f51; stroke-width: 1.5; stroke-linecap: square"/>
+" clip-path="url(#pc35f3b598e)" style="fill: none; stroke: #e76f51; stroke-width: 1.5; stroke-linecap: square"/>
    </g>
    <g id="patch_15">
     <path d="M 196.56 360 
@@ -400,6 +489,26 @@ L 196.56 188.28
     <path d="M 196.56 360 
 L 376.56 360 
 " style="fill: none; stroke: #17324d; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="legend_5">
+    <g id="line2d_21">
+     <path d="M 307.61375 197.15875 
+L 314.01375 197.15875 
+L 320.41375 197.15875 
+" style="fill: none; stroke: #1f6feb; stroke-width: 1.5; stroke-linecap: square"/>
+    </g>
+    <g id="text_10">
+     <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17324d" x="324.01375" y="199.95875" transform="rotate(-0 324.01375 199.95875)">MRP</text>
+    </g>
+    <g id="line2d_22">
+     <path d="M 307.61375 206.90125 
+L 314.01375 206.90125 
+L 320.41375 206.90125 
+" style="fill: none; stroke: #e76f51; stroke-width: 1.5; stroke-linecap: square"/>
+    </g>
+    <g id="text_11">
+     <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17324d" x="324.01375" y="209.70125" transform="rotate(-0 324.01375 209.70125)">Factor price</text>
+    </g>
    </g>
   </g>
   <g id="axes_6">
@@ -413,7 +522,7 @@ z
    </g>
    <g id="matplotlib.axis_11"/>
    <g id="matplotlib.axis_12"/>
-   <g id="line2d_12">
+   <g id="line2d_23">
     <path d="M 395.541818 213.430909 
 L 405.769091 222.103636 
 L 415.996364 230.776364 
@@ -431,9 +540,9 @@ L 528.496364 326.176364
 L 538.723636 334.849091 
 L 548.950909 343.521818 
 L 559.178182 352.194545 
-" clip-path="url(#p9429312d22)" style="fill: none; stroke: #1f6feb; stroke-width: 1.5; stroke-linecap: square"/>
+" clip-path="url(#pcecda50b63)" style="fill: none; stroke: #1f6feb; stroke-width: 1.5; stroke-linecap: square"/>
    </g>
-   <g id="line2d_13">
+   <g id="line2d_24">
     <path d="M 395.541818 352.194545 
 L 405.769091 343.521818 
 L 415.996364 334.849091 
@@ -451,9 +560,9 @@ L 528.496364 239.449091
 L 538.723636 230.776364 
 L 548.950909 222.103636 
 L 559.178182 213.430909 
-" clip-path="url(#p9429312d22)" style="fill: none; stroke: #e76f51; stroke-width: 1.5; stroke-linecap: square"/>
+" clip-path="url(#pcecda50b63)" style="fill: none; stroke: #e76f51; stroke-width: 1.5; stroke-linecap: square"/>
    </g>
-   <g id="line2d_14">
+   <g id="line2d_25">
     <path d="M 395.541818 334.849091 
 L 405.769091 326.176364 
 L 415.996364 317.503636 
@@ -471,7 +580,7 @@ L 528.496364 222.103636
 L 538.723636 213.430909 
 L 548.950909 204.758182 
 L 559.178182 196.085455 
-" clip-path="url(#p9429312d22)" style="fill: none; stroke: #c94c4c; stroke-width: 1.5; stroke-linecap: square"/>
+" clip-path="url(#pcecda50b63)" style="fill: none; stroke: #c94c4c; stroke-width: 1.5; stroke-linecap: square"/>
    </g>
    <g id="patch_18">
     <path d="M 387.36 360 
@@ -483,25 +592,54 @@ L 387.36 188.28
 L 567.36 360 
 " style="fill: none; stroke: #17324d; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
    </g>
+   <g id="legend_6">
+    <g id="line2d_26">
+     <path d="M 392.4 196.270875 
+L 398.16 196.270875 
+L 403.92 196.270875 
+" style="fill: none; stroke: #1f6feb; stroke-width: 1.5; stroke-linecap: square"/>
+    </g>
+    <g id="text_12">
+     <text style="font-size: 7.2px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17324d" x="407.16" y="198.790875" transform="rotate(-0 407.16 198.790875)">MB</text>
+    </g>
+    <g id="line2d_27">
+     <path d="M 392.4 205.039125 
+L 398.16 205.039125 
+L 403.92 205.039125 
+" style="fill: none; stroke: #e76f51; stroke-width: 1.5; stroke-linecap: square"/>
+    </g>
+    <g id="text_13">
+     <text style="font-size: 7.2px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17324d" x="407.16" y="207.559125" transform="rotate(-0 407.16 207.559125)">PMC</text>
+    </g>
+    <g id="line2d_28">
+     <path d="M 428.50125 196.270875 
+L 434.26125 196.270875 
+L 440.02125 196.270875 
+" style="fill: none; stroke: #c94c4c; stroke-width: 1.5; stroke-linecap: square"/>
+    </g>
+    <g id="text_14">
+     <text style="font-size: 7.2px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17324d" x="443.26125" y="198.790875" transform="rotate(-0 443.26125 198.790875)">SMC</text>
+    </g>
+   </g>
   </g>
  </g>
  <defs>
-  <clipPath id="p1e4bac161e">
+  <clipPath id="p2ad608f1ec">
    <rect x="5.76" y="5.76" width="180" height="171.72"/>
   </clipPath>
-  <clipPath id="p85ccfbd74d">
+  <clipPath id="p6ebe82b404">
    <rect x="196.56" y="5.76" width="180" height="171.72"/>
   </clipPath>
-  <clipPath id="p14c1c29921">
+  <clipPath id="p145eae9712">
    <rect x="387.36" y="5.76" width="180" height="171.72"/>
   </clipPath>
-  <clipPath id="p4818425ba0">
+  <clipPath id="p52261e129e">
    <rect x="5.76" y="188.28" width="180" height="171.72"/>
   </clipPath>
-  <clipPath id="p2d5a1d4825">
+  <clipPath id="pc35f3b598e">
    <rect x="196.56" y="188.28" width="180" height="171.72"/>
   </clipPath>
-  <clipPath id="p9429312d22">
+  <clipPath id="pcecda50b63">
    <rect x="387.36" y="188.28" width="180" height="171.72"/>
   </clipPath>
  </defs>
