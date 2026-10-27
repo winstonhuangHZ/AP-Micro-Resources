@@ -2,6 +2,7 @@
 
 Reserved layout for future asset production:
 
+- [`ASSET-COMPLETENESS.md`](ASSET-COMPLETENESS.md) — audit of source-image coverage and index integrity
 - `source/` — 42 downloaded source images and their metadata; keep these files unchanged
 - `source/ap-reference-crops/` — reference-only graph crops from existing AP PDFs, with source-page metadata and reuse warnings
 - `data/` — public CSV snapshots and retrieval dates
