@@ -568,10 +568,16 @@ def make_profit_max():
 
 
 def make_firm_dashboard():
+    d = load_csv("illustrative/monopoly.csv")
+    choice = d.iloc[(d["mr"] - d["mc"]).abs().argmin()]
+    q = float(choice["quantity"])
+    price = float(choice["price"])
+    atc = float(choice["atc"])
+    profit_per_unit = price - atc
     fig,axs=plt.subplots(2,2,figsize=(7.5,5.6),constrained_layout=False); fig.suptitle("Firm decision dashboard",x=.08,y=.97,ha="left",fontsize=14,fontweight="bold",color=INK)
-    labels=["Output","Price","Average cost","Profit per unit"]; vals=[24,76,51,25]; colors=[BLUE,TEAL,ORANGE,GOLD]
+    labels=["Output","Price","Average cost","Profit per unit"]; vals=[q,price,atc,profit_per_unit]; colors=[BLUE,TEAL,ORANGE,GOLD]
     for ax,label,val,color in zip(axs.flat,labels,vals,colors):
-        ax.bar([0],[val],color=color,width=.55); ax.set_title(label,loc="left",fontsize=10.5,fontweight="bold"); ax.set_xticks([]); ax.set_ylim(0,100); ax.text(0,val+5,str(val),ha="center",fontweight="bold",fontsize=14); style_axes(ax)
+        ax.bar([0],[val],color=color,width=.55); ax.set_title(label,loc="left",fontsize=10.5,fontweight="bold"); ax.set_xticks([]); ax.set_ylim(0,100); ax.text(0,val+5,f"{val:.0f}",ha="center",fontweight="bold",fontsize=14); style_axes(ax)
     polish(fig,axs,"Source: APMICRO illustrative data / monopoly.csv.","Illustrative firm snapshot; values are synthetic.")
     save(fig,15,"Firm decision dashboard","APMICRO illustrative data / monopoly.csv","Illustrative firm snapshot.")
 
@@ -622,14 +628,18 @@ def make_monopoly():
         ax.plot(x_plot,y_plot,color=color,linewidth=width,label=label)
     idx=np.argmin(np.abs(d.mr-d.mc)); q=float(d.quantity.iloc[idx]); p=float(d.price.iloc[idx]);
     q_comp=float(d.quantity.iloc[np.argmin(np.abs(d.price-d.mc))]); p_comp=float(d.price.iloc[np.argmin(np.abs(d.price-d.mc))])
-    ax.set_xlim(0, 50); ax.set_ylim(0, 105); mark_equilibrium(ax, q, p, "Q_M", "P_M", "Monopoly choice"); project_x(ax, q_comp, "Q_C", p_comp, color=TEAL); project_y(ax, p_comp, "P_C", q_comp, color=TEAL); change_arrow(ax, (q_comp, 17), (q, 17), "Q_M < Q_C", color=RED, bidirectional=True, text_offset=(0, -4)); econ_axes(ax, "Output (Q)", "Price / cost ($)"); ax.legend(frameon=False,ncol=4,fontsize=8,loc="upper right"); polish(fig,ax,"Source: APMICRO illustrative data / monopoly.csv.","Synthetic monopoly model.")
+    ax.set_xlim(0, 50); ax.set_ylim(0, 105); mark_equilibrium(ax, q, p, "Q_M", "P_M", "Monopoly choice"); project_x(ax, q_comp, "Q_C", p_comp, color=TEAL); project_y(ax, p_comp, "P_C", q_comp, color=TEAL, label_offset=1.0, label_y_offset=0.8); change_arrow(ax, (q_comp, 17), (q, 17), "Q_M < Q_C", color=RED, bidirectional=True, text_offset=(0, -4)); econ_axes(ax, "Output (Q)", "Price / cost ($)"); ax.legend(frameon=False,ncol=4,fontsize=8,loc="upper right"); polish(fig,ax,"Source: APMICRO illustrative data / monopoly.csv.","Synthetic monopoly model.")
     save(fig,19,"Monopoly D-MR-MC-ATC graph","APMICRO illustrative data / monopoly.csv","Synthetic monopoly model.")
 
 
 def make_price_discrimination():
     fig,ax=figure("Price discrimination separates consumer segments", "Different demand segments can face different prices when resale is limited and market power is present.")
     q=np.linspace(0,40,200); ax.plot(q,90-1.5*q,color=BLUE,linewidth=2.5,label="Segment A"); ax.plot(q,65-.8*q,color=ORANGE,linewidth=2.5,label="Segment B"); ax.axhline(45,color=TEAL,linewidth=1.8,label="Uniform price")
-    ax.scatter([20,25],[60,45],color=[BLUE,ORANGE],s=42); add_label(ax,20,64,"Higher willingness to pay",color=BLUE,weight="bold"); add_label(ax,25,39,"Lower segment price",color=ORANGE,weight="bold")
+    ax.scatter([20,25],[60,45],color=[BLUE,ORANGE],s=42)
+    project_x(ax, 20, "Q_A", 60, color=BLUE, label_offset=0.5)
+    project_x(ax, 25, "Q_B", 45, color=ORANGE, label_offset=1.2)
+    add_label(ax,20,67,"Higher willingness to pay",color=BLUE,weight="bold")
+    add_label(ax,31,38,"Lower segment price",color=ORANGE,weight="bold")
     econ_axes(ax, "Quantity in segment (Q)", "Price (P)"); ax.legend(frameon=False,ncol=3,fontsize=8,loc="upper right"); polish(fig,ax,"Source: Original illustrative model data.","Stylized segment-demand example.")
     save(fig,20,"Segmented-price graph","Original illustrative model data","Stylized segment-demand example.")
 
@@ -662,10 +672,14 @@ def make_payoff():
 
 
 def make_efficiency_comparison():
-    fig,axs=plt.subplots(1,2,figsize=(8.6,4.2),constrained_layout=False); fig.suptitle("Market structures differ in price, output, and efficiency",x=.08,y=.965,ha="left",fontsize=14,fontweight="bold",color=INK)
-    names=["Perfect competition","Monopolistic competition","Oligopoly","Monopoly"]; price=[38,48,58,72]; output=[92,76,65,48]; dwl=[0,8,14,26]
-    axs[0].bar(names,price,color=[TEAL,BLUE,PURPLE,ORANGE]); axs[0].set_ylabel("Relative price"); axs[0].tick_params(axis="x",rotation=25); style_axes(axs[0])
-    axs[1].bar(names,output,color=[TEAL,BLUE,PURPLE,ORANGE],label="Output"); axs[1].plot(names,dwl,color=RED,marker="o",linewidth=2.2,label="Relative DWL"); axs[1].set_ylabel("Relative output / loss"); axs[1].tick_params(axis="x",rotation=25); axs[1].legend(frameon=False); style_axes(axs[1])
+    fig,axs=plt.subplots(1,2,figsize=(9.6,4.5),constrained_layout=False); fig.suptitle("Market structures differ in price, output, and efficiency",x=.08,y=.965,ha="left",fontsize=14,fontweight="bold",color=INK)
+    names=["Perfect comp.","Monopolistic comp.","Oligopoly","Monopoly"]; price=[38,48,58,72]; output=[92,76,65,48]; dwl=[0,8,14,26]
+    x=np.arange(len(names))
+    axs[0].bar(x,price,color=[TEAL,BLUE,PURPLE,ORANGE]); axs[0].set_xticks(x,names,rotation=20,ha="right"); axs[0].set_ylabel("Relative price"); style_axes(axs[0])
+    axs[1].bar(x,output,color=[TEAL,BLUE,PURPLE,ORANGE],label="Output")
+    ax_dwl=axs[1].twinx(); ax_dwl.plot(x,dwl,color=RED,marker="o",linewidth=2.2,label="Relative DWL")
+    axs[1].set_xticks(x,names,rotation=20,ha="right"); axs[1].set_ylabel("Relative output"); ax_dwl.set_ylabel("Relative DWL",color=RED); ax_dwl.tick_params(axis="y",colors=RED)
+    lines, labels = axs[1].get_legend_handles_labels(); lines2, labels2 = ax_dwl.get_legend_handles_labels(); axs[1].legend(lines+lines2,labels+labels2,frameon=False,loc="upper right"); style_axes(axs[1]); ax_dwl.spines["top"].set_visible(False)
     polish(fig,axs,"Source: Original illustrative model data.","Relative comparison; values are synthetic.")
     save(fig,23,"Efficiency comparison bars","Original illustrative model data","Relative comparison.")
 
@@ -702,7 +716,21 @@ def make_competitive_labor():
 
 def make_monopsony():
     d=load_csv("illustrative/monopsony.csv"); fig,ax=figure("Monopsony chooses employment where MFC equals MRP", "The single dominant buyer faces an upward-sloping labor supply and a marginal factor cost above the wage.")
-    ax.plot(d.labor,d.labor_supply_wage,color=TEAL,linewidth=2.3,label="Labor supply / wage"); ax.plot(d.labor,d.mfc,color=ORANGE,linewidth=2.3,label="MFC"); ax.plot(d.labor,d.mrp,color=BLUE,linewidth=2.3,label="MRP"); idx=np.argmin(np.abs(d.mfc-d.mrp)); q=d.labor.iloc[idx]; w=d.labor_supply_wage.iloc[idx]; ax.set_xlim(0,30); ax.set_ylim(0,105); mark_equilibrium(ax,q,w,"L_M","W_M","Monopsony choice"); econ_axes(ax,"Quantity of labor (L)","Wage / marginal value ($)"); ax.legend(frameon=False,fontsize=8,ncol=3,loc="upper right"); polish(fig,ax,"Source: APMICRO illustrative data / monopsony.csv.","Synthetic monopsony schedule.")
+    ax.plot(d.labor,d.labor_supply_wage,color=TEAL,linewidth=2.3,label="Labor supply / wage"); ax.plot(d.labor,d.mfc,color=ORANGE,linewidth=2.3,label="MFC"); ax.plot(d.labor,d.mrp,color=BLUE,linewidth=2.3,label="MRP")
+    idx=np.argmin(np.abs(d.mfc-d.mrp)); q=float(d.labor.iloc[idx]); mfc=float(d.mfc.iloc[idx]); w=float(d.labor_supply_wage.iloc[idx])
+    ax.set_xlim(0,30); ax.set_ylim(0,105)
+    ax.scatter([q],[mfc],color=INK,s=42,zorder=5)
+    ax.plot([q,q],[0,mfc],color=INK,linewidth=0.9,linestyle=(0,(3,3)),zorder=1)
+    ax.plot([0,q],[mfc,mfc],color=INK,linewidth=0.9,linestyle=(0,(3,3)),zorder=1)
+    ax.scatter([q],[w],color=TEAL,s=42,zorder=5)
+    ax.plot([0,q],[w,w],color=TEAL,linewidth=0.9,linestyle=(0,(3,3)),zorder=1)
+    suppress_numeric_ticks(ax)
+    ax.text(q,-0.10,"$L_M$",transform=ax.get_xaxis_transform(),ha="center",va="top",fontsize=8.5,color=INK,fontweight="bold",clip_on=False)
+    ax.text(-0.13,mfc,"MFC = MRP",transform=ax.get_yaxis_transform(),ha="right",va="center",fontsize=8.5,color=INK,fontweight="bold",clip_on=False)
+    ax.text(-0.13,w,"$W_M$",transform=ax.get_yaxis_transform(),ha="right",va="center",fontsize=8.5,color=TEAL,fontweight="bold",clip_on=False)
+    add_label(ax,q+1,mfc+3,"decision point",color=INK,weight="bold")
+    add_label(ax,q+1,w+2,"read wage from labor supply",color=TEAL,size=8.2)
+    econ_axes(ax,"Quantity of labor (L)","Wage / marginal value ($)"); ax.legend(frameon=False,fontsize=8,ncol=3,loc="upper right"); polish(fig,ax,"Source: APMICRO illustrative data / monopsony.csv.","Synthetic monopsony schedule.")
     save(fig,27,"Monopsony MFC-MRP graph","APMICRO illustrative data / monopsony.csv","Synthetic monopsony schedule.")
 
 
@@ -716,12 +744,18 @@ def make_externality():
 
 
 def make_externality_pair():
-    fig,axs=plt.subplots(1,2,figsize=(8.6,4.2),constrained_layout=False); fig.suptitle("Externalities can create overproduction or underproduction",x=.08,y=.965,ha="left",fontsize=14,fontweight="bold",color=INK)
-    q=np.linspace(0,80,200); mb=90-q; pmc=10+q; smc_neg=22+q; smc_pos=-4+q
-    for ax,title,smc,color in [(axs[0],"Negative externality",smc_neg,RED),(axs[1],"Positive externality",smc_pos,TEAL)]:
-        ax.plot(q,mb,color=BLUE,linewidth=2.2,label="MB"); ax.plot(q,pmc,color=ORANGE,linewidth=2.2,label="Private MC"); ax.plot(q,smc,color=color,linewidth=2.2,label="Social MC / MB"); ax.set_title(title,loc="left",fontsize=10.5,fontweight="bold"); ax.set_ylim(0,100); econ_axes(ax,"Quantity (Q)","Benefit / cost ($)")
-    change_arrow(axs[0], (42, 24), (34, 24), "Q ↓", color=RED, text_offset=(0, -4))
-    change_arrow(axs[1], (36, 24), (44, 24), "Q ↑", color=TEAL, text_offset=(0, -4))
+    fig,axs=plt.subplots(1,2,figsize=(9.0,5.0),constrained_layout=False); fig.suptitle("Externalities can create overproduction or underproduction",x=.08,y=.965,ha="left",fontsize=14,fontweight="bold",color=INK)
+    q=np.linspace(0,80,301)
+    negative=[("MB",90-q,BLUE),("PMC",10+q,ORANGE),("SMC",22+q,RED)]
+    positive=[("PMB",80-q,BLUE),("SMB",92-q,TEAL),("MC",10+q,ORANGE)]
+    for ax,title,curves in [(axs[0],"Negative externality",negative),(axs[1],"Positive externality",positive)]:
+        for label,values,color in curves: ax.plot(q,values,color=color,linewidth=2.2,label=label)
+        ax.set_title(title,loc="left",fontsize=10.5,fontweight="bold"); ax.set_xlim(0,80); ax.set_ylim(0,100); econ_axes(ax,"Quantity (Q)","Benefit / cost ($)")
+    q_market=40; q_efficient=34
+    project_x(axs[0],q_market,"Q_M",50,color=ORANGE); project_x(axs[0],q_efficient,"Q*",56,color=RED); change_arrow(axs[0],(q_market,18),(q_efficient,18),"Q ↓",color=RED,text_offset=(0,-4))
+    q_market_pos=35; q_efficient_pos=41
+    project_x(axs[1],q_market_pos,"Q_M",45,color=BLUE); project_x(axs[1],q_efficient_pos,"Q*",51,color=TEAL); change_arrow(axs[1],(q_market_pos,18),(q_efficient_pos,18),"Q ↑",color=TEAL,text_offset=(0,-4))
+    add_label(axs[1],46,78,"SMB > PMB",color=TEAL,weight="bold")
     axs[0].legend(frameon=False,fontsize=8,ncol=3,loc="upper right"); polish(fig,axs,"Source: Original illustrative model data.","Stylized comparison of market failure channels.")
     save(fig,29,"Negative and positive externality pair","Original illustrative model data","Stylized comparison.")
 
@@ -736,11 +770,11 @@ def make_free_rider():
 
 
 def make_policy_dashboard():
-    fig,axs=plt.subplots(1,3,figsize=(8.8,3.7),constrained_layout=False); fig.suptitle("Policy tools change different margins",x=.08,y=.965,ha="left",fontsize=14,fontweight="bold",color=INK)
+    fig,axs=plt.subplots(1,3,figsize=(10.2,4.2),constrained_layout=False); fig.suptitle("Policy tools change different margins",x=.08,y=.965,ha="left",fontsize=14,fontweight="bold",color=INK)
     names=["Ceiling","Floor","Tax","Subsidy"]; q=[35,70,44,64]; p=[35,65,55,38]
     axs[0].bar(names,q,color=[RED,TEAL,ORANGE,PURPLE]); axs[0].set_title("Quantity traded",loc="left",fontsize=10.5,fontweight="bold"); axs[0].set_ylabel("Relative quantity"); axs[0].tick_params(axis="x",rotation=30); style_axes(axs[0])
     axs[1].bar(names,p,color=[RED,TEAL,ORANGE,PURPLE]); axs[1].set_title("Policy price",loc="left",fontsize=10.5,fontweight="bold"); axs[1].set_ylabel("Relative price"); axs[1].tick_params(axis="x",rotation=30); style_axes(axs[1])
-    axs[2].bar(["Consumer","Producer","Government"],[20,25,15],color=[BLUE,ORANGE,TEAL]); axs[2].set_title("Who is directly affected?",loc="left",fontsize=10.5,fontweight="bold"); axs[2].set_ylabel("Illustrative impact"); style_axes(axs[2])
+    axs[2].barh(["Consumer","Producer","Government"],[20,25,15],color=[BLUE,ORANGE,TEAL]); axs[2].set_title("Who is directly affected?",loc="left",fontsize=10.5,fontweight="bold"); axs[2].set_xlabel("Illustrative impact"); style_axes(axs[2])
     polish(fig,axs,"Source: Original illustrative model data.","Comparison is conceptual; magnitudes are synthetic.")
     save(fig,31,"Policy-tool comparison dashboard","Original illustrative model data","Conceptual comparison.")
 

@@ -6,7 +6,7 @@
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2026-10-27T11:57:44.636489</dc:date>
+    <dc:date>2026-10-27T15:18:18.106993</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -30,10 +30,10 @@ z
   </g>
   <g id="axes_1">
    <g id="patch_2">
-    <path d="M 82.88516 196.74
+    <path d="M 123.4638 196.74
 L 456.336 196.74
 L 456.336 68.58
-L 82.88516 68.58
+L 123.4638 68.58
 z
 " style="fill: #ffffff"/>
    </g>
@@ -60,142 +60,147 @@ z
      <g id="line2d_7"/>
     </g>
     <g id="text_1">
-     <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #17324d" x="269.61058" y="240.338437" transform="rotate(-0 269.61058 240.338437)">Quantity of labor (L)</text>
+     <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #17324d" x="289.8999" y="240.338437" transform="rotate(-0 289.8999 240.338437)">Quantity of labor (L)</text>
     </g>
    </g>
    <g id="matplotlib.axis_2">
     <g id="ytick_1">
      <g id="line2d_8">
-      <path d="M 82.88516 196.74
+      <path d="M 123.4638 196.74
 L 456.336 196.74
-" clip-path="url(#p698798225e)" style="fill: none; stroke: #d9e3ec; stroke-opacity: 0.8; stroke-width: 0.7; stroke-linecap: square"/>
+" clip-path="url(#p30d28acf51)" style="fill: none; stroke: #d9e3ec; stroke-opacity: 0.8; stroke-width: 0.7; stroke-linecap: square"/>
      </g>
      <g id="line2d_9"/>
     </g>
     <g id="ytick_2">
      <g id="line2d_10">
-      <path d="M 82.88516 172.328571
+      <path d="M 123.4638 172.328571
 L 456.336 172.328571
-" clip-path="url(#p698798225e)" style="fill: none; stroke: #d9e3ec; stroke-opacity: 0.8; stroke-width: 0.7; stroke-linecap: square"/>
+" clip-path="url(#p30d28acf51)" style="fill: none; stroke: #d9e3ec; stroke-opacity: 0.8; stroke-width: 0.7; stroke-linecap: square"/>
      </g>
      <g id="line2d_11"/>
     </g>
     <g id="ytick_3">
      <g id="line2d_12">
-      <path d="M 82.88516 147.917143
+      <path d="M 123.4638 147.917143
 L 456.336 147.917143
-" clip-path="url(#p698798225e)" style="fill: none; stroke: #d9e3ec; stroke-opacity: 0.8; stroke-width: 0.7; stroke-linecap: square"/>
+" clip-path="url(#p30d28acf51)" style="fill: none; stroke: #d9e3ec; stroke-opacity: 0.8; stroke-width: 0.7; stroke-linecap: square"/>
      </g>
      <g id="line2d_13"/>
     </g>
     <g id="ytick_4">
      <g id="line2d_14">
-      <path d="M 82.88516 123.505714
+      <path d="M 123.4638 123.505714
 L 456.336 123.505714
-" clip-path="url(#p698798225e)" style="fill: none; stroke: #d9e3ec; stroke-opacity: 0.8; stroke-width: 0.7; stroke-linecap: square"/>
+" clip-path="url(#p30d28acf51)" style="fill: none; stroke: #d9e3ec; stroke-opacity: 0.8; stroke-width: 0.7; stroke-linecap: square"/>
      </g>
      <g id="line2d_15"/>
     </g>
     <g id="ytick_5">
      <g id="line2d_16">
-      <path d="M 82.88516 99.094286
+      <path d="M 123.4638 99.094286
 L 456.336 99.094286
-" clip-path="url(#p698798225e)" style="fill: none; stroke: #d9e3ec; stroke-opacity: 0.8; stroke-width: 0.7; stroke-linecap: square"/>
+" clip-path="url(#p30d28acf51)" style="fill: none; stroke: #d9e3ec; stroke-opacity: 0.8; stroke-width: 0.7; stroke-linecap: square"/>
      </g>
      <g id="line2d_17"/>
     </g>
     <g id="ytick_6">
      <g id="line2d_18">
-      <path d="M 82.88516 74.682857
+      <path d="M 123.4638 74.682857
 L 456.336 74.682857
-" clip-path="url(#p698798225e)" style="fill: none; stroke: #d9e3ec; stroke-opacity: 0.8; stroke-width: 0.7; stroke-linecap: square"/>
+" clip-path="url(#p30d28acf51)" style="fill: none; stroke: #d9e3ec; stroke-opacity: 0.8; stroke-width: 0.7; stroke-linecap: square"/>
      </g>
      <g id="line2d_19"/>
     </g>
     <g id="text_2">
-     <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #17324d" x="51.805472" y="132.66" transform="rotate(-90 51.805472 132.66)">Wage / marginal value ($)</text>
+     <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #17324d" x="92.384113" y="132.66" transform="rotate(-90 92.384113 132.66)">Wage / marginal value ($)</text>
     </g>
    </g>
    <g id="line2d_20">
-    <path d="M 331.852387 196.74
-L 331.852387 147.917143
-" clip-path="url(#p698798225e)" style="fill: none; stroke-dasharray: 2.7,2.7; stroke-dashoffset: 0; stroke: #5f7184; stroke-width: 0.9"/>
+    <path d="M 345.3786 196.74
+L 345.3786 123.505714
+" clip-path="url(#p30d28acf51)" style="fill: none; stroke-dasharray: 2.7,2.7; stroke-dashoffset: 0; stroke: #17324d; stroke-width: 0.9"/>
    </g>
    <g id="line2d_21">
-    <path d="M 82.88516 147.917143
-L 331.852387 147.917143
-" clip-path="url(#p698798225e)" style="fill: none; stroke-dasharray: 2.7,2.7; stroke-dashoffset: 0; stroke: #5f7184; stroke-width: 0.9"/>
+    <path d="M 123.4638 123.505714
+L 345.3786 123.505714
+" clip-path="url(#p30d28acf51)" style="fill: none; stroke-dasharray: 2.7,2.7; stroke-dashoffset: 0; stroke: #17324d; stroke-width: 0.9"/>
    </g>
    <g id="line2d_22">
-    <path d="M 82.88516 172.328571
-L 107.781883 169.887429
-L 132.678605 167.446286
-L 157.575328 165.005143
-L 182.472051 162.564
-L 207.368773 160.122857
-L 232.265496 157.681714
-L 257.162219 155.240571
-L 282.058941 152.799429
-L 306.955664 150.358286
-L 331.852387 147.917143
-L 356.749109 145.476
-L 381.645832 143.034857
-L 406.542555 140.593714
-L 431.439277 138.152571
-L 456.336 135.711429
-" clip-path="url(#p698798225e)" style="fill: none; stroke: #2a9d8f; stroke-width: 2.3; stroke-linecap: square"/>
+    <path d="M 123.4638 147.917143
+L 345.3786 147.917143
+" clip-path="url(#p30d28acf51)" style="fill: none; stroke-dasharray: 2.7,2.7; stroke-dashoffset: 0; stroke: #2a9d8f; stroke-width: 0.9"/>
    </g>
    <g id="line2d_23">
-    <path d="M 82.88516 172.328571
-L 107.781883 167.446286
-L 132.678605 162.564
-L 157.575328 157.681714
-L 182.472051 152.799429
-L 207.368773 147.917143
-L 232.265496 143.034857
-L 257.162219 138.152571
-L 282.058941 133.270286
-L 306.955664 128.388
-L 331.852387 123.505714
-L 356.749109 118.623429
-L 381.645832 113.741143
-L 406.542555 108.858857
-L 431.439277 103.976571
-L 456.336 99.094286
-" clip-path="url(#p698798225e)" style="fill: none; stroke: #e76f51; stroke-width: 2.3; stroke-linecap: square"/>
+    <path d="M 123.4638 172.328571
+L 145.65528 169.887429
+L 167.84676 167.446286
+L 190.03824 165.005143
+L 212.22972 162.564
+L 234.4212 160.122857
+L 256.61268 157.681714
+L 278.80416 155.240571
+L 300.99564 152.799429
+L 323.18712 150.358286
+L 345.3786 147.917143
+L 367.57008 145.476
+L 389.76156 143.034857
+L 411.95304 140.593714
+L 434.14452 138.152571
+L 456.336 135.711429
+" clip-path="url(#p30d28acf51)" style="fill: none; stroke: #2a9d8f; stroke-width: 2.3; stroke-linecap: square"/>
    </g>
    <g id="line2d_24">
-    <path d="M 82.88516 74.682857
-L 107.781883 79.565143
-L 132.678605 84.447429
-L 157.575328 89.329714
-L 182.472051 94.212
-L 207.368773 99.094286
-L 232.265496 103.976571
-L 257.162219 108.858857
-L 282.058941 113.741143
-L 306.955664 118.623429
-L 331.852387 123.505714
-L 356.749109 128.388
-L 381.645832 133.270286
-L 406.542555 138.152571
-L 431.439277 143.034857
+    <path d="M 123.4638 172.328571
+L 145.65528 167.446286
+L 167.84676 162.564
+L 190.03824 157.681714
+L 212.22972 152.799429
+L 234.4212 147.917143
+L 256.61268 143.034857
+L 278.80416 138.152571
+L 300.99564 133.270286
+L 323.18712 128.388
+L 345.3786 123.505714
+L 367.57008 118.623429
+L 389.76156 113.741143
+L 411.95304 108.858857
+L 434.14452 103.976571
+L 456.336 99.094286
+" clip-path="url(#p30d28acf51)" style="fill: none; stroke: #e76f51; stroke-width: 2.3; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_25">
+    <path d="M 123.4638 74.682857
+L 145.65528 79.565143
+L 167.84676 84.447429
+L 190.03824 89.329714
+L 212.22972 94.212
+L 234.4212 99.094286
+L 256.61268 103.976571
+L 278.80416 108.858857
+L 300.99564 113.741143
+L 323.18712 118.623429
+L 345.3786 123.505714
+L 367.57008 128.388
+L 389.76156 133.270286
+L 411.95304 138.152571
+L 434.14452 143.034857
 L 456.336 147.917143
-" clip-path="url(#p698798225e)" style="fill: none; stroke: #1f6feb; stroke-width: 2.3; stroke-linecap: square"/>
+" clip-path="url(#p30d28acf51)" style="fill: none; stroke: #1f6feb; stroke-width: 2.3; stroke-linecap: square"/>
    </g>
    <g id="patch_3">
-    <path d="M 82.88516 196.74
-L 82.88516 68.58
+    <path d="M 123.4638 196.74
+L 123.4638 68.58
 " style="fill: none; stroke: #17324d; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
    </g>
    <g id="patch_4">
-    <path d="M 82.88516 196.74
+    <path d="M 123.4638 196.74
 L 456.336 196.74
 " style="fill: none; stroke: #17324d; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
    </g>
    <g id="text_3">
     <!-- $L_M$ -->
-    <g style="fill: #17324d" transform="translate(326.794887 216.014672)">
+    <g style="fill: #17324d" transform="translate(340.3211 216.014672)">
      <text>
       <tspan x="0" y="-0.4375" style="font-style: oblique; font-size: 8.5px; font-family: 'DejaVu Sans'; fill: #17324d">L</tspan>
       <tspan x="4.735596" y="1.039062" style="font-style: oblique; font-size: 5.95px; font-family: 'DejaVu Sans'; fill: #17324d">M</tspan>
@@ -203,36 +208,55 @@ L 456.336 196.74
     </g>
    </g>
    <g id="text_4">
+    <text style="font-weight: 700; font-size: 8.5px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #17324d" x="80.190414" y="125.851183" transform="rotate(-0 80.190414 125.851183)">MFC = MRP</text>
+   </g>
+   <g id="text_5">
     <!-- $W_M$ -->
-    <g style="fill: #17324d" transform="translate(20.481551 150.262612)">
+    <g style="fill: #2a9d8f" transform="translate(66.335414 150.262612)">
      <text>
-      <tspan x="0" y="-0.4375" style="font-style: oblique; font-size: 8.5px; font-family: 'DejaVu Sans'; fill: #17324d">W</tspan>
-      <tspan x="8.404541" y="1.039062" style="font-style: oblique; font-size: 5.95px; font-family: 'DejaVu Sans'; fill: #17324d">M</tspan>
+      <tspan x="0" y="-0.4375" style="font-style: oblique; font-size: 8.5px; font-family: 'DejaVu Sans'; fill: #2a9d8f">W</tspan>
+      <tspan x="8.404541" y="1.039062" style="font-style: oblique; font-size: 5.95px; font-family: 'DejaVu Sans'; fill: #2a9d8f">M</tspan>
      </text>
     </g>
    </g>
-   <g id="text_5">
+   <g id="text_6">
     <g id="patch_5">
-     <path d="M 356.749109 146.235429
-L 450.318172 146.235429
-Q 452.298172 146.235429 452.298172 144.255429
-L 452.298172 135.474804
-Q 452.298172 133.494804 450.318172 133.494804
-L 356.749109 133.494804
-Q 354.769109 133.494804 354.769109 135.474804
-L 354.769109 144.255429
-Q 354.769109 146.235429 356.749109 146.235429
+     <path d="M 356.47434 121.824
+L 428.025746 121.824
+Q 430.005746 121.824 430.005746 119.844
+L 430.005746 111.133687
+Q 430.005746 109.153687 428.025746 109.153687
+L 356.47434 109.153687
+Q 354.49434 109.153687 354.49434 111.133687
+L 354.49434 119.844
+Q 354.49434 121.824 356.47434 121.824
 z
 " style="fill: #ffffff; opacity: 0.85"/>
     </g>
-    <text style="font-weight: 700; font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17324d" x="356.749109" y="142.313397" transform="rotate(-0 356.749109 142.313397)">Monopsony choice</text>
+    <text style="font-weight: 700; font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17324d" x="356.47434" y="117.972281" transform="rotate(-0 356.47434 117.972281)">decision point</text>
    </g>
-   <g id="text_6">
-    <text style="font-size: 8.5px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #5f7184" x="75.88516" y="212.198672" transform="rotate(-0 75.88516 212.198672)">0</text>
+   <g id="text_7">
+    <g id="patch_6">
+     <path d="M 356.47434 147.28
+L 474.330121 147.28
+Q 476.134121 147.28 476.134121 145.476
+L 476.134121 137.539937
+Q 476.134121 135.735937 474.330121 135.735937
+L 356.47434 135.735937
+Q 354.67034 135.735937 354.67034 137.539937
+L 354.67034 145.476
+Q 354.67034 147.28 356.47434 147.28
+z
+" style="fill: #ffffff; opacity: 0.85"/>
+    </g>
+    <text style="font-size: 8.2px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #2a9d8f" x="356.47434" y="143.770656" transform="rotate(-0 356.47434 143.770656)">read wage from labor supply</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 8.5px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #5f7184" x="116.4638" y="212.198672" transform="rotate(-0 116.4638 212.198672)">0</text>
    </g>
    <g id="PathCollection_1">
     <defs>
-     <path id="m5840dd658d" d="M 0 3.24037
+     <path id="mee808fc834" d="M 0 3.24037
 C 0.859356 3.24037 1.683631 2.898944 2.291288 2.291288
 C 2.898944 1.683631 3.24037 0.859356 3.24037 0
 C 3.24037 -0.859356 2.898944 -1.683631 2.291288 -2.291288
@@ -244,53 +268,71 @@ C -1.683631 2.898944 -0.859356 3.24037 0 3.24037
 z
 " style="stroke: #17324d"/>
     </defs>
-    <g clip-path="url(#p698798225e)">
-     <use xlink:href="#m5840dd658d" x="331.852387" y="147.917143" style="fill: #17324d; stroke: #17324d"/>
+    <g clip-path="url(#p30d28acf51)">
+     <use xlink:href="#mee808fc834" x="345.3786" y="123.505714" style="fill: #17324d; stroke: #17324d"/>
+    </g>
+   </g>
+   <g id="PathCollection_2">
+    <defs>
+     <path id="mc37a269f98" d="M 0 3.24037
+C 0.859356 3.24037 1.683631 2.898944 2.291288 2.291288
+C 2.898944 1.683631 3.24037 0.859356 3.24037 0
+C 3.24037 -0.859356 2.898944 -1.683631 2.291288 -2.291288
+C 1.683631 -2.898944 0.859356 -3.24037 0 -3.24037
+C -0.859356 -3.24037 -1.683631 -2.898944 -2.291288 -2.291288
+C -2.898944 -1.683631 -3.24037 -0.859356 -3.24037 0
+C -3.24037 0.859356 -2.898944 1.683631 -2.291288 2.291288
+C -1.683631 2.898944 -0.859356 3.24037 0 3.24037
+z
+" style="stroke: #2a9d8f"/>
+    </defs>
+    <g clip-path="url(#p30d28acf51)">
+     <use xlink:href="#mc37a269f98" x="345.3786" y="147.917143" style="fill: #2a9d8f; stroke: #2a9d8f"/>
     </g>
    </g>
    <g id="legend_1">
-    <g id="line2d_25">
+    <g id="line2d_26">
      <path d="M 234.81725 79.05875
 L 242.81725 79.05875
 L 250.81725 79.05875
 " style="fill: none; stroke: #2a9d8f; stroke-width: 2.3; stroke-linecap: square"/>
     </g>
-    <g id="text_7">
+    <g id="text_9">
      <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17324d" x="257.21725" y="81.85875" transform="rotate(-0 257.21725 81.85875)">Labor supply / wage</text>
     </g>
-    <g id="line2d_26">
+    <g id="line2d_27">
      <path d="M 353.961 79.05875
 L 361.961 79.05875
 L 369.961 79.05875
 " style="fill: none; stroke: #e76f51; stroke-width: 2.3; stroke-linecap: square"/>
     </g>
-    <g id="text_8">
+    <g id="text_10">
      <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17324d" x="376.361" y="81.85875" transform="rotate(-0 376.361 81.85875)">MFC</text>
     </g>
-    <g id="line2d_27">
+    <g id="line2d_28">
      <path d="M 409.451 79.05875
 L 417.451 79.05875
 L 425.451 79.05875
 " style="fill: none; stroke: #1f6feb; stroke-width: 2.3; stroke-linecap: square"/>
     </g>
-    <g id="text_9">
+    <g id="text_11">
      <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17324d" x="431.851" y="81.85875" transform="rotate(-0 431.851 81.85875)">MRP</text>
     </g>
    </g>
   </g>
-  <g id="text_10">
+  <g id="text_12">
    <text style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17324d" x="5.76" y="16.397812" transform="rotate(-0 5.76 16.397812)">Monopsony chooses employment where MFC equals MRP</text>
   </g>
-  <g id="text_11">
+  <g id="text_13">
    <text style="font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #5f7184" x="5.76" y="29.178516" transform="rotate(-0 5.76 29.178516)">The single dominant buyer faces an upward-sloping labor supply and a marginal factor cost above the wage.</text>
   </g>
-  <g id="text_12">
+  <g id="text_14">
    <text style="font-size: 7.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #5f7184" x="5.76" y="305.311641" transform="rotate(-0 5.76 305.311641)">Source: APMICRO illustrative data / monopsony.csv.  |  Synthetic monopsony schedule.</text>
   </g>
  </g>
  <defs>
-  <clipPath id="p698798225e">
-   <rect x="82.88516" y="68.58" width="373.45084" height="128.16"/>
+  <clipPath id="p30d28acf51">
+   <rect x="123.4638" y="68.58" width="332.8722" height="128.16"/>
   </clipPath>
  </defs>
 </svg>
