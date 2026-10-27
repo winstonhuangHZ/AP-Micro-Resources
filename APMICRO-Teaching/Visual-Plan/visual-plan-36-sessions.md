@@ -771,6 +771,12 @@ The first source-image batch is marked `completed` below. These are source candi
 | `completed` | [`wall-street-crowd-1929.jpg`](assets/source/wall-street-crowd-1929.jpg) | Wall Street, financial-market confidence, and 1929 crash context. | Public domain |
 | `completed` | [`woolwich-arsenal-factory-workers.jpg`](assets/source/woolwich-arsenal-factory-workers.jpg) | Labor, factory production, and factor markets. | No restrictions |
 
+**Completed AP reference crops: 10**
+
+These crops are `reference-only` visual studies from existing AP Microeconomics PDFs. They preserve source-page metadata and are not presented as original redistributable artwork.
+
+See [`ap-reference-crops/README.md`](assets/source/ap-reference-crops/README.md) and [`ap-reference-crops/metadata.csv`](assets/source/ap-reference-crops/metadata.csv).
+
 ## Cross-cutting visual modules
 
 ### Indicators

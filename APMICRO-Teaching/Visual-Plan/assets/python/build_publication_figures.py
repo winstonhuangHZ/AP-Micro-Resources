@@ -92,8 +92,9 @@ def style_axes(ax, xlabel=None, ylabel=None, zero=False):
 
 def econ_axes(ax, xlabel="Quantity (Q)", ylabel="Price (P)", origin=True):
     """Apply AP Micro style axis names and mark the origin."""
-    ax.set_xlabel(xlabel, labelpad=7)
-    ax.set_ylabel(ylabel, labelpad=7)
+    # Leave room for custom AP projection labels below/left of the axes.
+    ax.set_xlabel(xlabel, labelpad=36)
+    ax.set_ylabel(ylabel, labelpad=29)
     style_axes(ax)
     if origin and ax.get_xlim()[0] <= 0 <= ax.get_xlim()[1] and ax.get_ylim()[0] <= 0 <= ax.get_ylim()[1]:
         ax.annotate("0", xy=(0, 0), xytext=(-7, -9), textcoords="offset points",
@@ -106,11 +107,14 @@ def project_point(ax, x, y, x_label, y_label, color=MUTED, linewidth=0.9, label_
     ymin, ymax = ax.get_ylim()
     ax.plot([x, x], [ymin, y], color=color, linewidth=linewidth, linestyle=(0, (3, 3)), zorder=1)
     ax.plot([xmin, x], [y, y], color=color, linewidth=linewidth, linestyle=(0, (3, 3)), zorder=1)
+    suppress_numeric_ticks(ax)
     x_pad = 0.035 * (xmax - xmin)
     y_pad = 0.035 * (ymax - ymin)
-    ax.text(x, ymin - y_pad, format_label(x_label), ha="center", va="top", fontsize=8.5, color=INK,
+    ax.text(x, -0.10, format_label(x_label), transform=ax.get_xaxis_transform(),
+            ha="center", va="top", fontsize=8.5, color=INK,
             fontweight="bold", clip_on=False)
-    ax.text(xmin - x_pad, y, format_label(y_label), ha="right", va="center", fontsize=8.5, color=INK,
+    ax.text(-0.13, y, format_label(y_label), transform=ax.get_yaxis_transform(),
+            ha="right", va="center", fontsize=8.5, color=INK,
             fontweight="bold", clip_on=False)
 
 
@@ -119,8 +123,10 @@ def project_x(ax, x, x_label, y=None, color=MUTED, linewidth=0.9, label_offset=0
     if y is None:
         y = ymax
     ax.plot([x, x], [ymin, y], color=color, linewidth=linewidth, linestyle=(0, (3, 3)), zorder=1)
+    suppress_numeric_ticks(ax)
     y_pad = 0.035 * (ymax - ymin)
-    ax.text(x, ymin - y_pad - label_offset * y_pad, format_label(x_label), ha="center", va="top", fontsize=8.5, color=INK,
+    ax.text(x, -0.10 - label_offset * 0.050, format_label(x_label), transform=ax.get_xaxis_transform(),
+            ha="center", va="top", fontsize=8.5, color=INK,
             fontweight="bold", clip_on=False)
 
 
@@ -130,10 +136,11 @@ def project_y(ax, y, y_label, x=None, color=MUTED, linewidth=0.9, label_offset=0
     if x is None:
         x = xmax
     ax.plot([xmin, x], [y, y], color=color, linewidth=linewidth, linestyle=(0, (3, 3)), zorder=1)
-    x_pad = 0.035 * (xmax - xmin)
-    ax.text(xmin - x_pad - label_offset * x_pad,
+    suppress_numeric_ticks(ax)
+    ax.text(-0.13 - label_offset * 0.055,
             y + label_y_offset * 0.035 * (ymax - ymin),
-            format_label(y_label), ha="right", va="center", fontsize=8.5, color=INK,
+            format_label(y_label), transform=ax.get_yaxis_transform(),
+            ha="right", va="center", fontsize=8.5, color=INK,
             fontweight="bold", clip_on=False)
 
 
@@ -154,7 +161,7 @@ def polish(fig, axes, source: str, note: str = ""):
             style_axes(ax)
     footer = source if not note else f"{source}  |  {note}"
     fig.text(0.09, 0.035, footer, ha="left", va="bottom", fontsize=7.5, color=MUTED)
-    fig.tight_layout(rect=[0.06, 0.09, 0.98, 0.88])
+    fig.tight_layout(rect=[0.09, 0.20, 0.98, 0.88])
 
 
 def save(fig, session: int, visual: str, source: str, note: str = ""):
@@ -185,6 +192,11 @@ def format_label(text):
     if isinstance(text, str) and ("_" in text or "^" in text) and not text.startswith("$"):
         return f"${text}$"
     return text
+
+
+def suppress_numeric_ticks(ax):
+    """Keep custom AP graph labels readable when they replace numeric ticks."""
+    ax.tick_params(axis="both", which="both", labelbottom=False, labelleft=False, length=0)
 
 
 def change_arrow(ax, start, end, label=None, color=INK, bidirectional=False,
@@ -396,11 +408,10 @@ def make_shortage_surplus():
         ax.scatter([qd,qs],[price,price],color=[BLUE,ORANGE],s=30,zorder=4)
         project_x(ax, qd, "Q_D", price, color=BLUE); project_x(ax, qs, "Q_S", price, color=ORANGE); project_y(ax, price, "P_c" if label == "Shortage" else "P_f", max(qd, qs), color=color)
         if label == "Shortage":
-            change_arrow(ax, (qs, price - 7), (qd, price - 7), "shortage: Q_D − Q_S", color=RED, bidirectional=True, text_offset=(0, -1))
+            change_arrow(ax, (qs, price - 7), (qd, price - 7), "shortage", color=RED, bidirectional=True, text_offset=(0, -1))
         else:
-            change_arrow(ax, (qd, price + 7), (qs, price + 7), "surplus: Q_S − Q_D", color=TEAL, bidirectional=True, text_offset=(0, 1))
+            change_arrow(ax, (qd, price + 7), (qs, price + 7), "surplus", color=TEAL, bidirectional=True, text_offset=(0, 1))
         ax.set_title(label,loc="left",fontsize=10.5,fontweight="bold"); econ_axes(ax)
-        ax.text((qd+qs)/2, price+5, f"Gap = {abs(qs-qd)}", ha="center", color=color, fontweight="bold")
     axs[0].legend(frameon=False, fontsize=8, loc="upper right")
     polish(fig, axs, "Source: APMICRO illustrative data / surplus-and-intervention.csv.", "Synthetic price-control examples.")
     save(fig, 9, "Shortage and surplus side-by-side", "APMICRO illustrative data / surplus-and-intervention.csv", "Synthetic price-control examples.")
@@ -475,11 +486,16 @@ def make_trade_map():
 
 
 def make_production():
-    d=load_csv("illustrative/production-function.csv"); fig,ax=figure("Total, average, and marginal product", "Diminishing marginal product appears after the turning point in the production process.")
-    ax.plot(d.labor,d.total_product,color=BLUE,linewidth=2.5,marker="o",markersize=3.5,label="Total product")
-    ax.plot(d.labor,d.average_product,color=TEAL,linewidth=2.2,marker="s",markersize=3.5,label="Average product")
-    ax.plot(d.labor,d.marginal_product,color=ORANGE,linewidth=2.2,marker="^",markersize=3.5,label="Marginal product")
-    ax.set_xlabel("Labor input (L)"); ax.set_ylabel("Product units (Q)"); ax.legend(frameon=False,ncol=3,fontsize=8,loc="upper left"); polish(fig,ax,"Source: APMICRO illustrative data / production-function.csv.","Synthetic production table.")
+    d=load_csv("illustrative/production-function.csv"); fig,axs=plt.subplots(1,2,figsize=(8.6,4.3),constrained_layout=False)
+    fig.suptitle("Total, average, and marginal product", x=.08, y=.965, ha="left", fontsize=14, fontweight="bold", color=INK)
+    axs[0].plot(d.labor,d.total_product,color=BLUE,linewidth=2.5,marker="o",markersize=3.5,label="Total product")
+    axs[0].set_title("Total product", loc="left", fontsize=10.5, fontweight="bold")
+    axs[0].set_xlabel("Labor input (L)"); axs[0].set_ylabel("Product units (Q)"); axs[0].legend(frameon=False,loc="upper left")
+    axs[1].plot(d.labor,d.average_product,color=TEAL,linewidth=2.2,marker="s",markersize=3.5,label="Average product")
+    axs[1].plot(d.labor,d.marginal_product,color=ORANGE,linewidth=2.2,marker="^",markersize=3.5,label="Marginal product")
+    axs[1].set_title("Average and marginal product", loc="left", fontsize=10.5, fontweight="bold")
+    axs[1].set_xlabel("Labor input (L)"); axs[1].set_ylabel("Product units per worker"); axs[1].legend(frameon=False,loc="upper right")
+    polish(fig,axs,"Source: APMICRO illustrative data / production-function.csv.","Synthetic production table; separate scales keep TP, AP, and MP readable.")
     save(fig,12,"TP, AP, and MP curves","APMICRO illustrative data / production-function.csv","Synthetic production table.")
 
 
@@ -497,9 +513,28 @@ def make_production_heatmap():
 
 
 def make_costs():
-    d=load_csv("illustrative/cost-curves.csv"); fig,ax=figure("Short-run cost curves", "Average and marginal costs describe how the firm's cost structure changes with output.")
-    for col,color,label in [("fixed_cost",MUTED,"FC"),("variable_cost",SKY,"VC"),("total_cost",INK,"TC"),("atc",BLUE,"ATC"),("avc",TEAL,"AVC"),("marginal_cost",ORANGE,"MC")]: ax.plot(d.quantity,d[col],linewidth=2 if col in ["atc","avc","marginal_cost"] else 1.5,color=color,label=label)
-    ax.set_xlabel("Output (Q)"); ax.set_ylabel("Cost ($)"); ax.legend(frameon=False,ncol=3,fontsize=8,loc="upper left"); polish(fig,ax,"Source: APMICRO illustrative data / cost-curves.csv.","Synthetic short-run cost schedule.")
+    d=load_csv("illustrative/cost-curves.csv"); fig,axs=plt.subplots(1,2,figsize=(8.6,4.3),constrained_layout=False)
+    fig.suptitle("Short-run cost curves", x=.08, y=.965, ha="left", fontsize=14, fontweight="bold", color=INK)
+    for col,color,label in [("fixed_cost",MUTED,"Fixed cost (FC)"),("variable_cost",SKY,"Variable cost (VC)"),("total_cost",INK,"Total cost (TC)")]:
+        axs[0].plot(d.quantity,d[col],linewidth=2.0,color=color,label=label)
+    axs[0].set_title("Total cost measures", loc="left", fontsize=10.5, fontweight="bold")
+    axs[0].set_xlabel("Output (Q)"); axs[0].set_ylabel("Cost ($)"); axs[0].legend(frameon=False,fontsize=8,loc="upper left")
+    unit = d[(d.quantity >= 1.0) & (d.quantity <= 16.0)].copy()
+    for col,color,label in [("atc",BLUE,"ATC"),("avc",TEAL,"AVC"),("marginal_cost",ORANGE,"MC")]:
+        axs[1].plot(unit.quantity,unit[col],linewidth=2.3,color=color,label=label)
+    avc_i = d["avc"].idxmin()
+    atc_i = d["atc"].idxmin()
+    q_avc, y_avc = float(d.loc[avc_i, "quantity"]), float(d.loc[avc_i, "avc"])
+    q_atc, y_atc = float(d.loc[atc_i, "quantity"]), float(d.loc[atc_i, "atc"])
+    for q_star, y_star, color in [(q_avc, y_avc, TEAL), (q_atc, y_atc, BLUE)]:
+        axs[1].plot([q_star, q_star], [0, y_star], color=color, linewidth=0.9, linestyle=(0, (3, 3)), zorder=1)
+        axs[1].scatter([q_star], [y_star], color=color, edgecolor="white", linewidth=0.8, s=38, zorder=5)
+    add_label(axs[1], q_avc + 0.7, y_avc + 5.0, "MC = AVC", color=TEAL, size=8.0, weight="bold")
+    add_label(axs[1], q_atc + 0.7, y_atc + 7.0, "MC = ATC", color=BLUE, size=8.0, weight="bold")
+    axs[1].set_xlim(0, 16); axs[1].set_ylim(0, 125)
+    axs[1].set_title("Per-unit and marginal costs", loc="left", fontsize=10.5, fontweight="bold")
+    axs[1].set_xlabel("Output (Q)"); axs[1].set_ylabel("Cost per unit ($)"); axs[1].legend(frameon=False,fontsize=8,loc="upper left")
+    polish(fig,axs,"Source: APMICRO illustrative data / cost-curves.csv.","Synthetic short-run cost schedule; total and per-unit curves are separated for readability.")
     save(fig,13,"FC, VC, TC, ATC, AVC, and MC curves","APMICRO illustrative data / cost-curves.csv","Synthetic short-run cost schedule.")
 
 
@@ -530,12 +565,12 @@ def make_firm_dashboard():
 
 
 def make_shutdown():
-    d=load_csv("illustrative/cost-curves.csv"); fig,ax=figure("Produce in the short run only when price covers AVC", "The shutdown rule compares price with average variable cost; the exit rule belongs to the long run.")
+    d=load_csv("illustrative/cost-curves.csv"); d=d[(d.quantity >= 1.0) & (d.quantity <= 20.0)].copy(); fig,ax=figure("Produce in the short run only when price covers AVC", "The shutdown rule compares price with average variable cost; the exit rule belongs to the long run.")
     ax.plot(d.quantity,d.marginal_cost,color=ORANGE,linewidth=2.4,label="MC"); ax.plot(d.quantity,d.avc,color=TEAL,linewidth=2.4,label="AVC"); ax.plot(d.quantity,d.atc,color=BLUE,linewidth=2.4,label="ATC"); ax.axhline(38,color=INK,linewidth=1.8,label="Market price")
     ax.fill_between(d.quantity,38,d.avc,where=d.avc<38,color=PALE_TEAL,alpha=.6); ax.fill_between(d.quantity,0,d.avc,where=d.avc>38,color=PALE_ORANGE,alpha=.5)
-    q_star = 10; project_x(ax, q_star, "Q*", 38, color=INK); project_y(ax, 38, "P", q_star, color=INK)
-    add_label(ax,5,41,"Produce if P ≥ AVC",color=TEAL,weight="bold"); add_label(ax,14,20,"Shutdown region",color=RED,weight="bold")
-    econ_axes(ax, "Output (Q)", "Cost / price ($)"); ax.legend(frameon=False,ncol=4,fontsize=8,loc="upper left"); polish(fig,ax,"Source: APMICRO illustrative data / cost-curves.csv.","Synthetic short-run shutdown illustration.")
+    q_star = float(d.loc[(d.marginal_cost-38).abs().idxmin(), "quantity"]); project_x(ax, q_star, "Q*", 38, color=INK); project_y(ax, 38, "P", q_star, color=INK)
+    add_label(ax,2.0,47,"Produce if P ≥ AVC",color=TEAL,weight="bold"); add_label(ax,17.1,52,"Shutdown region",color=RED,weight="bold")
+    ax.set_xlim(0,20); ax.set_ylim(0,220); econ_axes(ax, "Output (Q)", "Cost / price ($)"); ax.legend(frameon=False,ncol=4,fontsize=8,loc="upper left"); polish(fig,ax,"Source: APMICRO illustrative data / cost-curves.csv.","Synthetic short-run shutdown illustration.")
     save(fig,16,"Shutdown decision graph","APMICRO illustrative data / cost-curves.csv","Synthetic short-run shutdown illustration.")
 
 
@@ -645,7 +680,7 @@ def make_monopsony():
 def make_externality():
     d=load_csv("illustrative/externalities.csv"); fig,ax=figure("Private and social costs can imply different quantities", "With a negative externality, social marginal cost lies above private marginal cost.")
     ax.plot(d.quantity,d.marginal_benefit,color=BLUE,linewidth=2.4,label="Marginal benefit"); ax.plot(d.quantity,d.private_marginal_cost,color=ORANGE,linewidth=2.4,label="Private MC"); ax.plot(d.quantity,d.social_marginal_cost,color=RED,linewidth=2.4,label="Social MC"); ax.fill_between(d.quantity,d.private_marginal_cost,d.social_marginal_cost,color=PALE_ORANGE,alpha=.65,label="External cost")
-    q_market = 40; q_efficient = 35; p_market = 50; p_efficient = 55; ax.set_xlim(0,80); ax.set_ylim(0,105); project_x(ax,q_market,"Q_M",p_market,color=ORANGE); project_x(ax,q_efficient,"Q*",p_efficient,color=RED); project_y(ax,p_market,"P_M",q_market,color=ORANGE); project_y(ax,p_efficient,"P*",q_efficient,color=RED); econ_axes(ax,"Quantity (Q)","Benefit / cost ($)"); ax.legend(frameon=False,fontsize=8,ncol=3,loc="upper right"); polish(fig,ax,"Source: APMICRO illustrative data / externalities.csv.","Synthetic negative-externality schedule.")
+    q_market = 40; q_efficient = 35; p_market = 50; p_efficient = 55; ax.set_xlim(0,80); ax.set_ylim(0,105); project_x(ax,q_market,"Q_M",p_market,color=ORANGE,label_offset=1.0); project_x(ax,q_efficient,"Q*",p_efficient,color=RED,label_offset=0.0); project_y(ax,p_market,"P_M",q_market,color=ORANGE,label_y_offset=-1.0); project_y(ax,p_efficient,"P*",q_efficient,color=RED,label_y_offset=1.0); econ_axes(ax,"Quantity (Q)","Benefit / cost ($)"); ax.legend(frameon=False,fontsize=8,ncol=3,loc="upper right"); polish(fig,ax,"Source: APMICRO illustrative data / externalities.csv.","Synthetic negative-externality schedule.")
     change_arrow(ax, (q_market, 18), (q_efficient, 18), "Q ↓ to efficient level", color=RED, text_offset=(0, -4))
     add_label(ax, 49, 73, "external cost", color=RED, weight="bold")
     save(fig,28,"Private versus social benefit/cost graph","APMICRO illustrative data / externalities.csv","Synthetic negative-externality schedule.")
